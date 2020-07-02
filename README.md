@@ -1,12 +1,10 @@
-ISDCF Metadata Registries
-=========================
+ISDCF Registries Site
+=====================
 
 _EXPERIMENTAL_
 
-Metadata registries maintained by the InterSociety Digital Cinema Forum (ISDCF).
+Generates the ISDCF Registries Website from the [ISDCF Registries](https://github.com/ISDCF/registries).
 
-The registry data is available as JSON at `src/main/data`.
+A build of the website from the `master` branch is automatically published at:
 
-The following registries are automatically published from the `master` branch:
-
-* https://isdcf.github.io/registries/facilities.html
+https://isdcf.github.io/registries-site/facilities.html
