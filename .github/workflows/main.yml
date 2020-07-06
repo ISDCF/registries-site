@@ -12,8 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        submodules: recursive
+    - run: git submodule update --remote --recursive --init
     - uses: actions/setup-node@v1
       with:
         node-version: '10'
