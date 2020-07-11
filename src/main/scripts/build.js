@@ -26,8 +26,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 const path = require('path');
 const fs = require('fs');
-const { exec } = require("child_process");
-
+const proc = require("child_process");
 
 const DATA_PATH = "src/main/templates/";
 const DATA_BUILD_PATH = "src/main/scripts/%s.build.js"; 
@@ -35,23 +34,21 @@ const DATA_BUILD_PATH = "src/main/scripts/%s.build.js";
 /* load and build the templates */
 
 for (const dataFile of fs.readdirSync(DATA_PATH).filter(f => /.hbs$/.test(f))) {
-  console.log(`Building ${dataFile}`)
   const name = path.basename(dataFile, ".hbs")
   const buildFile = DATA_BUILD_PATH.replace("%s", name)
-  const buildCommand = "node " + buildFile
-  const buildSuccess = "Build of " + name + " completed"
-  const buildFail = "Build of " + name + " has errored"
-  exec(buildCommand, (error, stdout, stderr) => {
-    if (error) {
-        console.log(buildFail);
-        return;
-    }
-    if (stderr) {
-        console.log(buildFail);
-        return;
-    }
-    console.log(buildSuccess);
-    });
+
+  console.log(`Building ${name} started`)
+  var success = true;
+
+  try {
+  buildCommand = proc.execSync('node ' + buildFile).toString().trim();
+  } catch (e) {
+    success = false;
+  }
+
+  if(success) {
+    console.log(`Building ${name} completed successfully`)
+  }
 
 }
 

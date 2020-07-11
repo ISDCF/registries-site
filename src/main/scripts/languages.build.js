@@ -1,7 +1,6 @@
 const hb = require('handlebars');
 const fs = require('fs');
 const path = require('path');
-const utils = require('./language-utilities.js');
 const puppeteer = require('puppeteer');
 const proc = require('child_process');
 const ajv = require('ajv');
@@ -10,6 +9,7 @@ const ajv = require('ajv');
 const REGISTRIES_REPO_PATH = "external/registries";
 const DATA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/data/languages.json");
 const DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/schemas/languages.schema.json");
+const UTILS_PATH = path.join("./../../../", REGISTRIES_REPO_PATH, "src/main/scripts/language-utilities.js");
 const TEMPLATE_PATH = "src/main/templates/languages.hbs";
 const PAGE_JS_PATH = "src/site/filter-languages.js";
 const PAGE_JS2_PATH = "src/site/backtotop.js";
@@ -57,6 +57,8 @@ if (!displayNames) {
 }
 
 /* build display name */
+
+const utils = require(UTILS_PATH);
 
 for (let i in registry) {
   let langtag = registry[i]["rfc5646Tag"];
