@@ -12,8 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
-  <script type="application/javascript" src="backtotop.js"></script>
-  <script type="application/javascript" src="filter-codedesc.js" defer></script>
+  <script type="application/javascript" src="features.js"></script>
 </head>
 
 <body>
@@ -31,8 +30,9 @@
           <a id="pdf-download" target="_blank" class="nav-link" title="Download as PDF" href="{{pdf_path}}">Download PDF</a>
         </li>
       </ul>
-        <form class="form-inline">
-          <input id="search" class="form-control" type="search" placeholder="Search Studios" aria-label="Search">
+        <form id="search-form" class="form-inline">
+          <span class="align-middle"><input id="search" class="form-control mb-2" type="search" placeholder="Search Studios" aria-label="Search">
+          <input type="button" class="btn btn-secondary btn-sm mb-2" value="x" id="clear-filter"/></span>
         </form>
     </div>
   </nav>
@@ -46,7 +46,7 @@
         <th scope="col">Description</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="searchTable">
       {{#data}}
       <tr id="studio-{{code}}">
         <td class="code"><a class="anchor" id="{{code}}" href="#{{code}}"></a><code>{{code}}</code></td>
@@ -57,7 +57,7 @@
               <span>Replaced by:</span>
             {{/if}}
             {{#obsoletedBy}}
-              <a class="studio-link" href="#{{this}}">{{this}}</a>
+              <a class="studio-link" id="clear-filter" href="#{{this}}">{{this}}</a>
             {{/obsoletedBy}}
           {{/obsolete}}
         </td>

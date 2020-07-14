@@ -11,8 +11,7 @@ const DATA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/data/languages.json"
 const DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/schemas/languages.schema.json");
 const UTILS_PATH = path.join("./../../../", REGISTRIES_REPO_PATH, "src/main/scripts/language-utilities.js");
 const TEMPLATE_PATH = "src/main/templates/languages.hbs";
-const PAGE_JS_PATH = "src/site/filter-languages.js";
-const PAGE_JS2_PATH = "src/site/backtotop.js";
+const PAGE_JS_PATH = "src/site/features.js";
 const PAGE_CSS_PATH = "src/site/mobile.css";
 const BUILD_PATH = "build";
 const PAGE_SITE_PATH = "languages.html";
@@ -136,7 +135,6 @@ fs.writeFileSync(path.join(BUILD_PATH, PAGE_SITE_PATH), html, 'utf8');
 
 /* copy in js */
 fs.copyFileSync(PAGE_JS_PATH, path.join(BUILD_PATH, path.basename(PAGE_JS_PATH)));
-fs.copyFileSync(PAGE_JS2_PATH, path.join(BUILD_PATH, path.basename(PAGE_JS2_PATH)));
 fs.copyFileSync(PAGE_CSS_PATH, path.join(BUILD_PATH, path.basename(PAGE_CSS_PATH)));
 
 /* write pdf */

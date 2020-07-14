@@ -10,8 +10,7 @@ const REGISTRIES_REPO_PATH = "external/registries";
 const DATA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/data/studios.json");
 const DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/schemas/studios.schema.json");
 const TEMPLATE_PATH = "src/main/templates/studios.hbs";
-const PAGE_JS_PATH = "src/site/filter-codedesc.js";
-const PAGE_JS2_PATH = "src/site/backtotop.js";
+const PAGE_JS_PATH = "src/site/features.js";
 const PAGE_CSS_PATH = "src/site/mobile.css";
 const BUILD_PATH = "build";
 const PAGE_SITE_PATH = "studios.html";
@@ -91,7 +90,6 @@ fs.writeFileSync(path.join(BUILD_PATH, PAGE_SITE_PATH), html, 'utf8');
 
 /* copy in js */
 fs.copyFileSync(PAGE_JS_PATH, path.join(BUILD_PATH, path.basename(PAGE_JS_PATH)));
-fs.copyFileSync(PAGE_JS2_PATH, path.join(BUILD_PATH, path.basename(PAGE_JS2_PATH)));
 fs.copyFileSync(PAGE_CSS_PATH, path.join(BUILD_PATH, path.basename(PAGE_CSS_PATH)));
 
 /* write pdf */
