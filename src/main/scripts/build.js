@@ -221,22 +221,21 @@ registries.forEach(function(obj) {
     pptr_options.executablePath = process.env.CHROMEPATH;
   };
   
-  (async() => {
+  try {
 
-    try {
+    (async() => {
 
       var browser = await puppeteer.launch(pptr_options);
       var page = await browser.newPage();
       await page.setContent(html);
       await page.pdf({ path: path.join(BUILD_PATH, PDF_SITE_PATH).toString()});
       await browser.close();
-      process.exit();
 
-    } catch (e) {
+    })();
+
+  } catch (e) {
       console.log(e);
     }
-
-  })();
 
   console.log(`Build of ${listType} completed`)
 
