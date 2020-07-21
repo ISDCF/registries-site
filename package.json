@@ -12,7 +12,6 @@
   "author": "InterSociety Digital Cinema Forum (ISDCF) <info@isdcf.com>",
   "license": "CC-BY-4.0",
   "devDependencies": {
-    "ajv": "^6.10.2",
     "handlebars": "^4.7.6",
     "puppeteer": "^2.0.0"
   },
