@@ -25,14 +25,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 const path = require('path');
-const fs = require('fs');
-const proc = require("child_process");
+const fs = require('fs').promises;
+const { promisify } = require('util');
+const execFile = promisify(require('child_process').execFile)
 const hb = require('handlebars');
 const puppeteer = require('puppeteer');
 
 const REGISTRIES_REPO_PATH = "external/registries";
-const PAGE_JS_PATH = "src/site/features.js";
-const PAGE_CSS_PATH = "src/site/mobile.css";
+const SITE_PATH = "src/site"
 const BUILD_PATH = "build";
 
 /* list the available registries type (lower case), id (single, for links), titles (Upper Case), and schema builds */
@@ -60,13 +60,7 @@ const registries = [
 
 /* load and build the templates */
 
-registries.forEach(function(obj) {
-  
-  var listType = obj.listType
-  var idType = obj.idType
-  var listTitle = obj.listTitle
-  var schemaBuild = obj.schemaBuild
-
+async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
   console.log(`Building ${listType} started`)
 
   var DATA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/data/" + listType + ".json");
@@ -77,13 +71,13 @@ registries.forEach(function(obj) {
 
   /* load header and footer for templates */
 
-  hb.registerPartial('header', fs.readFileSync("src/main/templates/partials/header.hbs", 'utf8'));
-  hb.registerPartial('footer', fs.readFileSync("src/main/templates/partials/footer.hbs", 'utf8'));
+  hb.registerPartial('header', await fs.readFile("src/main/templates/partials/header.hbs", 'utf8'));
+  hb.registerPartial('footer', await fs.readFile("src/main/templates/partials/footer.hbs", 'utf8'));
   
   /* instantiate template */
   
   let template = hb.compile(
-    fs.readFileSync(
+    await fs.readFile(
       TEMPLATE_PATH,
       'utf8'
     )
@@ -96,7 +90,7 @@ registries.forEach(function(obj) {
   /* load the registry */
   
   let registry = JSON.parse(
-    fs.readFileSync(
+    await fs.readFile(
       DATA_PATH
     )
   );
@@ -113,7 +107,7 @@ registries.forEach(function(obj) {
     var UTILS_PATH = path.join("./../../../", REGISTRIES_REPO_PATH, "src/main/scripts/language-utilities.js");
     
     let displayNames = JSON.parse(
-      fs.readFileSync(
+      await fs.readFile(
         DISPLAYNAMES_PATH
       )
     );
@@ -158,7 +152,7 @@ registries.forEach(function(obj) {
   /* confirm we understand the registry schema */
   
   let json_schema = JSON.parse(
-    fs.readFileSync(
+    await fs.readFile(
       DATA_SCHEMA_PATH
     )
   );
@@ -172,21 +166,22 @@ registries.forEach(function(obj) {
   let registry_version = "Unknown version"
   
   try {
-    registry_version = proc.execSync('git submodule status ' + REGISTRIES_REPO_PATH).toString().trim().split(" ")[0];
+    [ registry_version ] = (await execFile('git', [ 'submodule', 'status', REGISTRIES_REPO_PATH ])).stdout.split(" ");
   } catch (e) {
+    console.warn(e);
   }
-  
+
   let site_version = "Unknown version"
   
   try {
-    site_version = proc.execSync('git rev-parse HEAD').toString().trim();
+    site_version = (await execFile('git', [ 'rev-parse', 'HEAD' ])).stdout.trim()
   } catch (e) {
+    console.warn(e);
   }
-  
   
   /* create build directory */
   
-  fs.mkdirSync(BUILD_PATH, { recursive: true });
+  await fs.mkdir(BUILD_PATH, { recursive: true });
   
   /* apply template */
   
@@ -203,11 +198,12 @@ registries.forEach(function(obj) {
   
   /* write HTML file */
   
-  fs.writeFileSync(path.join(BUILD_PATH, PAGE_SITE_PATH), html, 'utf8');
+  await fs.writeFile(path.join(BUILD_PATH, PAGE_SITE_PATH), html, 'utf8');
   
-  /* copy in js */
-  fs.copyFileSync(PAGE_JS_PATH, path.join(BUILD_PATH, path.basename(PAGE_JS_PATH)));
-  fs.copyFileSync(PAGE_CSS_PATH, path.join(BUILD_PATH, path.basename(PAGE_CSS_PATH)));
+  /* copy in static resources */
+  await Promise.all((await fs.readdir(SITE_PATH)).map(
+    f => fs.copyFile(path.join(SITE_PATH, f), path.join(BUILD_PATH, f))
+  ))
 
   /* write pdf */
 
@@ -222,21 +218,20 @@ registries.forEach(function(obj) {
   };
   
   try {
-
-    (async() => {
-
-      var browser = await puppeteer.launch(pptr_options);
-      var page = await browser.newPage();
-      await page.setContent(html);
-      await page.pdf({ path: path.join(BUILD_PATH, PDF_SITE_PATH).toString()});
-      await browser.close();
-
-    })();
-
+    var browser = await puppeteer.launch(pptr_options);
+    var page = await browser.newPage();
+    await page.setContent(html);
+    await page.pdf({ path: path.join(BUILD_PATH, PDF_SITE_PATH).toString()});
+    await browser.close();
   } catch (e) {
-      console.log(e);
-    }
+    console.warn(e);
+  }
 
   console.log(`Build of ${listType} completed`)
+};
 
-});
+void (async () => {
+
+  await Promise.all(registries.map(buildRegistry))
+
+})().catch(console.error)
