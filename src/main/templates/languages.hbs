@@ -15,10 +15,9 @@
       </thead>
       <tbody id="searchTable">
         {{#data}}
-        <tr id="{{idType}}-{{rfc5646Tag}}">
-          <td><span class="description">{{displayName}}</span>
+        <tr id="{{../idType}}-{{rfc5646Tag}}">
+          <td><span class="description">{{displayName}}</span></td>
           <td class="rfc"><a class="anchor" id="{{rfc5646Tag}}" href="#{{rfc5646Tag}}"></a><code>{{rfc5646Tag}}</code></td>
-          </td>
           <td class="code">
             {{#if dcncTag}}
             {{dcncTag}}

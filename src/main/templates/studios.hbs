@@ -12,7 +12,7 @@
       </thead>
       <tbody id="searchTable">
         {{#data}}
-        <tr id="{{idType}}-{{code}}">
+        <tr id="{{../idType}}-{{code}}">
           <td class="code"><a class="anchor" id="{{code}}" href="#{{code}}"></a><code>{{code}}</code></td>
           <td><span class="description">{{description}}</span>
             {{#obsolete}}
@@ -21,7 +21,7 @@
                 <span>Replaced by:</span>
               {{/if}}
               {{#obsoletedBy}}
-                <a class="{{idType}}-link" id="clear-filter" href="#{{this}}">{{this}}</a>
+                <a class="{{../../idType}}-link" id="clear-filter" href="#{{this}}">{{this}}</a>
               {{/obsoletedBy}}
             {{/obsolete}}
           </td>
