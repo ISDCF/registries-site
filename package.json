@@ -16,6 +16,7 @@
     "puppeteer": "^2.0.0"
   },
   "dependencies": {
-    "isdcf-registries": "file:external/registries"
+    "cldr-core": "^36.0.0",
+    "cldr-localenames-modern": "^36.0.0"
   }
 }
