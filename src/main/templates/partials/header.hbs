@@ -27,9 +27,13 @@
           <a id="pdf-download" target="_blank" class="nav-link" title="Download as PDF" href="{{pdf_path}}">Download PDF</a>
         </li>
       </ul>
-        <form id="search-form" class="form-inline">
-          <span class="align-middle"><input id="search" class="form-control mb-2" type="text" placeholder="Search {{listTitle}}">
-          <input type="button" class="btn btn-secondary btn-sm mb-2 clear-filter" value="x"/></span>
+         <form id="search-form" class="form-inline">
+          <div class="input-group mb-2">
+            <input id="search" class="form-control" type="text" placeholder="Search {{listTitle}}">
+            <div class="input-group-append">
+              <input type="button" class="btn btn-secondary clear-filter" value="x"/>
+            </div>
+          </div>
         </form>
     </div>
   </nav>
