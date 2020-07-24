@@ -26,6 +26,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 const path = require('path');
 const fs = require('fs').promises;
+const constants = require('fs').constants
 const { promisify } = require('util');
 const execFile = promisify(require('child_process').execFile)
 const hb = require('handlebars');
@@ -68,6 +69,7 @@ async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
   var TEMPLATE_PATH = "src/main/templates/" + listType + ".hbs";
   var PAGE_SITE_PATH = listType + ".html";
   var PDF_SITE_PATH = listType + ".pdf";
+  var EXTRA_PATH = listType + ".build.js"
 
   /* load header and footer for templates */
 
@@ -99,56 +101,18 @@ async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
     throw "Cannot load registry";
   }
     
-  /* load display names if registry is "languages" */
+  /* load and invoke additional processing if available */
 
-  if (listType == "languages") {
-    
-    var DISPLAYNAMES_PATH = "node_modules/cldr-localenames-modern/main/en/languages.json";
-    var UTILS_PATH = path.join("./../../../", REGISTRIES_REPO_PATH, "src/main/scripts/language-utilities.js");
-    
-    let displayNames = JSON.parse(
-      await fs.readFile(
-        DISPLAYNAMES_PATH
-      )
-    );
-    
-    if (!displayNames) {
-      throw "Cannot load CLDR display names";
-    }
-    
-    /* build display name */
-    
-    var utils = require(UTILS_PATH);
-    
-    for (let i in registry) {
-      let langtag = registry[i]["rfc5646Tag"];
-    
-      let ptag = utils.parseLanguageTag(langtag);
-    
-      let locale = utils.parsedTagToCLDRLocale(ptag);
-    
-      if (!locale) {
-        throw "Cannot transform language tag to locale: " + langtag;
-      }
-    
-      /* CLDR locale */
-    
-      registry[i].cldrLocale = utils.fromParsedTagToCanonicalTag(locale);
-    
-      /* add display name */
-    
-      let dn = utils.buildDisplayName(locale);
-    
-      if (!dn) {
-        throw "Invalid language tag: " + langtag;
-      }
-    
-      registry[i].displayName = dn;
-    
-    }
-
+  try {
+    await fs.access(path.join(__dirname, EXTRA_PATH), constants.F_OK)
+    console.log(`  Loading extras for ${listType}`)
+    require(path.join(__dirname, EXTRA_PATH))(registry)
   }
-  
+  catch (e) {
+    if (e.code !== "ENOENT")
+      throw e
+  }
+
   /* confirm we understand the registry schema */
   
   let json_schema = JSON.parse(
