@@ -24,122 +24,214 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-/* pass the option --nopdf to disable PDF creation */
-
-const hb = require('handlebars');
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs').promises;
+const { promisify } = require('util');
+const execFile = promisify(require('child_process').execFile)
+const hb = require('handlebars');
 const puppeteer = require('puppeteer');
-const proc = require('child_process');
-const ajv = require('ajv');
-
 
 const REGISTRIES_REPO_PATH = "external/registries";
-const DATA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/data/facilities.json");
-const DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/schemas/facilities.schema.json");
-const TEMPLATE_PATH = "src/main/templates/facilities.hbs";
-const PAGE_JS_PATH = "src/site/facilities.js";
-const PAGE_JS2_PATH = "src/site/backtotop.js";
-const PAGE_CSS_PATH = "src/site/mobile.css";
+const SITE_PATH = "src/site"
 const BUILD_PATH = "build";
-const PAGE_SITE_PATH = "facilities.html";
-const PDF_SITE_PATH = "isdcf-facilities.pdf";
 
-/* instantiate template */
+/* list the available registries type (lower case), id (single, for links), titles (Upper Case), and schema builds */
 
-let template = hb.compile(
-  fs.readFileSync(
-    TEMPLATE_PATH,
-    'utf8'
-  )
-);
+const registries = [
+  {
+    "listType": "facilities",
+    "idType": "facility",
+    "listTitle": "Facilities",
+    "schemaBuild": "1.0.0-beta.2"
+  },
+  {
+    "listType": "languages",
+    "idType": "language",
+    "listTitle": "Languages",
+    "schemaBuild": "1.0.0-beta.1"
+  },
+  {
+    "listType": "studios",
+    "idType": "studio",
+    "listTitle": "Studios",
+    "schemaBuild": "1.0.0-beta.1"
+  }
+]
 
-if (!template) {
-  throw "Cannot load HTML template";
-}
+/* load and build the templates */
 
-/* load the registry */
+async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
+  console.log(`Building ${listType} started`)
 
-let registry = JSON.parse(
-  fs.readFileSync(
-    DATA_PATH
-  )
-);
+  var DATA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/data/" + listType + ".json");
+  var DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/schemas/" + listType + ".schema.json");
+  var TEMPLATE_PATH = "src/main/templates/" + listType + ".hbs";
+  var PAGE_SITE_PATH = listType + ".html";
+  var PDF_SITE_PATH = listType + ".pdf";
 
-if (!registry) {
-  throw "Cannot load registry";
-}
+  /* load header and footer for templates */
 
-/* confirm we understand the registry schema */
+  hb.registerPartial('header', await fs.readFile("src/main/templates/partials/header.hbs", 'utf8'));
+  hb.registerPartial('footer', await fs.readFile("src/main/templates/partials/footer.hbs", 'utf8'));
+  
+  /* instantiate template */
+  
+  let template = hb.compile(
+    await fs.readFile(
+      TEMPLATE_PATH,
+      'utf8'
+    )
+  );
+  
+  if (!template) {
+    throw "Cannot load HTML template";
+  }
+  
+  /* load the registry */
+  
+  let registry = JSON.parse(
+    await fs.readFile(
+      DATA_PATH
+    )
+  );
+  
+  if (!registry) {
+    throw "Cannot load registry";
+  }
+    
+  /* load display names if registry is "languages" */
 
-let json_schema = JSON.parse(
-  fs.readFileSync(
-    DATA_SCHEMA_PATH
-  )
-);
+  if (listType == "languages") {
+    
+    var DISPLAYNAMES_PATH = "node_modules/cldr-localenames-modern/main/en/languages.json";
+    var UTILS_PATH = path.join("./../../../", REGISTRIES_REPO_PATH, "src/main/scripts/language-utilities.js");
+    
+    let displayNames = JSON.parse(
+      await fs.readFile(
+        DISPLAYNAMES_PATH
+      )
+    );
+    
+    if (!displayNames) {
+      throw "Cannot load CLDR display names";
+    }
+    
+    /* build display name */
+    
+    var utils = require(UTILS_PATH);
+    
+    for (let i in registry) {
+      let langtag = registry[i]["rfc5646Tag"];
+    
+      let ptag = utils.parseLanguageTag(langtag);
+    
+      let locale = utils.parsedTagToCLDRLocale(ptag);
+    
+      if (!locale) {
+        throw "Cannot transform language tag to locale: " + langtag;
+      }
+    
+      /* CLDR locale */
+    
+      registry[i].cldrLocale = utils.fromParsedTagToCanonicalTag(locale);
+    
+      /* add display name */
+    
+      let dn = utils.buildDisplayName(locale);
+    
+      if (!dn) {
+        throw "Invalid language tag: " + langtag;
+      }
+    
+      registry[i].displayName = dn;
+    
+    }
 
-if (json_schema["$id"] !== "http://isdcf.com/ns/json-schemas/registries/facilities/1.0.0-beta.2") {
-  throw "Incompatible registry schema: " + json_schema["$id"];
+  }
+  
+  /* confirm we understand the registry schema */
+  
+  let json_schema = JSON.parse(
+    await fs.readFile(
+      DATA_SCHEMA_PATH
+    )
+  );
+  
+  if (json_schema["$id"] !== "http://isdcf.com/ns/json-schemas/registries/" + listType + "/" + schemaBuild) {
+    throw "Incompatible registry schema: " + json_schema["$id"];
+  };
+  
+  /* get the version fields */
+  
+  let registry_version = "Unknown version"
+  
+  try {
+    [ registry_version ] = (await execFile('git', [ 'submodule', 'status', REGISTRIES_REPO_PATH ])).stdout.split(" ");
+  } catch (e) {
+    console.warn(e);
+  }
+
+  let site_version = "Unknown version"
+  
+  try {
+    site_version = (await execFile('git', [ 'rev-parse', 'HEAD' ])).stdout.trim()
+  } catch (e) {
+    console.warn(e);
+  }
+  
+  /* create build directory */
+  
+  await fs.mkdir(BUILD_PATH, { recursive: true });
+  
+  /* apply template */
+  
+  var html = template({
+    "version" : registry_version,
+    "data" : registry,
+    "date" :  new Date(),
+    "pdf_path": PDF_SITE_PATH,
+    "site_version": site_version,
+    "listType": listType,
+    "idType": idType,
+    "listTitle": listTitle
+  });
+  
+  /* write HTML file */
+  
+  await fs.writeFile(path.join(BUILD_PATH, PAGE_SITE_PATH), html, 'utf8');
+  
+  /* copy in static resources */
+  await Promise.all((await fs.readdir(SITE_PATH)).map(
+    f => fs.copyFile(path.join(SITE_PATH, f), path.join(BUILD_PATH, f))
+  ))
+
+  /* write pdf */
+
+  if (process.argv.slice(2).includes("--nopdf")) return;
+  
+  /* set the CHROMEPATH environment variable to provide your own Chrome executable */
+  
+  var pptr_options = {};
+  
+  if (process.env.CHROMEPATH) {
+    pptr_options.executablePath = process.env.CHROMEPATH;
+  };
+  
+  try {
+    var browser = await puppeteer.launch(pptr_options);
+    var page = await browser.newPage();
+    await page.setContent(html);
+    await page.pdf({ path: path.join(BUILD_PATH, PDF_SITE_PATH).toString()});
+    await browser.close();
+  } catch (e) {
+    console.warn(e);
+  }
+
+  console.log(`Build of ${listType} completed`)
 };
 
-/* get the version fields */
+void (async () => {
 
-let registry_version = "Unknown version"
+  await Promise.all(registries.map(buildRegistry))
 
-try {
-  registry_version = proc.execSync('git submodule status ' + REGISTRIES_REPO_PATH).toString().trim().split(" ")[0];
-} catch (e) {
-}
-
-let site_version = "Unknown version"
-
-try {
-  site_version = proc.execSync('git rev-parse HEAD').toString().trim();
-} catch (e) {
-}
-
-
-/* create build directory */
-
-fs.mkdirSync(BUILD_PATH, { recursive: true });
-
-/* apply template */
-
-var html = template({
-  "version" : registry_version,
-  "data" : registry,
-  "date" :  new Date(),
-  "pdf_path": PDF_SITE_PATH,
-  "site_version": site_version
-});
-
-/* write HTML file */
-
-fs.writeFileSync(path.join(BUILD_PATH, PAGE_SITE_PATH), html, 'utf8');
-
-/* copy in js */
-fs.copyFileSync(PAGE_JS_PATH, path.join(BUILD_PATH, path.basename(PAGE_JS_PATH)));
-fs.copyFileSync(PAGE_JS2_PATH, path.join(BUILD_PATH, path.basename(PAGE_JS2_PATH)));
-fs.copyFileSync(PAGE_CSS_PATH, path.join(BUILD_PATH, path.basename(PAGE_CSS_PATH)));
-
-/* write pdf */
-
-if (process.argv.slice(2).includes("--nopdf")) return;
-
-/* set the CHROMEPATH environment variable to provide your own Chrome executable */
-
-var pptr_options = {};
-
-if (process.env.CHROMEPATH) {
-  pptr_options.executablePath = process.env.CHROMEPATH;
-}
-
-(async () => {
-  const browser = await puppeteer.launch(pptr_options);
-  const page = await browser.newPage();
-  await page.setContent(html);
-  await page.pdf({ path: path.join(BUILD_PATH, PDF_SITE_PATH).toString() })
-  await browser.close();
-  process.exit();
-})();
-
+})().catch(console.error)

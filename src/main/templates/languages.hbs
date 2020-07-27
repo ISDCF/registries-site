@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {{>header}}
+  <!-- Main content starts - do not edit above this line -->
+    <table class="table table-small table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Language</th>
+          <th scope="col"><a target="_blank" href="https://tools.ietf.org/html/rfc5646">RFC 5646</a> Tag<br><small>(For DCP Metadata)</small></th>
+          <th scope="col">DCNC Code<br><small>(For CTT)</small></th>
+          <th scope="col">Intended use</th>
+          <th scope="col" class="text-wrap" width="20%">Comments</th>
+        </tr>
+      </thead>
+      <tbody id="searchTable">
+        {{#data}}
+        <tr id="{{../idType}}-{{rfc5646Tag}}">
+          <td><span class="description">{{displayName}}</span></td>
+          <td class="rfc"><a class="anchor" id="{{rfc5646Tag}}" href="#{{rfc5646Tag}}"></a><code>{{rfc5646Tag}}</code></td>
+          <td class="code">
+            {{#if dcncTag}}
+            {{dcncTag}}
+            {{else}}
+            <em>n/a</em>
+            {{/if}}
+          </td>
+          <td class="use">
+            {{#use}}
+            <p class="badge badge-secondary">{{this}}</p>
+            {{/use}}
+          </td>
+          <td class="comment">
+            {{#comments}}
+                {{this}}
+            {{/comments}}
+          </td>
+        </tr>
+        {{/data}}
+      </tbody>
+    </table>
+<!-- Main content ends - do not edit below this line -->
+{{>footer}}
+
+</html>
