@@ -13,13 +13,13 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light d-print-none d-flex">
+  <nav class="navbar navbar-expand-md navbar-light sticky-top bg-light d-flex">
     <a class="navbar-brand" href="#">ISDCF {{listTitle}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto d-print-none">
         <li class="nav-item">
           <a id="json-feed" target="_blank" class="nav-link" href="https://registry.isdcf.com/{{listType}}">JSON Feed</a>
         </li>
@@ -27,16 +27,12 @@
           <a id="pdf-download" target="_blank" class="nav-link" title="Download as PDF" href="{{pdf_path}}">Download PDF</a>
         </li>
       </ul>
-         <form id="search-form" class="form-inline">
+         <form id="search-form" class="form-inline d-print-none">
           <div class="input-group mb-2">
-            <input id="search" class="form-control" type="text" placeholder="Search {{listTitle}}">
-            <div class="input-group-append">
-              <input type="button" class="btn btn-secondary clear-filter" value="x"/>
-            </div>
+            <input id="search" class="form-control" type="search" placeholder="Search {{listTitle}}">
           </div>
         </form>
     </div>
   </nav>
   <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
   <a class="anchor" id="top" href="#top"></a>
-  <div class="d-none d-print-block"><h4>ISDCF {{listTitle}}</h4></div>
