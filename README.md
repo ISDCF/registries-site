@@ -7,6 +7,6 @@ Generates the ISDCF Registries Website from the [ISDCF Registries](https://githu
 
 A build of the website from the `master` branch is automatically published at:
 
-https://isdcf.github.io/registries-site/facilities.html
-https://isdcf.github.io/registries-site/languages.html
-https://isdcf.github.io/registries-site/studios.html
+* https://isdcf.github.io/registries-site/facilities.html
+* https://isdcf.github.io/registries-site/languages.html
+* https://isdcf.github.io/registries-site/studios.html
