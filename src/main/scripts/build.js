@@ -233,6 +233,6 @@ async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
 void (async () => {
 
   await Promise.all(registries.map(buildRegistry))
-  console.log("done")
+  console.log("Site is built.")
 
 })().catch(e => { console.error(e); process.exit(1) } )
