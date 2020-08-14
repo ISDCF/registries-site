@@ -42,7 +42,7 @@ const registries = [
     "listType": "facilities",
     "idType": "facility",
     "listTitle": "Facilities",
-    "schemaBuild": "1.0.0-beta.2"
+    "schemaBuild": "1.0.0-beta.3"
   },
   {
     "listType": "languages",
@@ -54,7 +54,7 @@ const registries = [
     "listType": "studios",
     "idType": "studio",
     "listTitle": "Studios",
-    "schemaBuild": "1.0.0-beta.1"
+    "schemaBuild": "1.0.0-beta.2"
   }
 ]
 
