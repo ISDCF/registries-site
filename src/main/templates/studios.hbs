@@ -8,13 +8,14 @@
         <tr> 
           <th scope="col" width="4em">Code</th>
           <th scope="col">Description</th>
+          <th scope="col">Contact Info</th>
         </tr>
       </thead>
       <tbody id="searchTable">
         {{#data}}
         <tr id="{{../idType}}-{{code}}">
           <td class="code"><a class="anchor" id="{{code}}" href="#{{code}}"></a><code>{{code}}</code></td>
-          <td><span class="description">{{description}}</span>
+          <td><span class="description">{{#if url}}<a href="{{url}}" target="_blank">{{/if}}{{description}}{{#if url}}</a>{{/if}}</span>
             {{#obsolete}}
               <span class="mx-3 badge badge-danger">Deprecated</span>
               {{#if obsoletedBy}}
@@ -24,6 +25,12 @@
                 <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a>
               {{/obsoletedBy}}
             {{/obsolete}}
+          </td>
+          <td class="text-capitalize">
+            {{#if contact}}
+            <span>Name: <a href="mailto:{{contact/email}}" target="_blank">{{contact/name}}</a>
+              <br>Address: {{contact/address}}</span>
+            {{/if}}
           </td>
         </tr>
         {{/data}}
