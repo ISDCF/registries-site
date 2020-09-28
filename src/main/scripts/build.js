@@ -48,7 +48,7 @@ const registries = [
     "listType": "languages",
     "idType": "language",
     "listTitle": "Languages",
-    "schemaBuild": "1.0.0-beta.1"
+    "schemaBuild": "1.0.0-beta.2"
   },
   {
     "listType": "studios",
