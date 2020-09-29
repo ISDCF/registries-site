@@ -3,12 +3,13 @@
 
   {{>header}}
   <!-- Main content starts - do not edit above this line -->
-    <table class="table table-small table-hover">
+    <table id="sorttable" class="table table-small table-hover display">
       <thead class="thead-light">
         <tr>
-          <th scope="col">Language</th>
-          <th scope="col"><a target="_blank" href="https://tools.ietf.org/html/rfc5646">RFC 5646</a> Tag<br><small>(For DCP Metadata)</small></th>
-          <th scope="col">DCNC Code<br><small>(For CTT)</small></th>
+          <th scope="col"><a target="_blank" href="http://cldr.unicode.org/">CLDR</a> Language</th>
+          <th scope="col"><a target="_blank" href="https://tools.ietf.org/html/rfc5646">RFC 5646</a> Tag <small>(For DCP Metadata)</small></th>
+          <th scope="col">DCNC Code <small>(For CTT)</small></th>
+          <th scope="col">DCNC Language</th>
           <th scope="col">Intended use</th>
           <th scope="col" class="text-wrap" width="20%">Comments</th>
         </tr>
@@ -25,6 +26,12 @@
             <em>n/a</em>
             {{/if}}
           </td>
+          <td>{{#if dcncLanguage}}
+            {{dcncLanguage}}
+            {{else}}
+            <em>n/a</em>
+            {{/if}}
+          </td>
           <td class="use">
             {{#use}}
             <p class="badge badge-secondary">{{this}}</p>
@@ -32,7 +39,7 @@
           </td>
           <td class="comment">
             {{#comments}}
-                {{this}}
+                <small>{{this}}</small>
             {{/comments}}
           </td>
         </tr>

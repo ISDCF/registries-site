@@ -3,6 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="mobile.css">
   <title>ISDCF {{listTitle}}</title>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -10,6 +11,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
   <script type="application/javascript" src="features.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 </head>
 
 <body>
@@ -22,6 +25,9 @@
       <ul class="navbar-nav mr-auto d-print-none">
         <li class="nav-item">
           <a id="json-feed" target="_blank" class="nav-link" href="https://registry.isdcf.com/{{listType}}">JSON Feed</a>
+        </li>
+        <li class="nav-item">
+          <a id="json-feed" target="_blank" class="nav-link" href="https://isdcf.github.io/registries-site/{{listType}}.html">Full Page</a>
         </li>
         <li class="nav-item">
           <a id="pdf-download" target="_blank" class="nav-link" title="Download as PDF" href="{{pdf_path}}">Download PDF</a>
