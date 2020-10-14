@@ -28,8 +28,8 @@
           </td>
           <td class="text-capitalize">
             {{#if contact}}
-            <span>Name: <a href="mailto:{{contact/email}}" target="_blank">{{contact/name}}</a>
-              <br>Address: {{contact/address}}</span>
+            <span><a href="mailto:{{contact/email}}" target="_blank">{{contact/name}}</a>
+              <br>{{contact/address}}</span>
             {{/if}}
           </td>
         </tr>

@@ -55,6 +55,12 @@ const registries = [
     "idType": "studio",
     "listTitle": "Studios",
     "schemaBuild": "1.0.0-beta.2"
+  },
+  {
+    "listType": "territories",
+    "idType": "territory",
+    "listTitle": "Territories",
+    "schemaBuild": "1.0.0-beta.1"
   }
 ]
 
