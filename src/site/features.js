@@ -24,7 +24,8 @@ $(document).ready(function() {
     $('#sorttable').DataTable( {
       "paging": false,
       "info": false,
-      "searching": false
+      "searching": false,
+      fixedHeader: true,
     });
 } );
 
