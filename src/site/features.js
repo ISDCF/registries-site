@@ -25,9 +25,21 @@ $(document).ready(function() {
       "paging": false,
       "info": false,
       "searching": false,
-      fixedHeader: true,
+      /* fixedHeader: true */
     });
 } );
+
+/* Sidenav show/hide */
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "260px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0px";
+  document.getElementById("main").style.marginLeft = "0px";
+}
 
 /* "Back To Top" button functionality */
 

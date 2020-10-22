@@ -1,17 +1,63 @@
-html {
+html, body{
   font-size: 12px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a.anchor {
     display: block;
     position: relative;
-    top: -95px;
+    top: -7px;
     visibility: hidden;
 }  
 
 .scroll {
     color: #fff;
     margin-top: 100px
+}
+
+.sidenav {
+  width: 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #555;
+  display: block;
+  transition: 0.3s;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidenav a:hover {
+  color: #bbb;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 30px;
+  margin-left: 50px;
+  border: none;
+}
+
+#main {
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 #toTopBtn {

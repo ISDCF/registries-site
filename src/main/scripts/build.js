@@ -41,25 +41,25 @@ const registries = [
   {
     "listType": "facilities",
     "idType": "facility",
-    "listTitle": "Facilities",
+    "listTitle": "6 Facility Codes",
     "schemaBuild": "1.0.0-beta.3"
   },
   {
     "listType": "languages",
     "idType": "language",
-    "listTitle": "Languages",
+    "listTitle": "1ab Language Codes",
     "schemaBuild": "1.0.0-beta.2"
   },
   {
     "listType": "studios",
     "idType": "studio",
-    "listTitle": "Studios",
+    "listTitle": "5 Studio Codes",
     "schemaBuild": "1.0.0-beta.2"
   },
   {
     "listType": "territories",
     "idType": "territory",
-    "listTitle": "Territories",
+    "listTitle": "2ab Territory Codes",
     "schemaBuild": "1.0.0-beta.1"
   }
 ]
@@ -78,6 +78,7 @@ async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
   /* load header and footer for templates */
 
   hb.registerPartial('header', await fs.readFile("src/main/templates/partials/header.hbs", 'utf8'));
+  hb.registerPartial('menu-dcnc', await fs.readFile("src/main/templates/partials/menu-dcnc.hbs", 'utf8'));
   hb.registerPartial('footer', await fs.readFile("src/main/templates/partials/footer.hbs", 'utf8'));
   
   /* instantiate template */
