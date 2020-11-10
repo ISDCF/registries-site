@@ -130,7 +130,7 @@ async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
     return options.inverse(this);
   });
 
-  /* load dcnc rating values if registry is "ragings" */
+  /* load dcnc rating values if registry is "ratings" */
 
   if (listType == "ratings") {
 
