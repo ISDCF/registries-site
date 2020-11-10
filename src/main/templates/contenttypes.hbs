@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {{>header}}
+  <!-- Main content starts - do not edit above this line -->
+    <table id="sorttable" class="table table-small table-hover display">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col" class="d-none">Sort Order</th>
+          <th scope="col" class="align-text-top">DCNC Code <small>(For CTT)</small></th>
+          <th scope="col" class="align-text-top" width="30%">Description</th>
+          <th scope="col" class="align-text-top">ContentKind Value <small>(For DCP Metadata)</small></th>
+          <th scope="col" class="align-text-top">ContentKind Scope <small>(For DCP Metadata)</small></th>
+          <th scope="col" class="align-text-top">ContentKind Defining Document</th>
+        </tr>
+      </thead>
+      <tbody id="searchTable">
+        {{#data}}
+        <tr id="{{../idType}}-{{dcncCode}}">
+          <td class="d-none">
+            {{dcncSortOrder}}
+          </td>
+          <td class="code"><a class="anchor" id="{{dcncCode}}" href="#{{dcncCode}}"></a><code>{{dcncCode}}</code></td>
+          <td class="comment">
+            {{description}}
+          </td>
+          <td>
+            <code class="sampCode">{{cplContentKind/value}}</code>
+          </td>
+          <td>
+            <a target="_blank" href="{{cplContentKind/scope}}"><code>{{cplContentKind/scope}}</code></a>
+          </td>
+          <td>
+            {{cplContentKind/definingDoc}}
+          </td>
+        </tr>
+        {{/data}}
+      </tbody>
+    </table>
+<!-- Main content ends - do not edit below this line -->
+{{>footer}}
+
+</html>

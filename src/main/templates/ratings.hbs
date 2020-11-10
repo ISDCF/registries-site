@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {{>header}}
+  <!-- Main content starts - do not edit above this line -->
+    <table id="sorttable" class="table table-small table-hover display">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col" class="align-text-top">Region</th>
+          <th scope="col" class="align-text-top" width="10%">DCNC Code <small>(For CTT)</small></th>
+          <th scope="col" class="align-text-top" width="15%">Rating Label Value <small>(For DCP Metadata)</small></th>
+          <th scope="col" class="align-text-top">Rating Agency Value <small>(For DCP Metadata)</small></th>
+          <th scope="col" class="align-text-top">Rating Agency</th>
+          <th scope="col" class="align-text-top">Reference</th>
+          <th scope="col" class="align-text-top" width="10%">Usage</th>
+        </tr>
+      </thead>
+      <tbody id="searchTable">
+        {{#data}}
+        <tr id="{{../idType}}-{{rfc5646Tag}}">
+          <td>
+            {{region/name}} ({{region/code}})
+          </td>
+          <td>
+            {{#ratingsdcnc}}
+              <div class="{{#unless @last}}border-bottom {{/unless}}p-2"><code>{{this}}</code></div>
+            {{/ratingsdcnc}}
+          </td>
+          <td>
+            {{#ratings}}
+              <div class="{{#unless @last}}border-bottom {{/unless}}p-2"><code class="sampCode">{{this}}</code></div>
+            {{/ratings}}
+          </td>
+          <td>
+            <a href="{{agency/identifier}}" target="_blank"><code>{{agency/identifier}}</code></a>
+          </td>
+          <td>
+            {{agency/system}}
+          </td>
+          <td>
+            <a href="{{reference/url}}" target="_blank">{{reference/description}}</a>
+          </td>
+          <td class="use">
+            {{#use}}
+            <p class="badge badge-secondary">{{this}}</p>
+            {{/use}}
+          </td>
+        </tr>
+        {{/data}}
+      </tbody>
+    </table>
+<!-- Main content ends - do not edit below this line -->
+{{>footer}}
+
+</html>
