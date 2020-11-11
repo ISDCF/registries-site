@@ -32,18 +32,18 @@
           <td>
             <code class="sampCode">
             {{#ifeq cplMetadata/metaType "Element Value"}}
-              &lt;{{cplMetadata/element}}&gt;{{#if variableValue}}<kbd class="sampKbd">{{/if}}{{cplMetadata/value}}{{#if variableValue}}</kbd>{{/if}}&lt;/{{cplMetadata/element}}&gt;
+              &lt;{{cplMetadata/element}}&gt;<code>{{cplMetadata/value}}</code>&lt;/{{cplMetadata/element}}&gt;
             {{/ifeq}}
             {{#ifeq cplMetadata/metaType "Element Attribute Value"}}
-              &lt;{{cplMetadata/element}} {{cplMetadata/attribute}}="{{#if variableValue}}<kbd class="sampKbd">{{/if}}{{cplMetadata/value}}{{#if variableValue}}</kbd>{{/if}}"&gt;...&lt;/{{cplMetadata/element}}&gt;
+              &lt;{{cplMetadata/element}} {{cplMetadata/attribute}}="<code>{{cplMetadata/value}}</code>"&gt;...&lt;/{{cplMetadata/element}}&gt;
             {{/ifeq}}
             {{#ifeq cplMetadata/metaType "Element Present"}}
               &lt;{{cplMetadata/element}}&gt;...&lt;/{{cplMetadata/element}}&gt;
             {{/ifeq}}
             {{#ifeq cplMetadata/metaType "Extension Present"}}
-              &lt;cpl-meta:ExtensionMetadata scope="{{cplMetadata/scope}}"&gt;
+              &lt;cpl-meta:ExtensionMetadata scope="<code>{{cplMetadata/scope}}</code>"&gt;
               <br>
-              &nbsp;&lt;cpl-meta:Name&gt;{{cplMetadata/value}}&lt;/cpl-meta:Name&gt;
+              &nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/value}}</code>&lt;/cpl-meta:Name&gt;
               <br>
               &nbsp;&nbsp;...
               <br>
