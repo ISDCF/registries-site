@@ -11,8 +11,8 @@
           <th scope="col" class="align-text-top" width="15%">Rating Label Value <small>(For DCP Metadata)</small></th>
           <th scope="col" class="align-text-top">Rating Agency Value <small>(For DCP Metadata)</small></th>
           <th scope="col" class="align-text-top">Rating Agency</th>
+          <th scope="col" class="align-text-top" width="8%">Usage</th>
           <th scope="col" class="align-text-top">Reference</th>
-          <th scope="col" class="align-text-top" width="10%">Usage</th>
         </tr>
       </thead>
       <tbody id="searchTable">
@@ -32,18 +32,18 @@
             {{/ratings}}
           </td>
           <td>
-            <a href="{{agency/identifier}}" target="_blank"><code>{{agency/identifier}}</code></a>
+            <code class="sampCode">{{agency/identifier}}</code>
           </td>
           <td>
             {{agency/system}}
-          </td>
-          <td>
-            <a href="{{reference/url}}" target="_blank">{{reference/description}}</a>
           </td>
           <td class="use">
             {{#use}}
             <p class="badge badge-secondary">{{this}}</p>
             {{/use}}
+          </td>
+          <td>
+            <a href="{{reference/url}}" target="_blank">{{reference/description}}</a>
           </td>
         </tr>
         {{/data}}
