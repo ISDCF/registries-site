@@ -9,9 +9,28 @@ a.anchor {
     visibility: hidden;
 }  
 
+a {
+    color: #309090;
+}
+
+code {
+    color: #9e0000;
+}
+
+.sampCode {
+    color: #444;
+}
+
+.sampKbd {
+    background-color: #777;
+    color: #fff;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .scroll {
     color: #fff;
-    margin-top: 100px
+    margin-top: 100px;
 }
 
 #toTopBtn {

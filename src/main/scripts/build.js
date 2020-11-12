@@ -1,4 +1,4 @@
-/*
+  /*
 Copyright (c) 2020, InterSociety Digital Cinema Forum
 All rights reserved.
 
@@ -39,6 +39,18 @@ const BUILD_PATH = "build";
 
 const registries = [
   {
+    "listType": "contentmodifiers",
+    "idType": "contentmodifier",
+    "listTitle": "Content Modifiers",
+    "schemaBuild": "1.0.0-beta.1"
+  },
+  {
+    "listType": "contenttypes",
+    "idType": "contenttype",
+    "listTitle": "Content Types",
+    "schemaBuild": "1.0.0-beta.1"
+  },
+  {
     "listType": "facilities",
     "idType": "facility",
     "listTitle": "Facilities",
@@ -49,6 +61,12 @@ const registries = [
     "idType": "language",
     "listTitle": "Languages",
     "schemaBuild": "1.0.0-beta.2"
+  },
+  {
+    "listType": "ratings",
+    "idType": "rating",
+    "listTitle": "Ratings",
+    "schemaBuild": "1.0.0-beta.1"
   },
   {
     "listType": "studios",
@@ -103,6 +121,37 @@ async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
   
   if (!registry) {
     throw "Cannot load registry";
+  }
+
+  /* if Conditional helper */
+
+  hb.registerHelper('ifeq', function (a, b, options) {
+    if (a == b) { return options.fn(this); }
+    return options.inverse(this);
+  });
+
+  /* load dcnc rating values if registry is "ratings" */
+
+  if (listType == "ratings") {
+
+    for (let i in registry) {
+
+      var rvaluesdcnc = []
+      let rvalues = registry[i]["ratings"];
+
+      rvalues.forEach(item => { 
+        rC = item.replace(/[^0-9a-zA-Z]/g, '');
+        rV = rC.toUpperCase();
+        rL = rV.substr(0, 5);
+
+        rvaluesdcnc.push(rL);
+
+      } );
+
+      registry[i].ratingsdcnc = rvaluesdcnc;
+
+    }
+
   }
     
   /* load display names if registry is "languages" */

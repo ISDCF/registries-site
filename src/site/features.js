@@ -26,6 +26,7 @@ $(document).ready(function() {
       "info": false,
       "searching": false,
       fixedHeader: true,
+      "order": [[ 0, "asc" ]]
     });
 } );
 
