@@ -6,28 +6,28 @@
     <table id="sorttable" class="table table-small table-hover display">
       <thead id="tableheader" class="thead-light">
         <tr>
-          <th scope="col">Territory</th>
-          <th scope="col">ReleaseTerritory Tag <small>(For DCP Metadata)</small></th>
-          <th scope="col">DCNC Code <small>(For CTT)</small></th>
-          <th scope="col">Tag Scope</th>
-          <th scope="col" class="text-wrap" width="20%">Comments</th>
+          <th scope="col" class="align-text-top">Territory</th>
+          <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
+          <th scope="col" class="align-text-top">ReleaseTerritory Tag<br><small>(For DCP Metadata)</small></th>
+          <th scope="col" class="align-text-top">Tag Scope<br><small>(For DCP Metadata)</small></th>
+          <th scope="col" class="align-text-top text-wrap" width="20%">Comments</th>
         </tr>
       </thead>
       <tbody id="searchTable">
         {{#data}}
         <tr id="{{../idType}}-{{rfc5646Tag}}">
           <td><span class="description">{{dcncTerritory}}</span></td>
-          <td class="rfc"><a class="anchor" id="{{rfc5646Tag}}" href="#{{rfc5646Tag}}"></a><code>{{tag}}</code></td>
           <td class="code">
             {{#if dcncTag}}
-            {{dcncTag}}
+            <code>{{dcncTag}}</code>
             {{else}}
             <em>n/a</em>
             {{/if}}
           </td>
+          <td class="rfc"><a class="anchor" id="{{rfc5646Tag}}" href="#{{rfc5646Tag}}"></a><code>{{tag}}</code></td>
           <td>
             {{#if tagScope}}
-            <a target="_blank" href="{{tagScope}}">{{tagScope}}</a>
+            <a target="_blank" href="{{tagScope}}"><code>{{tagScope}}</code></a>
             {{/if}}
           </td>
           <td class="comment">
