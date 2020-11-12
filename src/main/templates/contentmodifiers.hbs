@@ -7,10 +7,9 @@
       <thead class="thead-light">
         <tr>
           <th scope="col" class="align-text-top d-none">Sort Order</th>
-          <th scope="col" class="align-text-top" width="10%">DCNC Code<br><small>(For CTT)</small></th>
+          <th scope="col" class="align-text-top" width="15%">DCNC Content Modifier Value<br><small>(For CTT)</small></th>
           <th scope="col" class="align-text-top" width="20%">Description</th>
-          <th scope="col" class="align-text-top" width="10%">CPL Metadata Type</th>
-          <th scope="col" class="align-text-top text-wrap">CPL Metadata Sample</th>
+          <th scope="col" class="align-text-top text-wrap">CPL Metadata Sample/Values</th>
           <th scope="col" class="align-text-top text-wrap">Metadata Scope</th>
           <th scope="col" class="align-text-top">Metadata Defining Document</th>
           
@@ -27,28 +26,42 @@
             {{description}}
           </td>
           <td>
-            {{cplMetadata/metaType}}
-          </td>
-          <td>
             <code class="sampCode">
+
             {{#ifeq cplMetadata/metaType "Element Value"}}
-              &lt;{{cplMetadata/element}}&gt;<code>{{cplMetadata/value}}</code>&lt;/{{cplMetadata/element}}&gt;
+              &lt;{{cplMetadata/element}}&gt;<code>{{cplMetadata/elementValue}}</code>&lt;/{{cplMetadata/element}}&gt;
             {{/ifeq}}
+
+            {{#ifeq cplMetadata/metaType "Sub Element Value"}}
+              &lt;{{cplMetadata/element}}&gt;<br>
+              {{#each cplMetadata/subElement}}
+                &nbsp;&lt;{{@key}}&gt;<code>{{this}}</code>&lt;/{{@key}}&gt;<br>
+              {{/each}}
+              &lt;/{{cplMetadata/element}}&gt;
+            {{/ifeq}}
+
             {{#ifeq cplMetadata/metaType "Element Attribute Value"}}
-              &lt;{{cplMetadata/element}} {{cplMetadata/attribute}}="<code>{{cplMetadata/value}}</code>"&gt;...&lt;/{{cplMetadata/element}}&gt;
+              &lt;{{cplMetadata/element}} {{cplMetadata/attribute}}="<code>{{cplMetadata/attributeValue}}</code>"&gt;...&lt;/{{cplMetadata/element}}&gt;
             {{/ifeq}}
+
+            {{#ifeq cplMetadata/metaType "Element and Attribute Value"}}
+              &lt;{{cplMetadata/element}} {{cplMetadata/attribute}}="<code>{{cplMetadata/attributeValue}}</code>"&gt;<code>{{cplMetadata/elementValue}}</code>&lt;/{{cplMetadata/element}}&gt;
+            {{/ifeq}}
+
             {{#ifeq cplMetadata/metaType "Element Present"}}
               &lt;{{cplMetadata/element}}&gt;...&lt;/{{cplMetadata/element}}&gt;
             {{/ifeq}}
+
             {{#ifeq cplMetadata/metaType "Extension Present"}}
-              &lt;cpl-meta:ExtensionMetadata scope="<code>{{cplMetadata/scope}}</code>"&gt;
-              <br>
-              &nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/value}}</code>&lt;/cpl-meta:Name&gt;
-              <br>
-              &nbsp;&nbsp;...
-              <br>
+              &lt;cpl-meta:ExtensionMetadata scope="<code>{{cplMetadata/extScope}}</code>"&gt;<br>
+              &nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extName}}</code>&lt;/cpl-meta:Name&gt;<br>
+              &nbsp;...<br>
+              &nbsp;&nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extpropName}}</code>&lt;/cpl-meta:Name&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;cpl-meta:Value&gt;<code>{{cplMetadata/extpropValue}}</code>&lt;/cpl-meta:Value&gt;<br>
+              &nbsp;&nbsp;...<br>
               &lt;/cpl-meta:ExtensionMetadata&gt;
             {{/ifeq}}
+
             </code>
           </td>
           <td>
