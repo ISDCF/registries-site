@@ -38,53 +38,62 @@ const BUILD_PATH = "build";
 /* list the available registries type (lower case), id (single, for links), titles (Upper Case), and schema builds */
 
 const registries = [
+  
   {
-    "listType": "contentmodifiers",
-    "idType": "contentmodifier",
-    "listTitle": "Content Modifiers",
-    "schemaBuild": "1.0.0-beta.1"
-  },
-  {
-    "listType": "contenttypes",
-    "idType": "contenttype",
-    "listTitle": "Content Types",
-    "schemaBuild": "1.0.0-beta.1"
-  },
-  {
-    "listType": "facilities",
-    "idType": "facility",
-    "listTitle": "6 Facility Codes",
-    "schemaBuild": "1.0.0-beta.3"
-  },
-  {
+    "apdxNum": "1ab",
     "listType": "languages",
     "idType": "language",
-    "listTitle": "1ab Language Codes",
+    "listTitle": "Language Codes",
     "schemaBuild": "1.0.0-beta.2"
   },
   {
+    "apdxNum": "2ab",
+    "listType": "territories",
+    "idType": "territory",
+    "listTitle": "Territory Codes",
+    "schemaBuild": "1.0.0-beta.1"
+  },
+  {
+    "apdxNum": "2c",
     "listType": "ratings",
     "idType": "rating",
     "listTitle": "Ratings",
     "schemaBuild": "1.0.0-beta.1"
   },
   {
+    "apdxNum": "3",
+    "listType": "contenttypes",
+    "idType": "contenttype",
+    "listTitle": "Content Types",
+    "schemaBuild": "1.0.0-beta.1"
+  },
+  {
+    "apdxNum": "3a",
+    "listType": "contentmodifiers",
+    "idType": "contentmodifier",
+    "listTitle": "Content Modifiers",
+    "schemaBuild": "1.0.0-beta.1"
+  },
+  {
+    "apdxNum": "5",
     "listType": "studios",
     "idType": "studio",
-    "listTitle": "5 Studio Codes",
+    "listTitle": "Studio Codes",
     "schemaBuild": "1.0.0-beta.2"
   },
   {
-    "listType": "territories",
-    "idType": "territory",
-    "listTitle": "2ab Territory Codes",
-    "schemaBuild": "1.0.0-beta.1"
+    "apdxNum": "6",
+    "listType": "facilities",
+    "idType": "facility",
+    "listTitle": "Facility Codes",
+    "schemaBuild": "1.0.0-beta.3"
   }
+
 ]
 
 /* load and build the templates */
 
-async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
+async function buildRegistry ({ apdxNum, listType, idType, listTitle, schemaBuild }) {
   console.log(`Building ${listType} started`)
 
   var DATA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/data/" + listType + ".json");
@@ -249,7 +258,8 @@ async function buildRegistry ({ listType, idType, listTitle, schemaBuild }) {
     "site_version": site_version,
     "listType": listType,
     "idType": idType,
-    "listTitle": listTitle
+    "listTitle": listTitle,
+    "apdxNum": apdxNum
   });
   
   /* write HTML file */

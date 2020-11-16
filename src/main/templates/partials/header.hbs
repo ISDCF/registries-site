@@ -27,7 +27,7 @@
   <div class="col" id="main">
     <nav class="navbar navbar-expand-md navbar-light bg-light d-flex">
       <span style="cursor:pointer" class="nav-link" onclick="openNav()">&#9776; Menu</span>
-      <a class="navbar-brand" href="#">DCNC Appendix #{{listTitle}}</a>
+      <a class="navbar-brand" href="#">DCNC {{#if apdxNum}}Appendix #{{apdxNum}} {{/if}}{{listTitle}}</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -52,7 +52,7 @@
         </ul>
            <form id="search-form" class="form-inline d-print-none">
             <div class="input-group mb-2">
-              <input id="search" class="form-control" type="search" placeholder="Search {{listType}}">
+              <input id="search" class="form-control" type="search" placeholder="Search {{listTitle}}">
             </div>
           </form>
       </div>
