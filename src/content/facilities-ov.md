@@ -1,0 +1,5 @@
+The Facility field is useful as a record of which company packaged a given DCP. Facility names are abbreviated to 2 – 3 characters. The codes are determined by the individual facilities and can be changed at any time. The facility codes in the table below are added upon request by each company. New facilities are added often. This on-line registry is always the most up to date.  
+
+If your facility is not represented here and you would like to be, decide on a 3 letter code for your facility that is not being used and [USE THIS FORM](https://docs.google.com/forms/d/e/1FAIpQLSfbHLUyNDaZ6FPFICiqQjXWDLcOoiZbFWqYOYb83msh4fKS2Q/viewform) to make a request for inclusion, or to make changes to an existing facility. Questions? Contact <digitalcinemanaming@isdcf.com>.
+
+*NOTE: This is NOT an endorsement or qualification of these facilities. These facilities have self-added themselves to the list. This list is provided for convenience only.*

@@ -1,0 +1,1 @@
+**ATMOS USERS:** Expect a change in the way Atmos content is labeled! IAB (Immersive Audio Bitstream) is the SMPTE standard for Immersive Audio. All Atmos systems can play the IAB track. Many authoring companies are planning to stop labeling `ATMOS` and using the `IAB` label only.

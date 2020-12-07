@@ -1,0 +1,74 @@
+  {{#templateSections}}
+        {{#if section-int}} 
+          <div class="row p-4">
+            <div class="col">
+{{{section-int}}}
+            </div>
+          </div>
+        {{/if}}
+        {{#if section-ov}}
+          <div class="row p-3">
+            <div class="col{{#if section-spn}}-md-8{{/if}}">
+              <div class="container-fluid"> 
+                <ul class="nav nav-tabs">
+                  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#ov">Overview</a></li>
+                {{#if section-ctt}}
+                  <li class="nav-item d-print-none"><a class="nav-link" data-toggle="tab" href="#ctt">CTT Example</a></li>
+                {{/if}}
+                {{#if section-cpl}}
+                  <li class="nav-item d-print-none"><a class="nav-link" data-toggle="tab" href="#cpl">CPL Usage</a></li>
+                {{/if}}
+                </ul>
+                <div class="tab-content p-3">
+                  <div class="tab-pane active" id="ov">
+                    <div class="ovHide" id="ovShow">
+{{{section-ov}}}
+                    {{#if section-rls}}
+                      <div class="border bg-light rounded p-3 font-italic">
+
+{{{section-rls}}}
+                      </div>
+                    {{/if}}
+                    </div>
+                  </div>
+                {{#if section-ctt}}
+                  <div class="tab-pane d-print-none" id="ctt">
+{{{section-ctt}}}
+                  </div>
+                {{/if}}
+                {{#if section-cpl}}
+                  <div class="tab-pane d-print-none" id="cpl">
+{{{section-cpl}}}
+                  </div>
+                {{/if}}
+                </div>
+              </div>
+            </div>
+          {{#if section-spn}}
+            <div class="col">
+              <div class="border bg-light p-3 font-italic">
+{{{section-spn}}}
+              </div>
+            </div>
+           {{/if}} 
+          </div>
+        {{/if}}
+        {{#if section-lst}}
+          <div class="row p-3">
+            <div class="col">
+              <div class="container-fluid p-4"> 
+{{{section-lst}}}
+              </div>
+            </div>
+          </div>
+        {{/if}}
+        {{#if section-toc}}
+          <div class="row p-3">
+            <div class="col">
+              <div class="container-fluid p-4"> 
+{{{section-toc}}}
+              </div>
+            </div>
+          </div>
+        {{/if}}
+  {{/templateSections}}

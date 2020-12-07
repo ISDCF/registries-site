@@ -1,75 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  {{>header}}
-  <!-- Main content starts - do not edit above this line -->
-    <div class="row p-3">
-      <div class="col">
-        <div class="container p-2"> 
-          <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#ov">Overview</a></li>
-          </ul>
-          <div class="tab-content p-3">
-            <div class="tab-pane active" id="ov">
-              <p>
-              The language codes are based on ISO 639-1, 639-2, or 639-3 codes*.  When a 2 digit 639-1 code is available, this is the preferred code.  Codes beginning with “Q” are not represented in the ISO Standard, but are named using the 639-2 methodology for additional languages.  “LAS”, representing Latin American Spanish, is a special case in that LAS represents Lama (spoken in Togo) in the 639-3 codes.  Due to the widespread use of “LAS” as Latin American Spanish in Film Distribution, however, we have chosen to keep it as Latin American Spanish for purposes of this convention.  If you have an older DCP with a language code that isn’t listed in the table below, it may be an out-of-date code.  A list of out-of-date codes can be found in Appendix 1c.
-              </p>
-              <p>
-              Language codes are complex. Please review <a href="http://isdcf.com/papers/ISDCF-Doc7-DigitalCinemaLanguageCodes.pdf" target="_blank">http://isdcf.com/papers/ISDCF-Doc7-DigitalCinemaLanguageCodes.pdf</a> for more information including the use of RFC-4647 and IANA Subtag Registry for codes and sub-codes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="border bg-light p-3 font-italic">
-            <b>Special Exception Note:</b> For CTTs where there are No Spoken Languages or No Subtitles, the proper DCNC code is “XX”. This code is only for usage within the CTT. The absence of the &lt;Language&gt; element where optional shall denote there is no spoken or written language.
-        </div>
-      </div>
-    </div>
-    <table id="sorttable" class="table table-small table-hover display">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col" class="align-text-top"><a target="_blank" href="http://cldr.unicode.org/">CLDR</a> Language</th>
-          <th scope="col" class="align-text-top"><a target="_blank" href="https://tools.ietf.org/html/rfc5646">RFC 5646</a> Tag<br><small>(For DCP Metadata)</small></th>
-          <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
-          <th scope="col" class="align-text-top">DCNC Language</th>
-          <th scope="col" class="align-text-top">Intended use</th>
-          <th scope="col" class="align-text-top text-wrap" width="20%">Comments</th>
-        </tr>
-      </thead>
-      <tbody id="searchTable">
-        {{#data}}
-        <tr id="{{../idType}}-{{rfc5646Tag}}">
-          <td><span class="description">{{displayName}}</span></td>
-          <td class="rfc"><a class="anchor" id="{{rfc5646Tag}}" href="#{{rfc5646Tag}}"></a><code>{{rfc5646Tag}}</code></td>
-          <td class="code">
-            {{#if dcncTag}}
-            <code>{{dcncTag}}</code>
-            {{else}}
-            <em>n/a</em>
-            {{/if}}
-          </td>
-          <td>{{#if dcncLanguage}}
-            {{dcncLanguage}}
-            {{else}}
-            <em>n/a</em>
-            {{/if}}
-          </td>
-          <td class="use">
-            {{#use}}
-            <p class="badge badge-secondary">{{this}}</p>
-            {{/use}}
-          </td>
-          <td class="comment">
-            {{#comments}}
-                <small>{{this}}</small>
-            {{/comments}}
-          </td>
-        </tr>
-        {{/data}}
-      </tbody>
-    </table>
+{{>header}}
+  <!-- Markdown content starts -->
+{{>content}}
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top"><a target="_blank" href="http://cldr.unicode.org/">CLDR</a> Language</th>
+                <th scope="col" class="align-text-top"><a target="_blank" href="https://tools.ietf.org/html/rfc5646">RFC 5646</a> Tag<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
+                <th scope="col" class="align-text-top">DCNC Language</th>
+                <th scope="col" class="align-text-top">Intended use</th>
+                <th scope="col" class="align-text-top text-wrap" width="20%">Comments</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              {{#data}}
+              <tr id="{{../idType}}-{{rfc5646Tag}}">
+                <td>
+                  <span class="description">{{displayName}}</span>
+                </td>
+                <td class="rfc">
+                  <a class="anchor" id="{{rfc5646Tag}}" href="#{{rfc5646Tag}}"></a><code>{{rfc5646Tag}}</code>
+                </td>
+                <td class="code">
+                  {{#if dcncTag}}
+                  <code>{{dcncTag}}</code>
+                  {{else}}
+                  <em>n/a</em>
+                  {{/if}}
+                </td>
+                <td>{{#if dcncLanguage}}
+                  {{dcncLanguage}}
+                  {{else}}
+                  <em>n/a</em>
+                  {{/if}}
+                </td>
+                <td class="use">
+                  {{#use}}
+                  <p class="badge badge-secondary">{{this}}</p>
+                  {{/use}}
+                </td>
+                <td class="comment">
+                  {{#comments}}
+                  <small>{{this}}</small>
+                  {{/comments}}
+                </td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
 <!-- Main content ends - do not edit below this line -->
 {{>footer}}
 

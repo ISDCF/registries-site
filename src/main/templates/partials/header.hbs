@@ -5,8 +5,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="mobile.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css">
-<title>DCNC Appendix #{{listTitle}}</title>
+<title>{{pageTitle}}</title>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -14,49 +13,113 @@
   <script type="application/javascript" src="features.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
 </head>
-
 <body>
-
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom d-flex d-print-none">
+    <a class="navbar-brand" href="https://www.isdcf.com/site/"><img src="ISDCF-logo.png" width="100"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse site-menu" id="navbarNav">
+      <ul class="navbar-nav ml-auto navbar-right">
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Home <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://www.isdcf.com/site/">Welcome</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/about/">About</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/terms/">Agreement of Terms</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav">
+          <a class="nav-link" href="https://www.isdcf.com/site/covid-19-recommendations/">Covid-19 Recommendations</a>
+        </li>
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Meetings <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://isdcf.com/site/meetings/">Meetings</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/meeting-notes/about/">Meeting Notes</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/subgroups/">ISDCF SubGroups</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/logistics/">Meeting Logistics</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/events/">Events</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Technical Details <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://www.isdcf.com/site/technical-docs/">Technical Docs</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/test-content/">Test Content</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/smpte-dcp-tests/">SMPTE DCP Tests</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/smpte-dcp-tests/framing-chart/">Framing Chart</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/smptestandards/">SMPTE and Other Standards</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/other-resources/">Other Resources</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav">
+          <a class="nav-link" href="https://www.isdcf.com/site/dcnc/">DCNC and Registry</a>
+        </li>
+        <li class="nav-item main-nav">
+          <a class="nav-link" href="https://www.isdcf.com/site/membership/">Membership</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <div class="container-fluid">
-  <div class="row">
-    
-    {{>menu-dcnc}}
-
-  <div class="col" id="main">
-    <nav class="navbar navbar-expand-md navbar-light bg-light d-flex">
-      <span style="cursor:pointer" class="nav-link" onclick="openNav()">&#9776; Menu</span>
-      <a class="navbar-brand" href="#">DCNC {{#if apdxNum}}Appendix #{{apdxNum}} {{/if}}{{listTitle}}</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto d-print-none">
-          <li class="nav-item">
-            <a id="json-feed" target="_blank" class="nav-link" href="https://registry.isdcf.com/{{listType}}"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/>
-  </svg> JSON Feed</a>
+    <div class="row p-3 d-print-none breadcrumbs border-bottom">
+        <span class="small"> <a href="https://www.isdcf.com/site/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/></svg></a> > {{#ifnoteq pageTemplate "home"}}<a href="home.html">D-Cinema Naming Convention and Metadata Registry</a> > {{#if breadCrumb}}{{#breadCrumb}}{{this}} > {{/breadCrumb}}{{/if}}{{/ifnoteq}}{{pageTitle}}</span>
+    </div>
+    <div class="row bg-light p-3">
+      <div id="sideNav" class="col-lg-2 sidenav pl-0 d-print-none">  
+        <ul class="list-unstyled components rounded">
+{{#pages}}
+  {{#ifeq menuLevel "1"}}
+    {{#ifeq pageType "descriptiveText"}}
+          <li><a class="nav-link{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}.html">{{pageTitle}}</a></li>
+    {{/ifeq}}
+  {{/ifeq}}
+  {{#ifeq menuLevel "2"}}
+    {{#ifeq pageType "descriptiveText"}}
+          <li><a class="nav-link {{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}.html">{{pageTitle}}</a></li>
+    {{/ifeq}}
+    {{#ifeq pageType "menuBreak"}}
+          <li>
+            <a href="#{{pageTitle}}Submenu" data-toggle="collapse" aria-expanded="true" class="nav-link">{{pageTitle}} <svg width="1em" height="1em" viewBox="0 0 16 16" class="float-right bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></a>
+            <ul class="collapse list-unstyled" id="{{pageTitle}}Submenu">
+    {{/ifeq}}
+    {{#ifeq pageType "menuBreakEnd"}}
+            </ul>
           </li>
-          <li class="nav-item">
-            <a id="full-page" target="_blank" class="nav-link" href="https://registry-page.isdcf.com/{{listType}}.html"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrows-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
-  </svg> Full Page</a>
-          </li>
-          <li class="nav-item">
-            <a id="pdf-download" target="_blank" class="nav-link" title="Download as PDF" href="{{pdf_path}}"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-    <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-  </svg> Download PDF</a>
-          </li>
+    {{/ifeq}}
+  {{/ifeq}}
+  {{#ifeq menuLevel "3"}}
+              <li><a class="nav-link pl-4{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}.html">{{pageTitle}}</a></li>
+  {{/ifeq}}
+{{/pages}}
         </ul>
-           <form id="search-form" class="form-inline d-print-none">
-            <div class="input-group mb-2">
-              <input id="search" class="form-control" type="search" placeholder="Search {{listTitle}}">
-            </div>
-          </form>
       </div>
-    </nav>
-
-  <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
-  <a class="anchor" id="top" href="#top"></a>
+      <div class="col bg-white rounded border pl-0 pr-0" id="main">
+        <nav class="navbar navbar-expand-md navbar-light d-flex">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><span class="d-none d-print-block">DCNC and Metadata Registry: </span>{{pageTitle}}</a>
+          </div>
+          <ul class="nav navbar-nav d-print-none ml-auto navbar-right">
+            {{#ifeq pageType "registryTable"}}
+            <li>
+              <a id="json-feed" target="_blank" class="nav-link" href="https://registry.isdcf.com/{{pageTemplate}}"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/></svg> JSON Feed</a>
+            </li>
+            {{/ifeq}}
+            <li>
+              <a id="full-page" target="_blank" class="nav-link" href="https://registry-page.isdcf.com/{{pageTemplate}}.html"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrows-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/></svg> Full Page</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" onclick="window.print();return false;" class="nav-link" title="Download as PDF"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg> Download PDF</a>
+            </li>
+          </ul>
+        </nav>
+<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+<a class="anchor" id="top" href="#top"></a>

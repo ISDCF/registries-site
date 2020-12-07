@@ -1,21 +1,16 @@
-/* Filter accross all collumns in table */
-
-$(document).ready(function(){
-  $("#search").on("input", function() {
-    var value = $(this).val().toLowerCase();
-    $("#searchTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-
-/* Clear filtering*/
+/* Clear filtering */
 
 $(document).on('click', '.clear-filter', function(){       
-    $("#searchTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf('') > -1)
-    });
-    document.getElementById("search-form").reset();
+
+  var table = $('#sorttable').DataTable();
+  table
+   .search( '' )
+   .columns().search( '' )
+   .draw();
+
+  $('#sorttable').DataTable().searchPanes.rebuildPane();
+  $('#sorttable').DataTable().order([0, 'asc']).draw();
+
 });
 
 /* DataTable options for sort headers*/
@@ -23,24 +18,13 @@ $(document).on('click', '.clear-filter', function(){
 $(document).ready(function() {
     $('#sorttable').DataTable( {
       "paging": false,
-      "info": false,
-      "searching": false,
-      /* fixedHeader: true */
-      "order": [[ 0, "asc" ]]
+      "info": true,
+      "searching": true,
+      "order": [[ 0, "asc" ]],
+      dom: "<'row pt-0 pl-3 pr-3'<'col-sm-6'i><'col-sm-6'f>>" +
+           "<'row'<'col-sm-12't>>",
     });
 } );
-
-/* Sidenav show/hide */
-
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "260px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0px";
-  document.getElementById("main").style.marginLeft = "0px";
-}
 
 /* "Back To Top" button functionality */
 

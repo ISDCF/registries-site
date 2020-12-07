@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  {{>header}}
-  <!-- Main content starts - do not edit above this line -->
-    <table id="sorttable" class="table table-small table-hover display">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col" class="align-text-top">Region</th>
-          <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
-          <th scope="col" class="align-text-top">Rating Label Value<br><small>(For DCP Metadata)</small></th>
-          <th scope="col" class="align-text-top">Rating Agency Value<br><small>(For DCP Metadata)</small></th>
-          <th scope="col" class="align-text-top">Rating Agency</th>
-          <th scope="col" class="align-text-top">Usage</th>
-          <th scope="col" class="align-text-top">Reference</th>
-        </tr>
-      </thead>
-      <tbody id="searchTable">
-        {{#data}}
-        <tr id="{{../idType}}-{{rfc5646Tag}}">
-          <td>
-            {{region/name}} ({{region/code}})
-          </td>
-          <td>
-            {{#ratingsdcnc}}
-              <div class="{{#unless @last}}border-bottom {{/unless}}p-2"><code>{{this}}</code></div>
-            {{/ratingsdcnc}}
-          </td>
-          <td>
-            {{#ratings}}
-              <div class="{{#unless @last}}border-bottom {{/unless}}p-2"><code>{{this}}</code></div>
-            {{/ratings}}
-          </td>
-          <td>
-            <code>{{agency/identifier}}</code>
-          </td>
-          <td>
-            {{agency/system}}
-          </td>
-          <td class="use">
-            {{#use}}
-            <p class="badge badge-secondary">{{this}}</p>
-            {{/use}}
-          </td>
-          <td>
-            <a href="{{reference/url}}" target="_blank">{{reference/description}}</a>
-          </td>
-        </tr>
-        {{/data}}
-      </tbody>
-    </table>
+{{>header}}
+  <!-- Markdown content starts -->
+{{>content}}
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top">Region</th>
+                <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
+                <th scope="col" class="align-text-top">Rating Label Value<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top">Rating Agency Value<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top">Rating Agency</th>
+                <th scope="col" class="align-text-top">Usage</th>
+                <th scope="col" class="align-text-top">Reference</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              {{#data}}
+              <tr id="{{../idType}}-{{rfc5646Tag}}">
+                <td>
+                  {{region/name}} ({{region/code}})
+                </td>
+                <td>
+                  {{#ratingsdcnc}}
+                  <div class="{{#unless @last}}border-bottom {{/unless}}p-2"><code>{{this}}</code></div>
+                  {{/ratingsdcnc}}
+                </td>
+                <td>
+                  {{#ratings}}
+                  <div class="{{#unless @last}}border-bottom {{/unless}}p-2"><code>{{this}}</code></div>
+                  {{/ratings}}
+                </td>
+                <td class="cell-breakAll">
+                  <code>{{agency/identifier}}</code>
+                </td>
+                <td>
+                  {{agency/system}}
+                </td>
+                <td class="use">
+                  {{#use}}
+                  <p class="badge badge-secondary">{{this}}</p>
+                  {{/use}}
+                </td>
+                <td>
+                  <a href="{{reference/url}}" target="_blank">{{reference/description}}</a>
+                </td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
 <!-- Main content ends - do not edit below this line -->
 {{>footer}}
 

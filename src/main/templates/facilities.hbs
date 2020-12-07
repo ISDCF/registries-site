@@ -1,105 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  {{>header}}
-  <!-- Main content starts - do not edit above this line -->
-    <div class="row p-3">
-      <div class="col">
-        <div class="container p-2"> 
-          <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#ov">Overview</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#md" >CPL Metadata Usage</a></li>
-          </ul>
-          <div class="tab-content p-3">
-            <div class="tab-pane active" id="ov">
-              <p>
-              The Facility field is useful as a record of which company packaged a given DCP.  Facility names are abbreviated to 2 – 3 characters.  The codes are determined by the individual facilities and can be changed at any time.  The facility codes in the table below are added upon request by each company.  New facilities are added often. This on-line registry is always the most up to date.  
-              </p>
-              <p>
-              If your facility is not represented here and you would like to be, decide on a 3 letter code for your facility that is not being used and <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbHLUyNDaZ6FPFICiqQjXWDLcOoiZbFWqYOYb83msh4fKS2Q/viewform" target="_blank">[USE THIS FORM]</a> to make a request for inclusion. 
-              </p>
-              <p>
-              Questions? Contact <a href="mailto:digitalcinemanaming@isdcf.com">digitalcinemanaming@isdcf.com</a>. If you don’t hear back in a week, please ping us again (vacations sometimes loose requests).
-              </p>
-              <p>
-              This is NOT an endorsement or qualification of these facilities. These facilities have self-added themselves to the list. This list is provided for convenience only.
-              </p>            
-            </div>
-            <div class="tab-pane" id="md">
-              <p>
-              The Facility is listed at <b>//Reel[1]//CompositionMetadataAsset/Facility:</b>
-              </p>
-              <p>
-                <code>
-                  <span class="ml-2">&lt;CompositionMetadataAsset xmlns=”http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata”&gt;</span>
-                  <br><span class="ml-3">…</span>
-                  <br><span class="ml-4">&lt;Facility&gt;Cloud 19&lt;/Facility&gt;</span>
-                  <br><span class="ml-3">…</span>
-                  <br><span class="ml-2">&lt;/CompositionMetadataAsset&gt;</span>
-                </code>
-              </p>
-              <p>
-              <em><b>Additional Notes:</b> According to SMPTE 429-16, this field is intended to contain “the organization that created the Composition Playlist”.</em>
-              </p>
-              <p>
-              The Facility may also be listed at <b>//Issuer</b>:
-              </p>
-              <p>
-                <code>
-                  <span class="ml-2">&lt;CompositionPlaylist xmlns=”http://www.smpte-ra.org/schemas/429-7/2006/CPL”&gt;</span>
-                  <br><span class="ml-3">…</span>
-                  <br><span class="ml-4">&lt;Issuer&gt;Cloud 19&lt;/Issuer&gt;</span>
-                  <br><span class="ml-3">…</span>
-                  <br><span class="ml-2">&lt;/CompositionPlaylist&gt;</span>
-                </code>
-              </p>
-              <p>
-              <em><b>Additional Notes:</b> According to SMPTE 429-7, this field is intended to contain “the entity that created the Composition Playlist”.</em>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="border bg-light p-3 font-italic">
-            <b>Special Exception Note:</b> For CTTs where the Facility is unknown and/or unspecified, the proper DCNC code is “NUL”. This code is only for usage within the CTT. If using 429-16 metadata, the absence of the &lt;Facility&gt; element shall denote the facility is “Unspecified”.
-        </div>
-      </div>
-    </div>
-    <table id="sorttable" class="table table-small table-hover display">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col" class="align-text-top" width="4em">Code</th>
-          <th scope="col" class="align-text-top">Description</th>
-          <th scope="col" class="align-text-top">Contact Info</th>
-        </tr>
-      </thead>
-      <tbody id="searchTable">
-        {{#data}}
-        <tr id="{{../idType}}-{{code}}">
-          <td class="code"><a class="anchor" id="{{code}}" href="#{{code}}"></a><code>{{code}}</code></td>
-          <td><span class="description">{{#if url}}<a href="{{url}}" target="_blank">{{/if}}{{description}}{{#if url}}</a>{{/if}}</span>
-            {{#obsolete}}
-              <span class="mx-3 badge badge-danger">Deprecated</span>
-              {{#if obsoletedBy}}
-                <span>Replaced by:</span>
-              {{/if}}
-              {{#obsoletedBy}}
-                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a>
-              {{/obsoletedBy}}
-            {{/obsolete}}
-          </td>
-          <td class="text-capitalize">
-            {{#if contact}}
-            <span><a href="mailto:{{contact/email}}" target="_blank">{{contact/name}}</a>
-              <br>{{contact/address}}</span>
-            {{/if}}
-          </td>
-        </tr>
-        {{/data}}
-      </tbody>
-    </table>
-<!-- Main content ends - do not edit below this line -->
+{{>header}}
+  <!-- Markdown content starts -->
+{{>content}}
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top" width="4em">Code</th>
+                <th scope="col" class="align-text-top">Description</th>
+                <th scope="col" class="align-text-top">Contact Info</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              {{#data}}
+              <tr id="{{../idType}}-{{code}}">
+                <td class="code">
+                  <a class="anchor" id="{{code}}" href="#{{code}}"></a><code>{{code}}</code>
+                </td>
+                <td>
+                  <span class="description">{{#if url}}<a href="{{url}}" target="_blank">{{/if}}{{description}}{{#if url}}</a>{{/if}}</span>
+                  {{#obsolete}}
+                    <span class="mx-3 badge badge-danger">Deprecated</span>
+                    {{#if obsoletedBy}}
+                      <span>Replaced by:</span>
+                    {{/if}}
+                    {{#obsoletedBy}}
+                      <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a>
+                    {{/obsoletedBy}}
+                  {{/obsolete}}
+                </td>
+                <td class="text-capitalize">
+                  {{#if contact}}
+                  <span><a href="mailto:{{contact/email}}" target="_blank">{{contact/name}}</a>
+                  <br>{{contact/address}}</span>
+                  {{/if}}
+                </td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
+<!-- Registry content ends - do not edit below this line -->
 {{>footer}}
 
 </html>
