@@ -181,7 +181,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "descriptiveText", /* needs registry */
+    "pageType": "registryTable", /* needs registry */
     "pageTemplate": "projectoraspectratios",
     "idType": "projectoraspectratio",
     "pageTitle": "Projector Aspect Ratios and Resolutions",
@@ -243,9 +243,9 @@ const pages = [
     ]
   },
   {
-    "pageType": "descriptiveText", /* needs registry */
+    "pageType": "registryTable",
     "pageTemplate": "audioconfigs",
-    "idType": "audioconfigs",
+    "idType": "audioconfig",
     "pageTitle": "Audio Config and Narrative Description Tracks",
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
@@ -303,7 +303,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "descriptiveText", /* needs registry */
+    "pageType": "registryTable", /* needs registry */
     "pageTemplate": "cplmetadataexts",
     "idType": "cplmetadataext",
     "pageTitle": "CPL Metadata Extensions",
@@ -314,7 +314,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "descriptiveText", /* needs registry */
+    "pageType": "registryTable", /* needs registry */
     "pageTemplate": "kdmforensicflags",
     "idType": "kdmforensicflag",
     "pageTitle": "KDM Forensic Flags",
@@ -325,7 +325,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "descriptiveText", /* needs registry */
+    "pageType": "registryTable", /* needs registry */
     "pageTemplate": "uls",
     "idType": "ul",
     "pageTitle": "ULs",

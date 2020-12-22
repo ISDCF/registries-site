@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+  <!-- Markdown content starts -->
+{{>content}}
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top sort-column">#</th>
+                <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
+                <th scope="col" class="align-text-top" width="10%">Description</th>
+                <th scope="col" class="align-text-top">MCATagSymbol Value<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top">MainSoundConfiguration Tag<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top" width="30%">CompositionMetadataAsset Extension<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top" width="15%">Metadata Defining Document(s)</th>
+                <th scope="col" class="align-text-top">Notes</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              {{#data}}
+              <tr id="{{../idType}}-{{dcncCode}}">
+                <td class="sort-column">
+                  {{dcncSortOrder}}
+                </td>
+                <td class="code">
+                  <a class="anchor" id="{{dcncCode}}" href="#{{dcncCode}}"></a><code>{{dcncCode}}</code>
+                </td>
+                <td>
+                  {{description}}
+                </td>
+                <td>
+                  <code>{{cplMetadata/MCATagSymbol}}</code>
+                </td>
+                <td>
+                  <code>{{cplMetadata/MainSoundConfigurationTag}}</code>
+                </td>
+                <td class="cell-breakAll">
+                  {{#if cplMetadata/extension}}
+                    <code class="sampCode">
+                      &lt;cpl-meta:ExtensionMetadata scope="<code>{{cplMetadata/extension/extScope}}</code>"&gt;<br>
+                      &nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extension/extName}}</code>&lt;/cpl-meta:Name&gt;<br>
+                      &nbsp;&nbsp;&lt;cpl-meta:PropertyList&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Property&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extension/extpropName}}</code>&lt;/cpl-meta:Name&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Value&gt;<code>{{cplMetadata/extension/extpropValue}}</code>&lt;/cpl-meta:Value&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/cpl-meta:Property&gt;<br>
+                      &nbsp;&nbsp;&lt;/cpl-meta:PropertyList&gt;<br>
+                      &lt;/cpl-meta:ExtensionMetadata&gt;
+                    </code>
+                  {{/if}}
+                </td>
+                <td>
+                  {{#cplMetadata/definingDocs}}
+                    <a href="{{url}}" target="_blank">[{{name}}]</a>{{#unless @last}}<br>{{/unless}}
+                  {{/cplMetadata/definingDocs}}
+                </td>
+                <td>
+                  <span class="small"><em>{{note}}</em></span>
+                </td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
+<!-- Main content ends - do not edit below this line -->
+{{>footer}}
+
+</html>
