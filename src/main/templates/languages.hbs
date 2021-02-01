@@ -10,6 +10,7 @@
           <th scope="col" class="align-text-top"><a target="_blank" href="https://tools.ietf.org/html/rfc5646">RFC 5646</a> Tag<br><small>(For DCP Metadata)</small></th>
           <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
           <th scope="col" class="align-text-top">DCNC Language</th>
+          <th scope="col" class="align-text-top">Obsoleted DCNC Code(s)<br><small>(Not for use, only listed for historical purposes)</small></th>
           <th scope="col" class="align-text-top">Intended use</th>
           <th scope="col" class="align-text-top text-wrap" width="20%">Comments</th>
         </tr>
@@ -30,6 +31,13 @@
             {{dcncLanguage}}
             {{else}}
             <em>n/a</em>
+            {{/if}}
+          </td>
+          <td class="code">
+            {{#if obsoleteDCNCTags}}
+              {{#obsoleteDCNCTags}}
+                <code>{{this}}</code>{{#unless @last}} | {{/unless}}
+              {{/obsoleteDCNCTags}}
             {{/if}}
           </td>
           <td class="use">

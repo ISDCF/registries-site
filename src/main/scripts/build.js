@@ -60,7 +60,7 @@ const registries = [
     "listType": "languages",
     "idType": "language",
     "listTitle": "Languages",
-    "schemaBuild": "1.0.0-beta.2"
+    "schemaBuild": "1.0.0"
   },
   {
     "listType": "ratings",
