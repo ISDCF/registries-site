@@ -1,4 +1,3 @@
-* 20210629 | Full site rendering in GitHub, all futture updates to be tracked via <https://github.com/ISDCF/registries-site>
 * 20200924 | Updated chart to 9.6.2 to add MOS to chart
 * 20200625 | Replacement of facilities list as a google sheet to a GitHub registry
 * 20200625 | Migration to WordPress site for DCNC

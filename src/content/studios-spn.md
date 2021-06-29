@@ -1,0 +1,1 @@
+**Special Exception Note:** For CTTs where the Studio is unknown and/or unspecified, the proper DCNC code is `NULL`. This code is only for usage within the CTT. If using 429-16 metadata, the absence of the `<Distributor>` element shall denote the studio is “Unspecified”.

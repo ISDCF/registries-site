@@ -4,7 +4,7 @@ The Title of the DCP is listed at **//ContentTitleText**[^1]
       …
       <ContentTitleText>AliceWonder_FTR-1_S_EN-LAS_US-13_51_2K_DI_20060607_TDC_OV</ContentTitleText>
       …
-    </CompositionPlaylist>
+    </CompositionPlaylist >
 
 Alternatively, the Title may be listed at **//Reel[1]//CompositionMetadataAsset//FullContentTitleText**[^2]
 

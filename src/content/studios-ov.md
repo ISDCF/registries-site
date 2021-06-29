@@ -1,0 +1,5 @@
+The studio codes are 2 – 4 character codes that represent the studio or content creator of the material.  This is helpful if a theatre or distribution entity does not immediately recognize the title in the file name and has a question regarding the material.  The codes are often but not always based on ISCI codes.  They are determined by the individual studios and can be changed at any time by the studios.  
+
+If your studio is not represented here and you would like to be, decide on a 3 or 4 letter code for your studio that is not being used and [USE THIS FORM](https://docs.google.com/forms/d/e/1FAIpQLSc3VOsGYkiCXUXVkY-ZDOMrATbW72VxEDXFiJnBPNRCrAio4Q/viewform) to make a request for inclusion. Questions? Contact <digitalcinemanaming@isdcf.com>.
+
+*NOTE: This is NOT an endorsement or qualification of these studios. These studios have self-added themselves to the list. This list is provided for convenience only.*

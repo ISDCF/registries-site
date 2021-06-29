@@ -51,14 +51,12 @@ const BUILD_PATH = "build";
 
   "pageType": "menuBreak", "descriptiveText", or "registryTable"
   "pageTemplate": "lowercase" / plural for registries or lists
-  "idType": "lowercase" / not needed for "descriptiveText" or "registryTable"
-  "pageTitle": "Proper Case" / Page and menu name
-  "schemaBuild": "1.0.0-beta.1" / specific to registry, not needed for "descriptiveText" or "registryTable"
-  "menuLevel": 1, 2, or 3 / controls indents in menu
-  "breadCrumb": [ / for breadcrumb links at top of page, to be flushed out further in future revisions
-    "pageTitle"
-  ] 
+  "idType": "lowercase" / singular, not used for "descriptiveText" or "menuBreak"
+  "pageTitle": "Proper Case" / Page and Menu name
+  "schemaBuild": "1.0.0-beta.1" / specific to registry, not used for "descriptiveText" or "menuBreak"
+  "menuLevel": 1, 2, or 3 / controls indents in menu (1 used for single pages. 2 is used for menu sections headers, 3 is for sub sections)
   "sections": [
+    "int" Introduction Text - pageTemplate-int
     "ov" Overview (tab) - pageTemplate-ov
     "rls" Rules (tab) - pageTemplate-rls
     "ctt" CTT Example (tab) - pageTemplate-ctt
@@ -74,7 +72,19 @@ const pages = [
   {
     "pageType": "descriptiveText",
     "pageTemplate": "home",
-    "pageTitle": "D-Cinema Naming Convention and Metadata Registry",
+    "pageTitle": "D-Cinema Naming DCNC and Metadata Registry",
+    "menuLevel": 1
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "general",
+    "pageTitle": "General Tips",
+    "menuLevel": 1
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "illustratedguide",
+    "pageTitle": "Illustrated Guide",
     "menuLevel": 1
   },
   {
@@ -90,9 +100,22 @@ const pages = [
     "menuLevel": 2
   },
   {
-    "pageType": "descriptiveText",
-    "pageTemplate": "general",
-    "pageTitle": "General Tips",
+    "pageType": "registryTable",
+    "pageTemplate": "contenttypes",
+    "idType": "contenttype",
+    "pageTitle": "Content Types",
+    "schemaBuild": "1.0.0-beta.1",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "registryTable",
+    "pageTemplate": "contentmodifiers",
+    "idType": "contentmodifier",
+    "pageTitle": "Content Modifiers",
+    "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
       "DCNC"
@@ -100,8 +123,139 @@ const pages = [
   },
   {
     "pageType": "descriptiveText",
-    "pageTemplate": "illustratedguide",
-    "pageTitle": "Illustrated Guide",
+    "pageTemplate": "labeling3dproduct",
+    "pageTitle": "Labeling 3D Product",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "labelingcombotrailers",
+    "pageTitle": "Labeling 'Combo' Trailers",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "registryTable", /* needs registry */
+    "pageTemplate": "projectoraspectratios",
+    "idType": "projectoraspectratio",
+    "pageTitle": "Projector Aspect Ratios and Resolutions",
+    "schemaBuild": "1.0.0-beta.1",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "registryTable",
+    "pageTemplate": "languages",
+    "idType": "language",
+    "pageTitle": "Language Codes",
+    "schemaBuild": "1.0.0",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "openandclosedcaptions",
+    "pageTitle": "Open and Closed Captions",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "registryTable",
+    "pageTemplate": "territories",
+    "idType": "territory",
+    "pageTitle": "Territory Codes",
+    "schemaBuild": "1.0.0-beta.1",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "registryTable",
+    "pageTemplate": "ratings",
+    "idType": "rating",
+    "pageTitle": "Ratings",
+    "schemaBuild": "1.0.0-beta.1",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "registryTable",
+    "pageTemplate": "audioconfigs",
+    "idType": "audioconfig",
+    "pageTitle": "Audio Config and Narrative Description Tracks",
+    "schemaBuild": "1.0.0-beta.1",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "registryTable",
+    "pageTemplate": "studios",
+    "idType": "studio",
+    "pageTitle": "Studio Codes",
+    "schemaBuild": "1.0.0-beta.2",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "creationdate",
+    "pageTitle": "Creation Date",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "registryTable",
+    "pageTemplate": "facilities",
+    "idType": "facility",
+    "pageTitle": "Facility Codes",
+    "schemaBuild": "1.0.0-beta.3",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "standard",
+    "pageTitle": "Standard",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "pkgtypes",
+    "pageTitle": "Package Types",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "DCNC"
+    ]
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "imax",
+    "pageTitle": "IMAX",
     "menuLevel": 3,
     "breadCrumb": [
       "DCNC"
@@ -116,190 +270,16 @@ const pages = [
   {
     "pageType": "menuBreak",
     "pageTemplate": "#",
-    "pageTitle": "CPL Metadata",
+    "pageTitle": "Registry",
     "menuLevel": 2
   },
   {
     "pageType": "descriptiveText",
-    "pageTemplate": "conventions",
-    "pageTitle": "Conventions",
+    "pageTemplate": "registryintro",
+    "pageTitle": "Introduction",
     "menuLevel": 3,
     "breadCrumb": [
-      "CPL Metadata"
-    ]
-  },
-  {
-    "pageType": "menuBreakEnd",
-    "pageTemplate": "#",
-    "pageTitle": "CPL Metadata End",
-    "menuLevel": 2
-  },
-  {
-    "pageType": "menuBreak",
-    "pageTemplate": "#",
-    "pageTitle": "Details",
-    "menuLevel": 2
-  },
-  {
-    "pageType": "registryTable",
-    "pageTemplate": "contenttypes",
-    "idType": "contenttype",
-    "pageTitle": "Content Types",
-    "schemaBuild": "1.0.0-beta.1",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "registryTable",
-    "pageTemplate": "contentmodifiers",
-    "idType": "contentmodifier",
-    "pageTitle": "Content Modifiers",
-    "schemaBuild": "1.0.0-beta.1",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "labeling3dproduct",
-    "pageTitle": "Labeling 3D Product",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "labelingcombotrailers",
-    "pageTitle": "Labeling 'Combo' Trailers",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "registryTable", /* needs registry */
-    "pageTemplate": "projectoraspectratios",
-    "idType": "projectoraspectratio",
-    "pageTitle": "Projector Aspect Ratios and Resolutions",
-    "schemaBuild": "1.0.0-beta.1",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "registryTable",
-    "pageTemplate": "languages",
-    "idType": "language",
-    "pageTitle": "Language Codes",
-    "schemaBuild": "1.0.0-beta.2",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "openandclosedcaptions",
-    "pageTitle": "Open and Closed Captions",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "territoryandratingintro",
-    "pageTitle": "Territory and Rating Introduction",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "registryTable",
-    "pageTemplate": "territories",
-    "idType": "territory",
-    "pageTitle": "Territory Codes",
-    "schemaBuild": "1.0.0-beta.1",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "registryTable",
-    "pageTemplate": "ratings",
-    "idType": "rating",
-    "pageTitle": "Ratings",
-    "schemaBuild": "1.0.0-beta.1",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "registryTable",
-    "pageTemplate": "audioconfigs",
-    "idType": "audioconfig",
-    "pageTitle": "Audio Config and Narrative Description Tracks",
-    "schemaBuild": "1.0.0-beta.1",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "registryTable",
-    "pageTemplate": "studios",
-    "idType": "studio",
-    "pageTitle": "Studio Codes",
-    "schemaBuild": "1.0.0-beta.2",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "creationdate",
-    "pageTitle": "Creation Date",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "registryTable",
-    "pageTemplate": "facilities",
-    "idType": "facility",
-    "pageTitle": "Facility Codes",
-    "schemaBuild": "1.0.0-beta.3",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "standardandpkgtypes",
-    "pageTitle": "Standard and Package Types",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
-    ]
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "imax",
-    "pageTitle": "IMAX",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Details"
+      "Registry"
     ]
   },
   {
@@ -310,7 +290,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "Details"
+      "Registry"
     ]
   },
   {
@@ -321,7 +301,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "Details"
+      "Registry"
     ]
   },
   {
@@ -332,13 +312,13 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "Details"
+      "Registry"
     ]
   },
   {
     "pageType": "menuBreakEnd",
     "pageTemplate": "#",
-    "pageTitle": "Details End",
+    "pageTitle": "Registry End",
     "menuLevel": 2
   },
   {
@@ -351,26 +331,32 @@ const pages = [
     "pageType": "descriptiveText",
     "pageTemplate": "references",
     "pageTitle": "References",
-    "menuLevel": 2
+    "menuLevel": 1
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "acknowledgements",
     "pageTitle": "Acknowledgements",
-    "menuLevel": 2
+    "menuLevel": 1
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "translations",
     "pageTitle": "Translations",
-    "menuLevel": 2
+    "menuLevel": 1
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "updates",
     "pageTitle": "Updates",
+    "menuLevel": 1
+  }/*,
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "sample",
+    "pageTitle": "Sample Page (All Sections)",
     "menuLevel": 2
-  }
+  }*/
 ]
 
 /* load and build the templates */

@@ -1,0 +1,1 @@
+**Special Exception Note:** Although `XX` is used in the Language field to indicate “No Subtitles”, you should not use `XX` in the Territory/Ratings field to indicate “No Rating”, since this might be confused with an “X” rating
