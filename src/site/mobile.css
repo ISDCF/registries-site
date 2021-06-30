@@ -1,5 +1,6 @@
 html, body{
-  font-size: calc(0.925 * 1em);
+  font-family: opensans;
+  font-size: calc(0.95 * 1em);
   max-width: 100%;
   overflow-x: hidden;
 }
