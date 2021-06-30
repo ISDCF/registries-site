@@ -12,7 +12,7 @@
   "author": "InterSociety Digital Cinema Forum (ISDCF) <info@isdcf.com>",
   "license": "CC-BY-4.0",
   "devDependencies": {
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "puppeteer": "^2.0.0"
   },
   "dependencies": {
