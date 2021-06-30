@@ -1,5 +1,5 @@
 html, body{
-  font-size: calc(0.875 * 1em);
+  font-size: calc(0.925 * 1em);
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -91,6 +91,7 @@ pre {
 
 .sidenav a {
   padding: 8px 8px 8px 8px;
+  font-size: calc(0.875 * 1em);
   text-decoration: none;
   color: #555;
   display: block;
