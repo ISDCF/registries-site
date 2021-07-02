@@ -1,4 +1,4 @@
-# D-Cinema Naming Convention and Metadata Registry
+# Digital Cinema Naming Convention and Metadata Registry
 
 Tabs
 * [Overview](home-ov.md)
@@ -25,7 +25,7 @@ Introduction
 
 ---
 
-## DCNC (Section)
+## Naming Convention (Section)
 
 ### Content Type
 
