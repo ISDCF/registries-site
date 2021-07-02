@@ -1,6 +1,6 @@
 # D-Cinema Naming Convention and Metadata Registry
 
-Introduction <home-int.md>
+[Introduction](home-int.md)
 
 Tabs
 * Overview <home-ov.md>
