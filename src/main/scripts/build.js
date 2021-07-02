@@ -107,7 +107,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -118,7 +118,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -127,7 +127,7 @@ const pages = [
     "pageTitle": "Labeling 3D Product",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -136,7 +136,7 @@ const pages = [
     "pageTitle": "Labeling 'Combo' Trailers",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -147,7 +147,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -158,7 +158,7 @@ const pages = [
     "schemaBuild": "1.0.0",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -167,7 +167,7 @@ const pages = [
     "pageTitle": "Open and Closed Captions",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -178,7 +178,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -189,7 +189,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -200,7 +200,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -211,7 +211,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.2",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -220,7 +220,7 @@ const pages = [
     "pageTitle": "Creation Date",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -231,7 +231,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.3",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -240,7 +240,7 @@ const pages = [
     "pageTitle": "Standard",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -249,7 +249,7 @@ const pages = [
     "pageTitle": "Package Types",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
@@ -258,19 +258,19 @@ const pages = [
     "pageTitle": "IMAX",
     "menuLevel": 3,
     "breadCrumb": [
-      "DCNC"
+      "Naming Convention"
     ]
   },
   {
     "pageType": "menuBreakEnd",
     "pageTemplate": "#",
-    "pageTitle": "DCNC End",
+    "pageTitle": "Naming Convention End",
     "menuLevel": 2
   },
   {
     "pageType": "menuBreak",
     "pageTemplate": "#",
-    "pageTitle": "Registry",
+    "pageTitle": "Metadata Registry",
     "menuLevel": 2
   },
   {
@@ -279,7 +279,7 @@ const pages = [
     "pageTitle": "Introduction",
     "menuLevel": 3,
     "breadCrumb": [
-      "Registry"
+      "Metadata Registry"
     ]
   },
   {
@@ -290,7 +290,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "Registry"
+      "Metadata Registry"
     ]
   },
   {
@@ -301,7 +301,7 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "Registry"
+      "Metadata Registry"
     ]
   },
   {
@@ -312,13 +312,13 @@ const pages = [
     "schemaBuild": "1.0.0-beta.1",
     "menuLevel": 3,
     "breadCrumb": [
-      "Registry"
+      "Metadata Registry"
     ]
   },
   {
     "pageType": "menuBreakEnd",
     "pageTemplate": "#",
-    "pageTitle": "Registry End",
+    "pageTitle": "Metadata Registry End",
     "menuLevel": 2
   },
   {
