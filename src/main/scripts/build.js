@@ -72,7 +72,7 @@ const pages = [
   {
     "pageType": "descriptiveText",
     "pageTemplate": "home",
-    "pageTitle": "D-Cinema Naming DCNC and Metadata Registry",
+    "pageTitle": "Digital Cinema Naming Convention and Metadata Registry",
     "menuLevel": 1
   },
   {
@@ -96,7 +96,7 @@ const pages = [
   {
     "pageType": "menuBreak",
     "pageTemplate": "#",
-    "pageTitle": "DCNC",
+    "pageTitle": "Naming Convention",
     "menuLevel": 2
   },
   {
@@ -140,7 +140,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable", /* needs registry */
+    "pageType": "registryTable",
     "pageTemplate": "projectoraspectratios",
     "idType": "projectoraspectratio",
     "pageTitle": "Projector Aspect Ratios and Resolutions",
@@ -283,7 +283,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable", /* needs registry */
+    "pageType": "registryTable", 
     "pageTemplate": "cplmetadataexts",
     "idType": "cplmetadataext",
     "pageTitle": "CPL Metadata Extensions",
@@ -294,7 +294,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable", /* needs registry */
+    "pageType": "registryTable",
     "pageTemplate": "kdmforensicflags",
     "idType": "kdmforensicflag",
     "pageTitle": "KDM Forensic Flags",
@@ -305,7 +305,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable", /* needs registry */
+    "pageType": "registryTable",
     "pageTemplate": "uls",
     "idType": "ul",
     "pageTitle": "ULs",
