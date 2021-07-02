@@ -62,7 +62,7 @@ const BUILD_PATH = "build";
     "ctt" CTT Example (tab) - pageTemplate-ctt
     "cpl" CPL Usage (tab) - pageTemplate-cpl
     "spn" Special Note - pageTemplate-spn
-    "lst" List - pageTemplate-ls
+    "lst" List - pageTemplate-lst
     "toc" Table of Content - pageTemplate-toc
   ] / all non "menuBreak" pages must have at least one section
 
@@ -283,7 +283,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable", /* needs registry */
+    "pageType": "registryTable",
     "pageTemplate": "cplmetadataexts",
     "idType": "cplmetadataext",
     "pageTitle": "CPL Metadata Extensions",
@@ -294,7 +294,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable", /* needs registry */
+    "pageType": "registryTable", 
     "pageTemplate": "kdmforensicflags",
     "idType": "kdmforensicflag",
     "pageTitle": "KDM Forensic Flags",
@@ -305,7 +305,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable", /* needs registry */
+    "pageType": "registryTable", 
     "pageTemplate": "uls",
     "idType": "ul",
     "pageTitle": "ULs",
