@@ -3,6 +3,9 @@
           <div class="row p-4">
             <div class="col">
 {{{section-int}}}
+            <div class="d-print-none d-flex justify-content-end">
+              <span class="small mark">[<a href="https://github.com/ISDCF/registries-site/blob/master/src/content/{{{page-int}}}.md" target="_blank">edit</a>]</span>
+            </div>
             </div>
           </div>
         {{/if}}
@@ -23,10 +26,17 @@
                   <div class="tab-pane active" id="ov">
                     <div class="ovHide" id="ovShow">
 {{{section-ov}}}
+                    <div class="d-print-none d-flex justify-content-end">
+                      <span class="small mark">[<a href="https://github.com/ISDCF/registries-site/blob/master/src/content/{{{page-ov}}}.md" target="_blank">edit</a>]</span>
+                    </div>
                     {{#if section-rls}}
+                      <br>
                       <div class="border bg-light rounded p-3 font-italic">
 
 {{{section-rls}}}
+                      <div class="d-print-none d-flex justify-content-end">
+                        <span class="small mark">[<a href="https://github.com/ISDCF/registries-site/blob/master/src/content/{{{page-rls}}}.md" target="_blank">edit</a>]</span>
+                      </div>
                       </div>
                     {{/if}}
                     </div>
@@ -34,11 +44,17 @@
                 {{#if section-ctt}}
                   <div class="tab-pane d-print-none" id="ctt">
 {{{section-ctt}}}
+                  <div class="d-print-none d-flex justify-content-end">
+                    <span class="small mark">[<a href="https://github.com/ISDCF/registries-site/blob/master/src/content/{{{page-ctt}}}.md" target="_blank">edit</a>]</span>
+                  </div>
                   </div>
                 {{/if}}
                 {{#if section-cpl}}
                   <div class="tab-pane d-print-none" id="cpl">
 {{{section-cpl}}}
+                  <div class="d-print-none d-flex justify-content-end">
+                    <span class="small mark">[<a href="https://github.com/ISDCF/registries-site/blob/master/src/content/{{{page-cpl}}}.md" target="_blank">edit</a>]</span>
+                  </div>
                   </div>
                 {{/if}}
                 </div>
@@ -48,6 +64,9 @@
             <div class="col">
               <div class="border bg-light p-3 font-italic">
 {{{section-spn}}}
+              <div class="d-print-none d-flex justify-content-end">
+                <span class="small mark">[<a href="https://github.com/ISDCF/registries-site/blob/master/src/content/{{{page-spn}}}.md" target="_blank">edit</a>]</span>
+              </div>
               </div>
             </div>
            {{/if}} 
@@ -58,15 +77,9 @@
             <div class="col">
               <div class="container-fluid p-4"> 
 {{{section-lst}}}
+              <div class="d-print-none d-flex justify-content-end">
+                <span class="small mark">[<a href="https://github.com/ISDCF/registries-site/blob/master/src/content/{{{page-lst}}}.md" target="_blank">edit</a>]</span>
               </div>
-            </div>
-          </div>
-        {{/if}}
-        {{#if section-toc}}
-          <div class="row p-3">
-            <div class="col">
-              <div class="container-fluid p-4"> 
-{{{section-toc}}}
               </div>
             </div>
           </div>

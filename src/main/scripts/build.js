@@ -62,7 +62,7 @@ const BUILD_PATH = "build";
     "ctt" CTT Example (tab) - pageTemplate-ctt
     "cpl" CPL Usage (tab) - pageTemplate-cpl
     "spn" Special Note - pageTemplate-spn
-    "lst" List - pageTemplate-lst
+    "lst" List - pageTemplate-ls
     "toc" Table of Content - pageTemplate-toc
   ] / all non "menuBreak" pages must have at least one section
 
@@ -283,7 +283,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable",
+    "pageType": "registryTable", /* needs registry */
     "pageTemplate": "cplmetadataexts",
     "idType": "cplmetadataext",
     "pageTitle": "CPL Metadata Extensions",
@@ -294,7 +294,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable", 
+    "pageType": "registryTable", /* needs registry */
     "pageTemplate": "kdmforensicflags",
     "idType": "kdmforensicflag",
     "pageTitle": "KDM Forensic Flags",
@@ -305,7 +305,7 @@ const pages = [
     ]
   },
   {
-    "pageType": "registryTable", 
+    "pageType": "registryTable", /* needs registry */
     "pageTemplate": "uls",
     "idType": "ul",
     "pageTitle": "ULs",
@@ -416,6 +416,7 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
         /* console.log("No " + pageTemplate + "-" + sec + " section present") */
       } 
 
+      templateSections['page-' + sec] = pageTemplate + "-" + sec;
       templateSections['section-' + sec] = section;
 
     });

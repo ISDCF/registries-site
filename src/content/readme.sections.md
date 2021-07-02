@@ -7,6 +7,5 @@
 * "cpl" CPL Usage (tab) - pageTemplate-cpl.md
 * "spn" Special Note - pageTemplate-spn.md
 * "lst" List - pageTemplate-lst.md
-* "toc" Table of Content - pageTemplate-toc.md
 
 pageTemplate = pages.pageTemplate for build.js
