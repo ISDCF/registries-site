@@ -48,7 +48,8 @@ pre {
 }
 
 .illGuide {
-  width: 60%;
+  width: 100%;
+  height: auto; 
   display: block;
   margin-left: auto;
   margin-right: auto;
