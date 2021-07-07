@@ -1,5 +1,5 @@
 
-If you are already familiar with the Digital Cinema Naming Convention (DCNC), [[Click Here]](general.html) for general tips and updates.
+If you are already familiar with the Digital Cinema Naming Convention (DCNC), [[Click Here]](general) for general tips and updates.
 
 This site is designed to help everyone involved in Digital Cinema exhibition understand how to use the Digital Cinema Naming Convention when naming (or locating) Digital Cinema Packages.
 

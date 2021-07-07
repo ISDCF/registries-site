@@ -5,6 +5,8 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="mobile.css">
+  <link rel="bookmark" href="https://registry-page.isdcf.com/{{pageTemplate}}"/>
+  <link rel="canonical" href="https://registry-page.isdcf.com/{{pageTemplate}}"/>
 <title>{{pageTitle}}</title>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -68,7 +70,7 @@
   </nav>
   <div class="container-fluid">
     <div class="row p-3 d-print-none breadcrumbs border-bottom">
-        <span class="small"> <a href="https://www.isdcf.com/site/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/></svg></a> > {{#ifnoteq pageTemplate "home"}}<a href="home.html">Digital Cinema Naming Convention and Metadata Registry</a> > {{#if breadCrumb}}{{#breadCrumb}}{{this}} > {{/breadCrumb}}{{/if}}{{/ifnoteq}}{{pageTitle}}</span>
+        <span class="small"> <a href="https://www.isdcf.com/site/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/></svg></a> > {{#ifnoteq pageTemplate "home"}}<a href="home">Digital Cinema Naming Convention and Metadata Registry</a> > {{#if breadCrumb}}{{#breadCrumb}}{{this}} > {{/breadCrumb}}{{/if}}{{/ifnoteq}}{{pageTitle}}</span>
     </div>
     <div class="row bg-light p-3">
       <div id="sideNav" class="col-lg-2 sidenav pl-0 d-print-none">  
@@ -76,12 +78,12 @@
 {{#pages}}
   {{#ifeq menuLevel "1"}}
     {{#ifeq pageType "descriptiveText"}}
-          <li><a class="nav-link{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}.html">{{pageTitle}}</a></li>
+          <li><a class="nav-link{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}">{{pageTitle}}</a></li>
     {{/ifeq}}
   {{/ifeq}}
   {{#ifeq menuLevel "2"}}
     {{#ifeq pageType "descriptiveText"}}
-          <li><a class="nav-link {{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}.html">{{pageTitle}}</a></li>
+          <li><a class="nav-link {{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}">{{pageTitle}}</a></li>
     {{/ifeq}}
     {{#ifeq pageType "menuBreak"}}
           <li>
@@ -94,7 +96,7 @@
     {{/ifeq}}
   {{/ifeq}}
   {{#ifeq menuLevel "3"}}
-              <li><a class="nav-link pl-4{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}.html">{{pageTitle}}</a></li>
+              <li><a class="nav-link pl-4{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}">{{pageTitle}}</a></li>
   {{/ifeq}}
 {{/pages}}
         </ul>
