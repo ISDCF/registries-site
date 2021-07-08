@@ -1,0 +1,3 @@
+`ThankYouService_FTR-4_S_EN-XX-CCAP_US-R-INT-TD_51-HI-VI_2K_UP_20170928_DTB_SMPTE_OV`
+
+“Thank You For Your Service”. Feature Version 4. Scope. English Language with Closed Captions. US Rated R/International Texted. 5.1 Audio with Assisted Listening and Audio Description tracks. 2K Resolution. Universal Pictures. Packaged on September 28, 2017, at Deluxe Technicolor Burbank. SMPTE Standard. Original Version package type.

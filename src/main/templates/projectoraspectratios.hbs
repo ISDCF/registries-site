@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+  <!-- Markdown content starts -->
+{{>content}}
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top sort-column">#</th>
+                <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
+                <th scope="col" class="align-text-top">Description</th>
+                <th scope="col" class="align-text-top">ScreenAspectRatio Values<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top">MainPictureStoredArea Values<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top">Metadata Defining Document(s)</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              {{#data}}
+              <tr id="{{../idType}}-{{dcncCode}}">
+                <td class="sort-column">
+                  {{dcncSortOrder}}
+                </td>
+                <td class="code">
+                  <a class="anchor" id="{{dcncCode}}" href="#{{dcncCode}}"></a><code>{{dcncCode}}</code>
+                </td>
+                <td>
+                  {{description}}
+                </td>
+                <td>
+                  <code class="sampCode">
+                    <div class="border-bottom p-2">For 2K: "<code>{{cplMetadata/2K/ScreenAspectRatio}}</code>"</div>
+                    <div class="p-2">For 4K: "<code>{{cplMetadata/4K/ScreenAspectRatio}}</code>"</div>
+                  </code>
+                </td>
+                <td>
+                  <code class="sampCode">
+                    <div class="border-bottom p-2">For 2k, Height: "<code>{{cplMetadata/2K/MainPictureStoredArea/Height}}</code>", Width: "<code>{{cplMetadata/2K/MainPictureStoredArea/Width}}</code>"</div>
+                    <div class="p-2">For 4K, Height: "<code>{{cplMetadata/4K/MainPictureStoredArea/Height}}</code>", Width: "<code>{{cplMetadata/4K/MainPictureStoredArea/Width}}</code>"</div>
+                  </code>
+                </td>
+                <td>
+                  {{#cplMetadata/definingDocs}}
+                    <a href="{{url}}" target="_blank">[{{name}}]</a>{{#unless @last}}<br>{{/unless}}
+                  {{/cplMetadata/definingDocs}}
+                </td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
+<!-- Main content ends - do not edit below this line -->
+{{>footer}}
+
+</html>

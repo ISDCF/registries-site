@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+  <!-- Markdown content starts -->
+{{>content}}
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top">Description</th>
+                <th scope="col" class="align-text-top" width="45%">URI</th>
+                <th scope="col" class="align-text-top" width="15%">Defining Document(s)</th>
+                <th scope="col" class="align-text-top">Notes</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              {{#data}}
+              <tr id="{{../idType}}">
+                <td>
+                  {{description}}
+                </td>
+                <td class="cell-breakAll">
+                  <code>{{uri}}</code>
+                </td>
+                <td>
+                  {{#definingDocs}}
+                    <a href="{{url}}" target="_blank">[{{name}}]</a>{{#unless @last}}<br>{{/unless}}
+                  {{/definingDocs}}
+                </td>
+                <td>
+                  <span class="small"><em>{{note}}</em></span>
+                </td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
+<!-- Main content ends - do not edit below this line -->
+{{>footer}}
+
+</html>

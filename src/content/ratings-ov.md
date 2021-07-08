@@ -1,0 +1,3 @@
+The [MovieLabs Ratings Codes](https://www.movielabs.com/md/ratings/) are suggested codes for each territory’s ratings. The Naming Convention uses abbreviations of each rating system's ratings.
+
+For US trailers, `GB` indicates Green Band; `RB` indicates Red Band.  `GB` indicates that the trailer has been approved for all audiences by the MPAA, but does not indicate the rating of the advertised feature.  For Canadian trailers that are identical to the US version with the exception of the Rating Tag, use `CA` in the territory field and do not follow with `GB` or `RB`.

@@ -1,0 +1,1 @@
+**Special Note:** If the Language Code is UPPER CASE, the sub-titles are generated in real time by the projector.  If the Language Code is lower case, the subtitles are burned into the image already

@@ -1,81 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  {{>header}}
-  <!-- Main content starts - do not edit above this line -->
-    <table id="sorttable" class="table table-small table-hover display">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col" class="align-text-top d-none">Sort Order</th>
-          <th scope="col" class="align-text-top" width="15%">DCNC Content Modifier Value<br><small>(For CTT)</small></th>
-          <th scope="col" class="align-text-top" width="20%">Description</th>
-          <th scope="col" class="align-text-top text-wrap">CPL Metadata Sample/Values</th>
-          <th scope="col" class="align-text-top text-wrap">Metadata Scope</th>
-          <th scope="col" class="align-text-top">Metadata Defining Document</th>
-          
-        </tr>
-      </thead>
-      <tbody id="searchTable">
-        {{#data}}
-        <tr id="{{../idType}}-{{dcncCode}}">
-          <td class="d-none">
-            {{dcncSortOrder}}
-          </td>
-          <td class="code"><a class="anchor" id="{{dcncCode}}" href="#{{dcncCode}}"></a><code>{{dcncCode}}</code></td>
-          <td class="comment">
-            {{description}}
-          </td>
-          <td>
-            <code class="sampCode">
-
-            {{#ifeq cplMetadata/metaType "Element Value"}}
-              &lt;{{cplMetadata/element}}&gt;<code>{{cplMetadata/elementValue}}</code>&lt;/{{cplMetadata/element}}&gt;
-            {{/ifeq}}
-
-            {{#ifeq cplMetadata/metaType "Sub Element Value"}}
-              &lt;{{cplMetadata/element}}&gt;<br>
-              {{#each cplMetadata/subElement}}
-                &nbsp;&lt;{{@key}}&gt;<code>{{this}}</code>&lt;/{{@key}}&gt;<br>
-              {{/each}}
-              &lt;/{{cplMetadata/element}}&gt;
-            {{/ifeq}}
-
-            {{#ifeq cplMetadata/metaType "Element Attribute Value"}}
-              &lt;{{cplMetadata/element}} {{cplMetadata/attribute}}="<code>{{cplMetadata/attributeValue}}</code>"&gt;...&lt;/{{cplMetadata/element}}&gt;
-            {{/ifeq}}
-
-            {{#ifeq cplMetadata/metaType "Element and Attribute Value"}}
-              &lt;{{cplMetadata/element}} {{cplMetadata/attribute}}="<code>{{cplMetadata/attributeValue}}</code>"&gt;<code>{{cplMetadata/elementValue}}</code>&lt;/{{cplMetadata/element}}&gt;
-            {{/ifeq}}
-
-            {{#ifeq cplMetadata/metaType "Element Present"}}
-              &lt;{{cplMetadata/element}}&gt;...&lt;/{{cplMetadata/element}}&gt;
-            {{/ifeq}}
-
-            {{#ifeq cplMetadata/metaType "Extension Present"}}
-              &lt;cpl-meta:ExtensionMetadata scope="<code>{{cplMetadata/extScope}}</code>"&gt;<br>
-              &nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extName}}</code>&lt;/cpl-meta:Name&gt;<br>
-              &nbsp;...<br>
-              &nbsp;&nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extpropName}}</code>&lt;/cpl-meta:Name&gt;<br>
-              &nbsp;&nbsp;&nbsp;&lt;cpl-meta:Value&gt;<code>{{cplMetadata/extpropValue}}</code>&lt;/cpl-meta:Value&gt;<br>
-              &nbsp;&nbsp;...<br>
-              &lt;/cpl-meta:ExtensionMetadata&gt;
-            {{/ifeq}}
-
-            </code>
-          </td>
-          <td>
-            <a target="_blank" href="{{cplMetadata/scope}}">{{cplMetadata/scope}}</a>
-          </td>
-          <td>
-            {{#ifeq cplMetadata/definingDoc "https://www.isdcf.com/site/registry-cpl-extensions/"}}<a href="{{cplMetadata/definingDoc}}" target="_blank">{{/ifeq}}
-            {{cplMetadata/definingDoc}}
-            {{#ifeq cplMetadata/definingDoc "https://www.isdcf.com/site/registry-cpl-extensions/"}}</a>{{/ifeq}}
-          </td>
-        </tr>
-        {{/data}}
-      </tbody>
-    </table>
+{{>header}}
+  <!-- Markdown content starts -->
+{{>content}}
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top">#</th>
+                <th scope="col" class="align-text-top" width="15%">DCNC Content Modifier Value<br><small>(For CTT)</small></th>
+                <th scope="col" class="align-text-top">Description</th>
+                <th scope="col" class="align-text-top" width="30%">CPL Metadata Sample/Values</th>
+                <th scope="col" class="align-text-top" width="15%">>Metadata Defining Document(s)</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              {{#data}}
+              <tr id="{{../idType}}-{{dcncCode}}">
+                <td class="">
+                  {{dcncSortOrder}}
+                </td>
+                <td class="code">
+                  <a class="anchor" id="{{dcncCode}}" href="#{{dcncCode}}"></a><code>{{dcncCode}}</code>
+                </td>
+                <td>
+                  {{description}}
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                  {{#ifeq cplMetadata/metaType "Element Value"}}
+                    &lt;{{cplMetadata/element}}&gt;<code>{{cplMetadata/elementValue}}</code>&lt;/{{cplMetadata/element}}&gt;
+                  {{/ifeq}}
+                  {{#ifeq cplMetadata/metaType "Sub Element Value"}}
+                    &lt;{{cplMetadata/element}}&gt;<br>
+                    {{#each cplMetadata/subElement}}
+                      &nbsp;&nbsp;&lt;{{@key}}&gt;<code>{{this}}</code>&lt;/{{@key}}&gt;<br>
+                    {{/each}}
+                    &lt;/{{cplMetadata/element}}&gt;
+                  {{/ifeq}}
+                  {{#ifeq cplMetadata/metaType "Element Attribute Value"}}
+                    &lt;{{cplMetadata/element}} {{cplMetadata/attribute}}="<code>{{cplMetadata/attributeValue}}</code>"&gt;...&lt;/{{cplMetadata/element}}&gt;
+                  {{/ifeq}}
+                  {{#ifeq cplMetadata/metaType "Element and Attribute Value"}}
+                    &lt;{{cplMetadata/element}} {{cplMetadata/attribute}}="<code>{{cplMetadata/attributeValue}}</code>"&gt;<code>{{cplMetadata/elementValue}}</code>&lt;/{{cplMetadata/element}}&gt;
+                  {{/ifeq}}
+                  {{#ifeq cplMetadata/metaType "Element Present"}}
+                    &lt;{{cplMetadata/element}}&gt;...&lt;/{{cplMetadata/element}}&gt;
+                  {{/ifeq}}
+                  {{#ifeq cplMetadata/metaType "Extension Present"}}
+                    &lt;cpl-meta:ExtensionMetadata scope="<code>{{cplMetadata/extScope}}</code>"&gt;<br>
+                    &nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extName}}</code>&lt;/cpl-meta:Name&gt;<br>
+                    &nbsp;&nbsp;&lt;cpl-meta:PropertyList&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Property&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extpropName}}</code>&lt;/cpl-meta:Name&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Value&gt;<code>{{cplMetadata/extpropValue}}</code>&lt;/cpl-meta:Value&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/cpl-meta:Property&gt;<br>
+                    &nbsp;&nbsp;&lt;/cpl-meta:PropertyList&gt;<br>
+                    &lt;/cpl-meta:ExtensionMetadata&gt;
+                    {{/ifeq}}
+                  </code>
+                </td>
+                <td>
+                  {{#cplMetadata/definingDocs}}
+                    <a href="{{url}}" target="_blank">[{{name}}]</a>{{#unless @last}}<br>{{/unless}}
+                  {{/cplMetadata/definingDocs}}
+                </td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
 <!-- Main content ends - do not edit below this line -->
 {{>footer}}
 

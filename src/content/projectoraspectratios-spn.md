@@ -1,0 +1,3 @@
+**SPECIAL NOTE:** Never use this labeling device with Trailers!
+
+Trailers are almost always produced in both Flat and Scope versions regardless of the aspect ratio of the feature advertised.  Quite often, the “non-native” format of the trailer is letterboxed or pillar-boxed.  These “cross aspect ratio” trailers should never be identified using this method (`F-239` or `S-185`) since theatres should not be encouraged to change masking for a single trailer on the playlist or this could inadvertently spoil the needed masking for the feature.  (Changing masking from trailer to trailer is not practical.)

@@ -1,0 +1,1 @@
+The Content Type and Version field is the area of the Naming Convention that identifies what type of content the DCP contains — whether it’s a feature, a trailer, a short subject, etc. — and what the version number is.  The field can contain up to 7 characters.  All content should be categorized as one of the following.
