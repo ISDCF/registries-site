@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css">
+  <title>ISDCF Languages</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script type="application/javascript" src="features.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+    <!-- requirement for Advanced iFrame WP plugin - start -->
+    <script>document.domain='isdcf.com';</script>
+    <!-- requirement for Advanced iFrame WP plugin - end -->
+  
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light sticky-top fh-fixedHeader bg-light d-flex">
+      <a class="navbar-brand" href="#">ISDCF Languages</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto d-print-none">
+          <li class="nav-item">
+            <a id="json-feed" target="_blank" class="nav-link" href="https://registry.isdcf.com/languages"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/>
+  </svg> JSON Feed</a>
+          </li>
+          <li class="nav-item">
+            <a id="full-page" target="_blank" class="nav-link" href="https://registry-page.isdcf.com/languages.html"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrows-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
+  </svg> Full Page</a>
+          </li>
+          <li class="nav-item">
+            <a id="pdf-download" target="_blank" class="nav-link" title="Download as PDF" href="languages.pdf"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+    <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+  </svg> Download PDF</a>
+          </li>
+        </ul>
+           <form id="search-form" class="form-inline d-print-none col-xs-4">
+            <div class="input-group mb-1">
+              <input id="search" class="form-control input-sm col-xs-4" type="search" placeholder="Search Languages">
+            </div>
+          </form>
+      </div>
+    </nav>
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+    <a class="anchor" id="top" href="#top"></a>  <!-- Main content starts - do not edit above this line -->
+    <table id="sorttable" class="table table-small table-hover display">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col" class="align-text-top"><a target="_blank" href="http://cldr.unicode.org/">CLDR</a> Language</th>
+          <th scope="col" class="align-text-top"><a target="_blank" href="https://tools.ietf.org/html/rfc5646">RFC 5646</a> Tag<br><small>(For DCP Metadata)</small></th>
+          <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
+          <th scope="col" class="align-text-top">DCNC Language</th>
+          <th scope="col" class="align-text-top">Obsoleted DCNC Code(s)<br><small>(Not for use, only listed for historical purposes)</small></th>
+          <th scope="col" class="align-text-top">Intended use</th>
+          <th scope="col" class="align-text-top text-wrap" width="20%">Comments</th>
+        </tr>
+      </thead>
+      <tbody id="searchTable">
+        <tr id="language-hy">
+          <td><span class="description">Armenian</span></td>
+          <td class="rfc"><a class="anchor" id="hy" href="#hy"></a><code>hy</code></td>
+          <td class="code">
+            <code>HY</code>
+          </td>
+          <td>
+            Armenian
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-sq">
+          <td><span class="description">Albanian</span></td>
+          <td class="rfc"><a class="anchor" id="sq" href="#sq"></a><code>sq</code></td>
+          <td class="code">
+            <code>SQ</code>
+          </td>
+          <td>
+            Albanian
+          </td>
+          <td class="code">
+                <code>ALB</code>,  
+                <code>SQI</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ar">
+          <td><span class="description">Arabic</span></td>
+          <td class="rfc"><a class="anchor" id="ar" href="#ar"></a><code>ar</code></td>
+          <td class="code">
+            <code>AR</code>
+          </td>
+          <td>
+            Arabic
+          </td>
+          <td class="code">
+                <code>ARA</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-bs">
+          <td><span class="description">Bosnian</span></td>
+          <td class="rfc"><a class="anchor" id="bs" href="#bs"></a><code>bs</code></td>
+          <td class="code">
+            <code>BS</code>
+          </td>
+          <td>
+            Bosnian
+          </td>
+          <td class="code">
+                <code>BOS</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-bg">
+          <td><span class="description">Bulgarian</span></td>
+          <td class="rfc"><a class="anchor" id="bg" href="#bg"></a><code>bg</code></td>
+          <td class="code">
+            <code>BG</code>
+          </td>
+          <td>
+            Bulgarian
+          </td>
+          <td class="code">
+                <code>BUL</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ca">
+          <td><span class="description">Catalan</span></td>
+          <td class="rfc"><a class="anchor" id="ca" href="#ca"></a><code>ca</code></td>
+          <td class="code">
+            <code>CA</code>
+          </td>
+          <td>
+            Catalan
+          </td>
+          <td class="code">
+                <code>CAT</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-yue">
+          <td><span class="description">Cantonese</span></td>
+          <td class="rfc"><a class="anchor" id="yue" href="#yue"></a><code>yue</code></td>
+          <td class="code">
+            <code>YUE</code>
+          </td>
+          <td>
+            Chinese - Cantonese
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-cmn">
+          <td><span class="description">Chinese</span></td>
+          <td class="rfc"><a class="anchor" id="cmn" href="#cmn"></a><code>cmn</code></td>
+          <td class="code">
+            <code>CMN</code>
+          </td>
+          <td>
+            Chinese - Mandarin PRC
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-cmn-Hans">
+          <td><span class="description">Simplified Chinese</span></td>
+          <td class="rfc"><a class="anchor" id="cmn-Hans" href="#cmn-Hans"></a><code>cmn-Hans</code></td>
+          <td class="code">
+            <code>QMS</code>
+          </td>
+          <td>
+            Chinese - Mandarin Simplified
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+                <small>(Subtitles only)</small>
+          </td>
+        </tr>
+        <tr id="language-cmn-Hant">
+          <td><span class="description">Traditional Chinese</span></td>
+          <td class="rfc"><a class="anchor" id="cmn-Hant" href="#cmn-Hant"></a><code>cmn-Hant</code></td>
+          <td class="code">
+            <code>QMT</code>
+          </td>
+          <td>
+            Chinese - Mandarin Traditional
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+                <small>(Subtitles only)</small>
+          </td>
+        </tr>
+        <tr id="language-nan">
+          <td><span class="description">Min Nan Chinese</span></td>
+          <td class="rfc"><a class="anchor" id="nan" href="#nan"></a><code>nan</code></td>
+          <td class="code">
+            <code>NAN</code>
+          </td>
+          <td>
+            Chinese - Taiwanese
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-cmn-TW">
+          <td><span class="description">Chinese (Taiwan)</span></td>
+          <td class="rfc"><a class="anchor" id="cmn-TW" href="#cmn-TW"></a><code>cmn-TW</code></td>
+          <td class="code">
+            <code>QTM</code>
+          </td>
+          <td>
+            Chinese - Taiwanese Mandarin
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-hr">
+          <td><span class="description">Croatian</span></td>
+          <td class="rfc"><a class="anchor" id="hr" href="#hr"></a><code>hr</code></td>
+          <td class="code">
+            <code>HR</code>
+          </td>
+          <td>
+            Croatian
+          </td>
+          <td class="code">
+                <code>HRV</code>,  
+                <code>SCR</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-cs">
+          <td><span class="description">Czech</span></td>
+          <td class="rfc"><a class="anchor" id="cs" href="#cs"></a><code>cs</code></td>
+          <td class="code">
+            <code>CS</code>
+          </td>
+          <td>
+            Czech
+          </td>
+          <td class="code">
+                <code>CES</code>,  
+                <code>CZE</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-da">
+          <td><span class="description">Danish</span></td>
+          <td class="rfc"><a class="anchor" id="da" href="#da"></a><code>da</code></td>
+          <td class="code">
+            <code>DA</code>
+          </td>
+          <td>
+            Danish
+          </td>
+          <td class="code">
+                <code>DAN</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-nl">
+          <td><span class="description">Dutch</span></td>
+          <td class="rfc"><a class="anchor" id="nl" href="#nl"></a><code>nl</code></td>
+          <td class="code">
+            <code>NL</code>
+          </td>
+          <td>
+            Dutch
+          </td>
+          <td class="code">
+                <code>DUT</code>,  
+                <code>NLD</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-en">
+          <td><span class="description">English</span></td>
+          <td class="rfc"><a class="anchor" id="en" href="#en"></a><code>en</code></td>
+          <td class="code">
+            <code>EN</code>
+          </td>
+          <td>
+            English
+          </td>
+          <td class="code">
+                <code>ENG</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-et">
+          <td><span class="description">Estonian</span></td>
+          <td class="rfc"><a class="anchor" id="et" href="#et"></a><code>et</code></td>
+          <td class="code">
+            <code>ET</code>
+          </td>
+          <td>
+            Estonian
+          </td>
+          <td class="code">
+                <code>EST</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-eu">
+          <td><span class="description">Basque</span></td>
+          <td class="rfc"><a class="anchor" id="eu" href="#eu"></a><code>eu</code></td>
+          <td class="code">
+            <code>EU</code>
+          </td>
+          <td>
+            Euskara
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-fi">
+          <td><span class="description">Finnish</span></td>
+          <td class="rfc"><a class="anchor" id="fi" href="#fi"></a><code>fi</code></td>
+          <td class="code">
+            <code>FI</code>
+          </td>
+          <td>
+            Finnish
+          </td>
+          <td class="code">
+                <code>FIN</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-nl-BE">
+          <td><span class="description">Flemish</span></td>
+          <td class="rfc"><a class="anchor" id="nl-BE" href="#nl-BE"></a><code>nl-BE</code></td>
+          <td class="code">
+            <code>VLS</code>
+          </td>
+          <td>
+            Flemish
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-fr">
+          <td><span class="description">French</span></td>
+          <td class="rfc"><a class="anchor" id="fr" href="#fr"></a><code>fr</code></td>
+          <td class="code">
+            <code>FR</code>
+          </td>
+          <td>
+            French
+          </td>
+          <td class="code">
+                <code>FRA</code>,  
+                <code>FRE</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-gl">
+          <td><span class="description">Galician</span></td>
+          <td class="rfc"><a class="anchor" id="gl" href="#gl"></a><code>gl</code></td>
+          <td class="code">
+            <code>GL</code>
+          </td>
+          <td>
+            Galician
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-fr-CA">
+          <td><span class="description">Canadian French</span></td>
+          <td class="rfc"><a class="anchor" id="fr-CA" href="#fr-CA"></a><code>fr-CA</code></td>
+          <td class="code">
+            <code>QFC</code>
+          </td>
+          <td>
+            French - Canadian
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-de">
+          <td><span class="description">German</span></td>
+          <td class="rfc"><a class="anchor" id="de" href="#de"></a><code>de</code></td>
+          <td class="code">
+            <code>DE</code>
+          </td>
+          <td>
+            German
+          </td>
+          <td class="code">
+                <code>DEU</code>,  
+                <code>GER</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-gsw">
+          <td><span class="description">Swiss German</span></td>
+          <td class="rfc"><a class="anchor" id="gsw" href="#gsw"></a><code>gsw</code></td>
+          <td class="code">
+            <code>GSW</code>
+          </td>
+          <td>
+            German - Swiss
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-el">
+          <td><span class="description">Greek</span></td>
+          <td class="rfc"><a class="anchor" id="el" href="#el"></a><code>el</code></td>
+          <td class="code">
+            <code>EL</code>
+          </td>
+          <td>
+            Greek
+          </td>
+          <td class="code">
+                <code>ELL</code>,  
+                <code>GRE</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-he">
+          <td><span class="description">Hebrew</span></td>
+          <td class="rfc"><a class="anchor" id="he" href="#he"></a><code>he</code></td>
+          <td class="code">
+            <code>HE</code>
+          </td>
+          <td>
+            Hebrew
+          </td>
+          <td class="code">
+                <code>HEB</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-hi">
+          <td><span class="description">Hindi</span></td>
+          <td class="rfc"><a class="anchor" id="hi" href="#hi"></a><code>hi</code></td>
+          <td class="code">
+            <code>HI</code>
+          </td>
+          <td>
+            Hindi
+          </td>
+          <td class="code">
+                <code>HIN</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-hu">
+          <td><span class="description">Hungarian</span></td>
+          <td class="rfc"><a class="anchor" id="hu" href="#hu"></a><code>hu</code></td>
+          <td class="code">
+            <code>HU</code>
+          </td>
+          <td>
+            Hungarian
+          </td>
+          <td class="code">
+                <code>HUN</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-is">
+          <td><span class="description">Icelandic</span></td>
+          <td class="rfc"><a class="anchor" id="is" href="#is"></a><code>is</code></td>
+          <td class="code">
+            <code>IS</code>
+          </td>
+          <td>
+            Icelandic
+          </td>
+          <td class="code">
+                <code>ICE</code>,  
+                <code>ISL</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-id">
+          <td><span class="description">Indonesian</span></td>
+          <td class="rfc"><a class="anchor" id="id" href="#id"></a><code>id</code></td>
+          <td class="code">
+            <code>IND</code>
+          </td>
+          <td>
+            Indonesian Bahasa
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-it">
+          <td><span class="description">Italian</span></td>
+          <td class="rfc"><a class="anchor" id="it" href="#it"></a><code>it</code></td>
+          <td class="code">
+            <code>IT</code>
+          </td>
+          <td>
+            Italian
+          </td>
+          <td class="code">
+                <code>ITA</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ja">
+          <td><span class="description">Japanese</span></td>
+          <td class="rfc"><a class="anchor" id="ja" href="#ja"></a><code>ja</code></td>
+          <td class="code">
+            <code>JA</code>
+          </td>
+          <td>
+            Japanese
+          </td>
+          <td class="code">
+                <code>JPN</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-kk">
+          <td><span class="description">Kazakh</span></td>
+          <td class="rfc"><a class="anchor" id="kk" href="#kk"></a><code>kk</code></td>
+          <td class="code">
+            <code>KK</code>
+          </td>
+          <td>
+            Kazakh
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-km">
+          <td><span class="description">Khmer</span></td>
+          <td class="rfc"><a class="anchor" id="km" href="#km"></a><code>km</code></td>
+          <td class="code">
+            <code>KM</code>
+          </td>
+          <td>
+            Khmer
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ko">
+          <td><span class="description">Korean</span></td>
+          <td class="rfc"><a class="anchor" id="ko" href="#ko"></a><code>ko</code></td>
+          <td class="code">
+            <code>KO</code>
+          </td>
+          <td>
+            Korean
+          </td>
+          <td class="code">
+                <code>KOR</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ky">
+          <td><span class="description">Kyrgyz</span></td>
+          <td class="rfc"><a class="anchor" id="ky" href="#ky"></a><code>ky</code></td>
+          <td class="code">
+            <code>KG</code>
+          </td>
+          <td>
+            Kyrgyz
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-lv">
+          <td><span class="description">Latvian</span></td>
+          <td class="rfc"><a class="anchor" id="lv" href="#lv"></a><code>lv</code></td>
+          <td class="code">
+            <code>LV</code>
+          </td>
+          <td>
+            Latvian
+          </td>
+          <td class="code">
+                <code>LAV</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-lt">
+          <td><span class="description">Lithuanian</span></td>
+          <td class="rfc"><a class="anchor" id="lt" href="#lt"></a><code>lt</code></td>
+          <td class="code">
+            <code>LT</code>
+          </td>
+          <td>
+            Lithuanian
+          </td>
+          <td class="code">
+                <code>LIT</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ms">
+          <td><span class="description">Malay</span></td>
+          <td class="rfc"><a class="anchor" id="ms" href="#ms"></a><code>ms</code></td>
+          <td class="code">
+            <code>MSA</code>
+          </td>
+          <td>
+            Malay Bahasa
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-mr">
+          <td><span class="description">Marathi</span></td>
+          <td class="rfc"><a class="anchor" id="mr" href="#mr"></a><code>mr</code></td>
+          <td class="code">
+            <code>MR</code>
+          </td>
+          <td>
+            Marathi
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-mn">
+          <td><span class="description">Mongolian</span></td>
+          <td class="rfc"><a class="anchor" id="mn" href="#mn"></a><code>mn</code></td>
+          <td class="code">
+            <code>MN</code>
+          </td>
+          <td>
+            Mongolian
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-nv">
+          <td><span class="description">Navajo</span></td>
+          <td class="rfc"><a class="anchor" id="nv" href="#nv"></a><code>nv</code></td>
+          <td class="code">
+            <em>n/a</em>
+          </td>
+          <td>
+            Navajo
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-no">
+          <td><span class="description">Norwegian Bokmål</span></td>
+          <td class="rfc"><a class="anchor" id="no" href="#no"></a><code>no</code></td>
+          <td class="code">
+            <code>NO</code>
+          </td>
+          <td>
+            Norwegian
+          </td>
+          <td class="code">
+                <code>NOR</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-pl">
+          <td><span class="description">Polish</span></td>
+          <td class="rfc"><a class="anchor" id="pl" href="#pl"></a><code>pl</code></td>
+          <td class="code">
+            <code>PL</code>
+          </td>
+          <td>
+            Polish
+          </td>
+          <td class="code">
+                <code>POL</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-pt-BR">
+          <td><span class="description">Brazilian Portuguese</span></td>
+          <td class="rfc"><a class="anchor" id="pt-BR" href="#pt-BR"></a><code>pt-BR</code></td>
+          <td class="code">
+            <code>QBP</code>
+          </td>
+          <td>
+            Portuguese - Brazilian
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-pt">
+          <td><span class="description">Portuguese</span></td>
+          <td class="rfc"><a class="anchor" id="pt" href="#pt"></a><code>pt</code></td>
+          <td class="code">
+            <code>PT</code>
+          </td>
+          <td>
+            Portuguese - European
+          </td>
+          <td class="code">
+                <code>SPA</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ro">
+          <td><span class="description">Romanian</span></td>
+          <td class="rfc"><a class="anchor" id="ro" href="#ro"></a><code>ro</code></td>
+          <td class="code">
+            <code>RO</code>
+          </td>
+          <td>
+            Romanian
+          </td>
+          <td class="code">
+                <code>ROM</code>,  
+                <code>RUM</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ru">
+          <td><span class="description">Russian</span></td>
+          <td class="rfc"><a class="anchor" id="ru" href="#ru"></a><code>ru</code></td>
+          <td class="code">
+            <code>RU</code>
+          </td>
+          <td>
+            Russian
+          </td>
+          <td class="code">
+                <code>RUS</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-sr">
+          <td><span class="description">Serbian</span></td>
+          <td class="rfc"><a class="anchor" id="sr" href="#sr"></a><code>sr</code></td>
+          <td class="code">
+            <code>SR</code>
+          </td>
+          <td>
+            Serbian
+          </td>
+          <td class="code">
+                <code>SCC</code>,  
+                <code>SRP</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-sk">
+          <td><span class="description">Slovak</span></td>
+          <td class="rfc"><a class="anchor" id="sk" href="#sk"></a><code>sk</code></td>
+          <td class="code">
+            <code>SK</code>
+          </td>
+          <td>
+            Slovak
+          </td>
+          <td class="code">
+                <code>SLK</code>,  
+                <code>SLO</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-sl">
+          <td><span class="description">Slovenian</span></td>
+          <td class="rfc"><a class="anchor" id="sl" href="#sl"></a><code>sl</code></td>
+          <td class="code">
+            <code>SL</code>
+          </td>
+          <td>
+            Slovenian
+          </td>
+          <td class="code">
+                <code>SLV</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-es-AR">
+          <td><span class="description">Spanish (Argentina)</span></td>
+          <td class="rfc"><a class="anchor" id="es-AR" href="#es-AR"></a><code>es-AR</code></td>
+          <td class="code">
+            <code>QSA</code>
+          </td>
+          <td>
+            Spanish - Argentina
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-es">
+          <td><span class="description">Spanish</span></td>
+          <td class="rfc"><a class="anchor" id="es" href="#es"></a><code>es</code></td>
+          <td class="code">
+            <code>ES</code>
+          </td>
+          <td>
+            Spanish - Castilian
+          </td>
+          <td class="code">
+                <code>POR</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-es-419">
+          <td><span class="description">Latin American Spanish</span></td>
+          <td class="rfc"><a class="anchor" id="es-419" href="#es-419"></a><code>es-419</code></td>
+          <td class="code">
+            <code>LAS</code>
+          </td>
+          <td>
+            Spanish - Latin America
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-es-MX">
+          <td><span class="description">Mexican Spanish</span></td>
+          <td class="rfc"><a class="anchor" id="es-MX" href="#es-MX"></a><code>es-MX</code></td>
+          <td class="code">
+            <code>QSM</code>
+          </td>
+          <td>
+            Spanish - Mexican
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-sv">
+          <td><span class="description">Swedish</span></td>
+          <td class="rfc"><a class="anchor" id="sv" href="#sv"></a><code>sv</code></td>
+          <td class="code">
+            <code>SV</code>
+          </td>
+          <td>
+            Swedish
+          </td>
+          <td class="code">
+                <code>SWE</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ta">
+          <td><span class="description">Tamil</span></td>
+          <td class="rfc"><a class="anchor" id="ta" href="#ta"></a><code>ta</code></td>
+          <td class="code">
+            <code>TA</code>
+          </td>
+          <td>
+            Tamil
+          </td>
+          <td class="code">
+                <code>TAM</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-te">
+          <td><span class="description">Telugu</span></td>
+          <td class="rfc"><a class="anchor" id="te" href="#te"></a><code>te</code></td>
+          <td class="code">
+            <code>TE</code>
+          </td>
+          <td>
+            Telugu
+          </td>
+          <td class="code">
+                <code>TEL</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-th">
+          <td><span class="description">Thai</span></td>
+          <td class="rfc"><a class="anchor" id="th" href="#th"></a><code>th</code></td>
+          <td class="code">
+            <code>TH</code>
+          </td>
+          <td>
+            Thai
+          </td>
+          <td class="code">
+                <code>THA</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-tr">
+          <td><span class="description">Turkish</span></td>
+          <td class="rfc"><a class="anchor" id="tr" href="#tr"></a><code>tr</code></td>
+          <td class="code">
+            <code>TR</code>
+          </td>
+          <td>
+            Turkish
+          </td>
+          <td class="code">
+                <code>TUR</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-uk">
+          <td><span class="description">Ukrainian</span></td>
+          <td class="rfc"><a class="anchor" id="uk" href="#uk"></a><code>uk</code></td>
+          <td class="code">
+            <code>UK</code>
+          </td>
+          <td>
+            Ukranian
+          </td>
+          <td class="code">
+                <code>UKR</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-ur">
+          <td><span class="description">Urdu</span></td>
+          <td class="rfc"><a class="anchor" id="ur" href="#ur"></a><code>ur</code></td>
+          <td class="code">
+            <code>UR</code>
+          </td>
+          <td>
+            Urdu
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-vi">
+          <td><span class="description">Vietnamese</span></td>
+          <td class="rfc"><a class="anchor" id="vi" href="#vi"></a><code>vi</code></td>
+          <td class="code">
+            <code>VI</code>
+          </td>
+          <td>
+            Vietnamese
+          </td>
+          <td class="code">
+                <code>VIE</code>
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-cy">
+          <td><span class="description">Welsh</span></td>
+          <td class="rfc"><a class="anchor" id="cy" href="#cy"></a><code>cy</code></td>
+          <td class="code">
+            <code>WEL</code>
+          </td>
+          <td>
+            Welsh
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+        <tr id="language-xh">
+          <td><span class="description">Xhosa</span></td>
+          <td class="rfc"><a class="anchor" id="xh" href="#xh"></a><code>xh</code></td>
+          <td class="code">
+            <code>XH</code>
+          </td>
+          <td>
+            Xhosa
+          </td>
+          <td class="code">
+          </td>
+          <td class="use">
+            <p class="badge badge-secondary">audio</p>
+            <p class="badge badge-secondary">text</p>
+          </td>
+          <td class="comment">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<!-- Main content ends - do not edit below this line -->
+    <small class="text-muted">
+      <br>
+      <p class="text-center">Registry version: <code>+3edfe09c683ea37fd6b7f7293dc724a856ec28e0</code></p>
+      <p class="text-center">Site version: <code>9215df83da3f1fa3a975585ce03e6a4f02c0fd93</code></p>
+      <p class="text-center">Generated on Fri Jul 23 2021 00:29:55 GMT+0000 (Coordinated Universal Time)</p>
+    </small>
+</body>
+</html>

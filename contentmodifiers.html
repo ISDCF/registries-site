@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css">
+  <title>ISDCF Content Modifiers</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script type="application/javascript" src="features.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+    <!-- requirement for Advanced iFrame WP plugin - start -->
+    <script>document.domain='isdcf.com';</script>
+    <!-- requirement for Advanced iFrame WP plugin - end -->
+  
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light sticky-top fh-fixedHeader bg-light d-flex">
+      <a class="navbar-brand" href="#">ISDCF Content Modifiers</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto d-print-none">
+          <li class="nav-item">
+            <a id="json-feed" target="_blank" class="nav-link" href="https://registry.isdcf.com/contentmodifiers"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/>
+  </svg> JSON Feed</a>
+          </li>
+          <li class="nav-item">
+            <a id="full-page" target="_blank" class="nav-link" href="https://registry-page.isdcf.com/contentmodifiers.html"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrows-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z"/>
+  </svg> Full Page</a>
+          </li>
+          <li class="nav-item">
+            <a id="pdf-download" target="_blank" class="nav-link" title="Download as PDF" href="contentmodifiers.pdf"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+    <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+  </svg> Download PDF</a>
+          </li>
+        </ul>
+           <form id="search-form" class="form-inline d-print-none col-xs-4">
+            <div class="input-group mb-1">
+              <input id="search" class="form-control input-sm col-xs-4" type="search" placeholder="Search Content Modifiers">
+            </div>
+          </form>
+      </div>
+    </nav>
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+    <a class="anchor" id="top" href="#top"></a>  <!-- Main content starts - do not edit above this line -->
+    <table id="sorttable" class="table table-small table-hover display">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col" class="align-text-top d-none">Sort Order</th>
+          <th scope="col" class="align-text-top" width="15%">DCNC Content Modifier Value<br><small>(For CTT)</small></th>
+          <th scope="col" class="align-text-top" width="20%">Description</th>
+          <th scope="col" class="align-text-top text-wrap">CPL Metadata Sample/Values</th>
+          <th scope="col" class="align-text-top text-wrap">Metadata Scope</th>
+          <th scope="col" class="align-text-top">Metadata Defining Document</th>
+          
+        </tr>
+      </thead>
+      <tbody id="searchTable">
+        <tr id="contentmodifier-[VersionNumber]">
+          <td class="d-none">
+            1
+          </td>
+          <td class="code"><a class="anchor" id="[VersionNumber]" href="#[VersionNumber]"></a><code>[VersionNumber]</code></td>
+          <td class="comment">
+            Indicates the version number of the Composition.
+          </td>
+          <td>
+            <code class="sampCode">
+
+              &lt;VersionNumber&gt;<code>[VersionNumber]</code>&lt;/VersionNumber&gt;
+
+
+
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata">http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-Final">
+          <td class="d-none">
+            2
+          </td>
+          <td class="code"><a class="anchor" id="Final" href="#Final"></a><code>Final</code></td>
+          <td class="comment">
+            Final composition, including final sound, picture and accessibility features. Note: You should not use this modifier code in the CTT - this is present only to show the intended value of the VersionNumber&#x27;s &#x27;status&#x27; attribute in a &#x27;Final&#x27; Composition.
+          </td>
+          <td>
+            <code class="sampCode">
+
+
+
+              &lt;VersionNumber status="<code>final</code>"&gt;...&lt;/VersionNumber&gt;
+
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata">http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-Temp">
+          <td class="d-none">
+            3
+          </td>
+          <td class="code"><a class="anchor" id="Temp" href="#Temp"></a><code>Temp</code></td>
+          <td class="comment">
+            Temporary composition, e.g. preview or rough-cut version. Picture and/or sound are temporary and unfinished.
+          </td>
+          <td>
+            <code class="sampCode">
+
+
+
+              &lt;VersionNumber status="<code>temp</code>"&gt;...&lt;/VersionNumber&gt;
+
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata">http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-Pre">
+          <td class="d-none">
+            4
+          </td>
+          <td class="code"><a class="anchor" id="Pre" href="#Pre"></a><code>Pre</code></td>
+          <td class="comment">
+            Pre-release Composition. Picture and sound are final, but not all features of the final version such as accessibility features are present.
+          </td>
+          <td>
+            <code class="sampCode">
+
+
+
+              &lt;VersionNumber status="<code>pre</code>"&gt;...&lt;/VersionNumber&gt;
+
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata">http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-RedBand">
+          <td class="d-none">
+            5
+          </td>
+          <td class="code"><a class="anchor" id="RedBand" href="#RedBand"></a><code>RedBand</code></td>
+          <td class="comment">
+              For US released trailers, NATO and the MPAA have requested that trailers with the Red Band MPAA rating be clearly marked early in the DCP file name. This is so theatres will more clearly see the trailer is restricted, and not accidently place a Red Band trailer with a G, PG, or PG-13 movie.
+          </td>
+          <td>
+            <code class="sampCode">
+
+
+              &lt;Rating&gt;<br>
+                &nbsp;&lt;Agency&gt;<code>http://www.movielabs.com/md/ratings/US/MPAAT/1</code>&lt;/Agency&gt;<br>
+                &nbsp;&lt;Label&gt;<code>RB</code>&lt;/Label&gt;<br>
+              &lt;/Rating&gt;
+
+
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-7/2006/CPL">http://www.smpte-ra.org/schemas/429-7/2006/CPL</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-[CHAIN]">
+          <td class="d-none">
+            6
+          </td>
+          <td class="code"><a class="anchor" id="[CHAIN]" href="#[CHAIN]"></a><code>[CHAIN]</code></td>
+          <td class="comment">
+            A human-readable name of the specific targeted use (specific theatre chain or event) for which the Composition Playlist is intended.
+          </td>
+          <td>
+            <code class="sampCode">
+
+              &lt;Chain&gt;<code>[CHAIN]</code>&lt;/Chain&gt;
+
+
+
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata">http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-ALT">
+          <td class="d-none">
+            7
+          </td>
+          <td class="code"><a class="anchor" id="ALT" href="#ALT"></a><code>ALT</code></td>
+          <td class="comment">
+            Alternative version - You have the option of using the word &#x27;ALT&#x27; in the theatre chain sub-field instead of naming a specific theatre chain or event.
+          </td>
+          <td>
+            <code class="sampCode">
+
+              &lt;Chain&gt;<code>Alt</code>&lt;/Chain&gt;
+
+
+
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata">http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-2D">
+          <td class="d-none">
+            8
+          </td>
+          <td class="code"><a class="anchor" id="2D" href="#2D"></a><code>2D</code></td>
+          <td class="comment">
+            If the product is in both 2D and 3D, label the 2D version: &#x27;2D&#x27;. If the product only exists in 2D, you do not need to label it &#x27;2D&#x27; - it will be assumed to be in 2D if it is not otherwise described.
+          </td>
+          <td>
+            <code class="sampCode">
+
+
+
+
+
+              &lt;MainPicture&gt;...&lt;/MainPicture&gt;
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-7/2006/CPL#standard-content">http://www.smpte-ra.org/schemas/429-7/2006/CPL#standard-content</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-3D">
+          <td class="d-none">
+            9
+          </td>
+          <td class="code"><a class="anchor" id="3D" href="#3D"></a><code>3D</code></td>
+          <td class="comment">
+            If the product is 3D.
+          </td>
+          <td>
+            <code class="sampCode">
+
+
+
+
+
+              &lt;MainStereoscopicPicture&gt;...&lt;/MainStereoscopicPicture&gt;
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-10/2008/Main-Stereo-Picture-CPL">http://www.smpte-ra.org/schemas/429-10/2008/Main-Stereo-Picture-CPL</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-[Luminance]fl">
+          <td class="d-none">
+            10
+          </td>
+          <td class="code"><a class="anchor" id="[Luminance]fl" href="#[Luminance]fl"></a><code>[Luminance]fl</code></td>
+          <td class="comment">
+            There is currently no luminance standard for mastering 3D content. Some films are color timed at 3.5 foot lamberts, others at 4, 4.5, 6, 7, and even 10 foot lamberts. If you have multiple luminance versions of your product, put the foot lamberts numerical value here in order to signal which version the DCP contains. Do not use decimal points for the CTT.
+          </td>
+          <td>
+            <code class="sampCode">
+
+
+
+
+              &lt;Luminance units="<code>foot-lambert</code>"&gt;<code>[Luminance]</code>&lt;/Luminance&gt;
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata">http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-[FPS]">
+          <td class="d-none">
+            11
+          </td>
+          <td class="code"><a class="anchor" id="[FPS]" href="#[FPS]"></a><code>[FPS]</code></td>
+          <td class="comment">
+            Frame Rate numerical value (if other than 24 frames per second).
+          </td>
+          <td>
+            <code class="sampCode">
+
+              &lt;EditRate&gt;<code>[FPS]</code>&lt;/EditRate&gt;
+
+
+
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata">http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-DVis">
+          <td class="d-none">
+            12
+          </td>
+          <td class="code"><a class="anchor" id="DVis" href="#DVis"></a><code>DVis</code></td>
+          <td class="comment">
+            Dolby Vision graded image.
+          </td>
+          <td>
+            <code class="sampCode">
+
+
+
+
+
+
+              &lt;cpl-meta:ExtensionMetadata scope="<code>http://www.dolby.com/schemas/2014/EDR-metadata</code>"&gt;<br>
+              &nbsp;&lt;cpl-meta:Name&gt;<code>Dolby EDR</code>&lt;/cpl-meta:Name&gt;<br>
+              &nbsp;...<br>
+              &nbsp;&nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>image transfer function</code>&lt;/cpl-meta:Name&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;cpl-meta:Value&gt;<code>PQ10K</code>&lt;/cpl-meta:Value&gt;<br>
+              &nbsp;&nbsp;...<br>
+              &lt;/cpl-meta:ExtensionMetadata&gt;
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href="http://www.dolby.com/schemas/2014/EDR-metadata">http://www.dolby.com/schemas/2014/EDR-metadata</a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+        <tr id="contentmodifier-EC">
+          <td class="d-none">
+            13
+          </td>
+          <td class="code"><a class="anchor" id="EC" href="#EC"></a><code>EC</code></td>
+          <td class="comment">
+            Eclaircolor graded image.
+          </td>
+          <td>
+            <code class="sampCode">
+
+
+
+
+
+
+
+            </code>
+          </td>
+          <td>
+            <a target="_blank" href=""></a>
+          </td>
+          <td>
+            
+            
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<!-- Main content ends - do not edit below this line -->
+    <small class="text-muted">
+      <br>
+      <p class="text-center">Registry version: <code>+3edfe09c683ea37fd6b7f7293dc724a856ec28e0</code></p>
+      <p class="text-center">Site version: <code>9215df83da3f1fa3a975585ce03e6a4f02c0fd93</code></p>
+      <p class="text-center">Generated on Fri Jul 23 2021 00:29:55 GMT+0000 (Coordinated Universal Time)</p>
+    </small>
+</body>
+</html>
