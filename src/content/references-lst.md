@@ -1,0 +1,16 @@
+* International Organization for Standardization (ISO) — see <http://www.iso.org>
+* ISO 639-1:2002 Codes for the representation of names of languages — [Part 1: Alpha-2 code](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=22109&ICS1=1&ICS2=140&ICS3=20)
+* ISO 639-2:1998 Codes for the representation of names of languages — [Part 2: Alpha-3 code](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=4767&ICS1=1&ICS2=140&ICS3=20)
+* ISO 639-3:2007 Codes for the representation of names of languages — [Part 3: Alpha-3 code](http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=39534)
+* ISO 3166-1:2006 Codes for the representation of names of countries and their subdivisions — [Part 1: Country codes](http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=39719&ICS1=1&ICS2=140&ICS3=30)
+* IANA Document: [Language Subtag Registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
+* BCP 47: [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47)
+* RFC 5646: [Tags for Identifying ](https://tools.ietf.org/html/rfc5646)
+* ISDCF Document: [Digital Cinema Language Codes](http://isdcf.com/papers/ISDCF-Doc7-DigitalCinemaLanguageCodes.pdf)
+* ISCI (Industry Standard Commercial Identifier) codes are assigned and maintained by the American Association of Advertising Agencies — see <http://www.aaaa.org>
+* SMPTE Standard 428-12-2013: [D-Cinema Distribution Master Common Audio Channels and Soundfield Groups](http://dx.doi.org/10.5594/SMPTE.ST428-12.2013)
+* SMPTE Standard 429-7-2006: [D-Cinema Packaging — Composition Playlist](http://dx.doi.org/10.5594/SMPTE.ST429-7.2006)
+* SMPTE Standard 429-10-2008: [D-Cinema Packaging — Stereoscopic Picture Track File](http://dx.doi.org/10.5594/SMPTE.ST429-10.2008)
+* SMPTE Standard 429-12-2008: [D-Cinema Packaging — Caption and Closed Subtitle](http://dx.doi.org/10.5594/SMPTE.ST429-12.2008)
+* SMPTE Standard 429-16-2014: [Additional Composition Metadata and Guidelines](http://dx.doi.org/10.5594/SMPTE.ST429-16.2014)
+* MovieLabs [Common Metadata Ratings](https://www.movielabs.com/md/ratings/)

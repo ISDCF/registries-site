@@ -1,0 +1,1 @@
+**Special Note:** It is important to note that there is not a specific language indicated in the Audio Type field for the HI, VI or SL tracks, since most often this language will be the same as the language indicated earlier in the naming string in the Audio Language field.

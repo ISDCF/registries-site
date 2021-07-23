@@ -1,0 +1,3 @@
+The Digital Cinema Naming Convention (DCNC) works best if theaters see consistent naming patterns from all the studios. By following the Naming Convention precisely, studios can help theaters find packages on their servers by eliminating the visual chaos of random information placement.
+
+DCNC is a CONVENTION not a STANDARD. Some will violate certain aspects of the rules to make it clear the intent. See the CTT Examples on this page that show deviation from the rules set forth in this convention.

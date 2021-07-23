@@ -1,0 +1,1 @@
+**Special Exception Note:** `OV` (Original Version) is a territory agnostic “base” package. Some studios use this as a package that can be used in many territories by applying VF files to customize to specific territories. In this case, as per ST 429-16 for `ReleaseTerritory` metadata: “…for generic international versions, the code `001` shall be used.”

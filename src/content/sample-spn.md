@@ -1,0 +1,1 @@
+**Special Exception Note:** For CTTs where the Facility is unknown and/or unspecified, the proper DCNC code is `NUL`. This code is only for usage within the CTT. If using 429-16 metadata, the absence of the `<Facility>` element shall denote the facility is “Unspecified”.

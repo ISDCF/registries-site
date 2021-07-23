@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  {{>header}}
-  <!-- Main content starts - do not edit above this line -->
-    <table id="sorttable" class="table table-small table-hover display">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col" class="align-text-top" width="4em">Code</th>
-          <th scope="col" class="align-text-top">Description</th>
-          <th scope="col" class="align-text-top">Contact Info</th>
-        </tr>
-      </thead>
-      <tbody id="searchTable">
-        {{#data}}
-        <tr id="{{../idType}}-{{code}}">
-          <td class="code"><a class="anchor" id="{{code}}" href="#{{code}}"></a><code>{{code}}</code></td>
-          <td><span class="description">{{#if url}}<a href="{{url}}" target="_blank">{{/if}}{{description}}{{#if url}}</a>{{/if}}</span>
-            {{#obsolete}}
-              <span class="mx-3 badge badge-danger">Deprecated</span>
-              {{#if obsoletedBy}}
-                <span>Replaced by:</span>
-              {{/if}}
-              {{#obsoletedBy}}
-                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a>
-              {{/obsoletedBy}}
-            {{/obsolete}}
-          </td>
-          <td class="text-capitalize">
-            {{#if contact}}
-            <span><a href="mailto:{{contact/email}}" target="_blank">{{contact/name}}</a>
-              <br>{{contact/address}}</span>
-            {{/if}}
-          </td>
-        </tr>
-        {{/data}}
-      </tbody>
-    </table>
-<!-- Main content ends - do not edit below this line -->
+{{>header}}
+  <!-- Markdown content starts -->
+{{>content}}
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top" width="4em">Code</th>
+                <th scope="col" class="align-text-top">Description</th>
+                <th scope="col" class="align-text-top">Contact Info</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              {{#data}}
+              <tr id="{{../idType}}-{{code}}">
+                <td class="code">
+                  <a class="anchor" id="{{code}}" href="#{{code}}"></a><code>{{code}}</code>
+                </td>
+                <td>
+                  <span class="description">{{#if url}}<a href="{{url}}" target="_blank">{{/if}}{{description}}{{#if url}}</a>{{/if}}</span>
+                  {{#obsolete}}
+                    <span class="mx-3 badge badge-danger">Deprecated</span>
+                    {{#if obsoletedBy}}
+                      <span>Replaced by:</span>
+                    {{/if}}
+                    {{#obsoletedBy}}
+                      <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a>
+                    {{/obsoletedBy}}
+                  {{/obsolete}}
+                </td>
+                <td class="text-capitalize">
+                  {{#if contact}}
+                  <span><a href="mailto:{{contact/email}}" target="_blank">{{contact/name}}</a>
+                  <br>{{contact/address}}</span>
+                  {{/if}}
+                </td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
+<!-- Registry content ends - do not edit below this line -->
 {{>footer}}
 
 </html>
