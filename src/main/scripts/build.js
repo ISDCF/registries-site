@@ -71,7 +71,7 @@ const BUILD_PATH = "build";
 const pages = [
   {
     "pageType": "descriptiveText",
-    "pageTemplate": "home",
+    "pageTemplate": "index",
     "pageTitle": "Digital Cinema Naming Convention and Metadata Registry",
     "menuLevel": 1
   },
