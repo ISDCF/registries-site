@@ -556,7 +556,7 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
     let registry_version = "Unknown version"
     
     try {
-      [ registry_version ] = (await execFile('git', [ 'submodule', 'status', REGISTRIES_REPO_PATH ])).stdout.split(" ");
+      registry_version = (await execFile('git', [ 'submodule', 'status', REGISTRIES_REPO_PATH ])).stdout.split(" ");
     } catch (e) {
       console.warn(e);
     }
@@ -576,7 +576,7 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
   /* apply template */
     
     var html = template({
-      "version" : registry_version,
+      "version" : registry_version[1],
       "pages": pages,
       "data" : registry,
       "date" :  new Date(),
