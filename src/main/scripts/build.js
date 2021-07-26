@@ -55,6 +55,7 @@ const BUILD_PATH = "build";
   "pageTitle": "Proper Case" / Page and Menu name
   "schemaBuild": "1.0.0-beta.1" / specific to registry, not used for "descriptiveText" or "menuBreak"
   "menuLevel": 1, 2, or 3 / controls indents in menu (1 used for single pages. 2 is used for menu sections headers, 3 is for sub sections)
+  "pageOrder": order of the pages in the menu and for pagination (actual pages only)
   "sections": [
     "int" Introduction Text - pageTemplate-int
     "ov" Overview (tab) - pageTemplate-ov
@@ -73,19 +74,22 @@ const pages = [
     "pageType": "descriptiveText",
     "pageTemplate": "index",
     "pageTitle": "Digital Cinema Naming Convention and Metadata Registry",
-    "menuLevel": 1
+    "menuLevel": 1,
+    "pageOrder": 1
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "general",
     "pageTitle": "General Tips",
-    "menuLevel": 1
+    "menuLevel": 1,
+    "pageOrder": 2
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "illustratedguide",
     "pageTitle": "Illustrated Guide",
-    "menuLevel": 1
+    "menuLevel": 1,
+    "pageOrder": 3
   },
   {
     "pageType": "menuBreak",
@@ -108,7 +112,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 4
   },
   {
     "pageType": "registryTable",
@@ -119,7 +124,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 5
   },
   {
     "pageType": "descriptiveText",
@@ -128,7 +134,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 6
   },
   {
     "pageType": "descriptiveText",
@@ -138,6 +145,8 @@ const pages = [
     "breadCrumb": [
       "Naming Convention"
     ]
+    ,
+    "pageOrder": 7
   },
   {
     "pageType": "registryTable",
@@ -148,7 +157,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 8
   },
   {
     "pageType": "registryTable",
@@ -159,7 +169,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 9
   },
   {
     "pageType": "descriptiveText",
@@ -168,7 +179,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 10
   },
   {
     "pageType": "registryTable",
@@ -179,7 +191,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 11
   },
   {
     "pageType": "registryTable",
@@ -190,7 +203,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 12
   },
   {
     "pageType": "registryTable",
@@ -201,7 +215,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 13
   },
   {
     "pageType": "registryTable",
@@ -212,7 +227,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 14
   },
   {
     "pageType": "descriptiveText",
@@ -221,7 +237,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 15
   },
   {
     "pageType": "registryTable",
@@ -232,7 +249,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 16
   },
   {
     "pageType": "descriptiveText",
@@ -241,7 +259,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 17
   },
   {
     "pageType": "descriptiveText",
@@ -250,7 +269,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 18
   },
   {
     "pageType": "descriptiveText",
@@ -259,7 +279,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
-    ]
+    ],
+    "pageOrder": 19
   },
   {
     "pageType": "menuBreakEnd",
@@ -280,7 +301,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Metadata Registry"
-    ]
+    ],
+    "pageOrder": 20
   },
   {
     "pageType": "registryTable", 
@@ -291,7 +313,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Metadata Registry"
-    ]
+    ],
+    "pageOrder": 21
   },
   {
     "pageType": "registryTable",
@@ -302,7 +325,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Metadata Registry"
-    ]
+    ],
+    "pageOrder": 22
   },
   {
     "pageType": "registryTable",
@@ -313,7 +337,8 @@ const pages = [
     "menuLevel": 3,
     "breadCrumb": [
       "Metadata Registry"
-    ]
+    ],
+    "pageOrder": 23
   },
   {
     "pageType": "menuBreakEnd",
@@ -331,25 +356,29 @@ const pages = [
     "pageType": "descriptiveText",
     "pageTemplate": "references",
     "pageTitle": "References",
-    "menuLevel": 1
+    "menuLevel": 1,
+    "pageOrder": 24
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "acknowledgements",
     "pageTitle": "Acknowledgements",
-    "menuLevel": 1
+    "menuLevel": 1,
+    "pageOrder": 25
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "translations",
     "pageTitle": "Translations",
-    "menuLevel": 1
+    "menuLevel": 1,
+    "pageOrder": 26
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "updates",
     "pageTitle": "Updates",
-    "menuLevel": 1
+    "menuLevel": 1,
+    "pageOrder": 27
   }/*,
   {
     "pageType": "descriptiveText",
@@ -361,7 +390,7 @@ const pages = [
 
 /* load and build the templates */
 
-async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBuild, sections, breadCrumb }) {
+async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBuild, sections, breadCrumb, pageOrder }) {
 
   if (pageType == "descriptiveText" || pageType == "registryTable") {
 
@@ -374,6 +403,7 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
   /* load header and footer for templates */
 
     hb.registerPartial('header', await fs.readFile("src/main/templates/partials/header.hbs", 'utf8'));
+    hb.registerPartial('pagination', await fs.readFile("src/main/templates/partials/pagination.hbs", 'utf8'));
     hb.registerPartial('footer', await fs.readFile("src/main/templates/partials/footer.hbs", 'utf8'));
     
   /* instantiate template */
@@ -450,6 +480,18 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
       return options.inverse(this);
     });
 
+    const pageNumtoTemplate = {}
+    pages.forEach(item => { pageNumtoTemplate[item.pageOrder] = item.pageTemplate})
+
+    hb.registerHelper('lastPage', function (a, b, options) {
+      var lastpageCount = a - 1
+      return pageNumtoTemplate[lastpageCount];
+    });
+
+    hb.registerHelper('nextPage', function (a, b, options) {
+      var nextpageCount = a + 1
+      return pageNumtoTemplate[nextpageCount];
+    });
 
   /* load the registry */
 
@@ -578,6 +620,7 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
     var html = template({
       "version" : registry_version[1],
       "pages": pages,
+      "pageOrder": pageOrder,
       "data" : registry,
       "date" :  new Date(),
       "site_version": site_version,
