@@ -1,0 +1,10 @@
+      <div class="container-fluid d-print-none">
+{{#pages}}
+  {{#ifeq pageOrder ../pageOrder}}
+        <ul class="pagination justify-content-between">
+          <li class="page-item">{{#unless @first}}<a class="page-link" href="{{lastPage pageOrder}}">&laquo; Previous</a>{{/unless}}</li>
+          <li class="page-item">{{#unless @last}}<a class="page-link" href="{{nextPage pageOrder}}">Next &raquo;</a>{{/unless}}</li>
+        </ul>
+  {{/ifeq}}
+{{/pages}}
+      </div>

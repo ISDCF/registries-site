@@ -31,6 +31,15 @@ pre {
   padding: 10px;
 }
 
+.page-link {
+  color: #309090;
+}
+
+.page-link:hover {
+  background-color: #309090;
+  color: #fff;
+}
+
 .logo {
   font-size: calc(1.2 * 1em);
 }
