@@ -2,7 +2,7 @@
 
 ## French
 
-![French Translation](trans-french.png "French Translation"){#translation-french .image} 
+![French Translation](../trans-french.png "French Translation"){#translation-french .image} 
 
 The Digital Cinema Naming Convention site has been translated into French for convenience. It is being maintained independently from this official site and may not reflect the latest changes. The authority for Digital Cinema Naming is held in this site: <www.isdcf.com/dcnc/>. To access the French site please go to <http://cinema-int.com/CNCN/index.html> (Contact <jm@cinema-int.com> for information on the French site)
 
@@ -12,7 +12,7 @@ Le site de la Convention de Nommage du Cinéma Numérique a été traduit en fra
 
 ## Japanese
 
-![Japanese Translation](trans-japanese.png "Japanese Translation"){#translation-japanese .image}
+![Japanese Translation](../trans-japanese.png "Japanese Translation"){#translation-japanese .image}
 
 Japanese version of DCNC. <https://cinematechnology.jp/dcnc>
 

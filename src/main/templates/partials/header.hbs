@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="mobile.css">
+  <link rel="stylesheet" type="text/css" href="{{#ifnoteq pageTemplate "index"}}../{{/ifnoteq}}mobile.css">
   <link rel="bookmark" href="https://registry-page.isdcf.com/{{pageTemplate}}"/>
   <link rel="canonical" href="https://registry-page.isdcf.com/{{pageTemplate}}"/>
 <title>{{pageTitle}}</title>
@@ -12,13 +12,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
-  <script type="application/javascript" src="features.js"></script>
+  <script type="application/javascript" src="{{#ifnoteq pageTemplate "index"}}../{{/ifnoteq}}features.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom d-flex d-print-none">
-    <a class="navbar-brand" href="https://www.isdcf.com/site/"><img src="ISDCF-logo.png" width="100"></a>
+    <a class="navbar-brand" href="https://www.isdcf.com/site/"><img src="{{#ifnoteq pageTemplate "index"}}../{{/ifnoteq}}ISDCF-logo.png" width="100"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -70,7 +70,7 @@
   </nav>
   <div class="container-fluid bg-light border-bottom">
     <div class="row p-3 d-print-none breadcrumbs border-bottom">
-        <span class="small"> <a href="https://www.isdcf.com/site/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/></svg></a> > {{#ifnoteq pageTemplate "index"}}<a href="https://registry-page.isdcf.com/">Digital Cinema Naming Convention and Metadata Registry</a> > {{#if breadCrumb}}{{#breadCrumb}}{{this}} > {{/breadCrumb}}{{/if}}{{/ifnoteq}}{{pageTitle}}</span>
+        <span class="small"> <a href="https://www.isdcf.com/site/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/></svg></a> > {{#ifnoteq pageTemplate "index"}}<a href="../index.html">Digital Cinema Naming Convention and Metadata Registry</a> > {{#if breadCrumb}}{{#breadCrumb}}{{this}} > {{/breadCrumb}}{{/if}}{{/ifnoteq}}{{pageTitle}}</span>
     </div>
     <div class="row p-3">
       {{>pagination}}
@@ -79,13 +79,10 @@
 {{#pages}}
   {{#ifeq menuLevel "1"}}
     {{#ifeq pageType "descriptiveText"}}
-          <li><a class="nav-link{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{#ifeq pageTemplate "index"}}https://registry-page.isdcf.com/{{/ifeq}}{{#ifnoteq pageTemplate "index"}}{{pageTemplate}}{{/ifnoteq}}">{{pageTitle}}</a></li>
+          <li><a class="nav-link{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{#ifeq ../pageTemplate "index"}}{{#ifnoteq pageTemplate "index"}}{{pageTemplate}}/{{/ifnoteq}}{{/ifeq}}{{#ifnoteq ../pageTemplate "index"}}../{{#ifnoteq pageTemplate "index"}}{{pageTemplate}}/{{/ifnoteq}}{{/ifnoteq}}index.html">{{pageTitle}}</a></li>
     {{/ifeq}}
   {{/ifeq}}
   {{#ifeq menuLevel "2"}}
-    {{#ifeq pageType "descriptiveText"}}
-          <li><a class="nav-link {{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}">{{pageTitle}}</a></li>
-    {{/ifeq}}
     {{#ifeq pageType "menuBreak"}}
           <li>
             <a href="#{{pageTitle}}Submenu" data-toggle="collapse" aria-expanded="true" class="nav-link">{{pageTitle}} <svg width="1em" height="1em" viewBox="0 0 16 16" class="float-right bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></a>
@@ -97,7 +94,7 @@
     {{/ifeq}}
   {{/ifeq}}
   {{#ifeq menuLevel "3"}}
-              <li><a class="nav-link pl-4{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{pageTemplate}}">{{pageTitle}}</a></li>
+              <li><a class="nav-link pl-4{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{#ifeq ../pageTemplate "index"}}{{pageTemplate}}/{{/ifeq}}{{#ifnoteq ../pageTemplate "index"}}../{{pageTemplate}}/{{/ifnoteq}}index.html">{{pageTitle}}</a></li>
   {{/ifeq}}
 {{/pages}}
         </ul>
