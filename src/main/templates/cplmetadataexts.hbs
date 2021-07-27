@@ -8,16 +8,16 @@
           <table id="sorttable" class="table table-small table-hover display">
             <thead class="thead-light">
               <tr>
-                <th scope="col" class="align-text-top">Description</th>
-                <th scope="col" class="align-text-top" width="45%">CompositionMetadataAsset Extension</th>
-                <th scope="col" class="align-text-top" width="15%">Defining Document(s)</th>
+                <th scope="col" class="align-text-top col-2">Description</th>
+                <th scope="col" class="align-text-top col-6">CompositionMetadataAsset Extension</th>
+                <th scope="col" class="align-text-top">Defining Document(s)</th>
                 <th scope="col" class="align-text-top">Contact Info</th>
                 <th scope="col" class="align-text-top">Notes</th>
               </tr>
             </thead>
             <tbody id="searchTable">
               {{#data}}
-              <tr id="{{../idType}}">
+              <tr id="{{../idType}}-{{stripillegalChars description}}">
                 <td>
                   {{description}}
                 </td>
