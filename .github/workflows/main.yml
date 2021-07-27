@@ -18,6 +18,8 @@ jobs:
         node-version: '10'
     - run: npm install
     - run: npm run build
+      env:
+         GH_PAGES_BUILD: true
     - uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/master'
       with:

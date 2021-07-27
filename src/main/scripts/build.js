@@ -398,7 +398,13 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
 
     var DATA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/data/" + pageTemplate + ".json");
     var DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "src/main/schemas/" + pageTemplate + ".schema.json");
-    var PAGE_SITE_PATH = pageTemplate + ".html";
+    var PAGE_SITE_PATH 
+    if (pageTemplate == "index") {
+      PAGE_SITE_PATH = pageTemplate + ".html";
+    }
+    else {
+      PAGE_SITE_PATH = pageTemplate + "/index.html";
+    }
 
   /* load header and footer for templates */
 
@@ -614,12 +620,24 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
   /* create build directory */
     
     await fs.mkdir(BUILD_PATH, { recursive: true });
-    
+    if (pageTemplate != "index") { 
+      await fs.mkdir(BUILD_PATH + "/" + pageTemplate, { recursive: true });
+    }
+
+  /* determine if build on GH to remove "index.html" from internal link */
+
+    let htmlLink = "index.html"
+
+    if ('GH_PAGES_BUILD' in process.env) {
+      htmlLink = ""
+    }
+
   /* apply template */
     
     var html = template({
       "version" : registry_version[1],
       "pages": pages,
+      "htmlLink": htmlLink,
       "pageOrder": pageOrder,
       "data" : registry,
       "date" :  new Date(),

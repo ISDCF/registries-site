@@ -8,7 +8,7 @@ and
 
 An `OV`, or “Original Version” package, always contains an entire feature/package.  The `VF` or “Version File” usually contains a partial feature (e.g.: subtitles, alternate language, pickup shots) and must be loaded together with the OV track files in order to play the feature correctly.  An `OV` package shipped by itself always contains its own CPL and track files.  A `VF` package shipped by itself always contains its own CPL, often some alternative track files, and relies on the existing `OV` track files.  A `VF` package is sometimes shipped with its corresponding `OV` package.  In this case, the `OV` package doesn’t need its own CPL because the `VF` CPL determines playout.  (See figure below.)
 
-![OV/VF Illustration](dcnc_ov-vf.jpg "OV/VF Illustration"){#ovvf-illustration .image}
+![OV/VF Illustration](../dcnc_ov-vf.jpg "OV/VF Illustration"){#ovvf-illustration .image}
 
-[[enlarge]](dcnc_ov-vf.jpg)
+[[enlarge]](../dcnc_ov-vf.jpg)
 {.text-center}

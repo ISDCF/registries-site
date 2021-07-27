@@ -2,8 +2,8 @@
 {{#pages}}
   {{#ifeq pageOrder ../pageOrder}}
         <ul class="pagination justify-content-between">
-          <li class="page-item">{{#unless @first}}<a class="page-link" href="{{lastPage pageOrder}}">&laquo; Previous</a>{{/unless}}</li>
-          <li class="page-item">{{#unless @last}}<a class="page-link" href="{{nextPage pageOrder}}">Next &raquo;</a>{{/unless}}</li>
+          <li class="page-item">{{#unless @first}}<a class="page-link" href="../{{#ifnoteq pageOrder 2}}{{lastPage pageOrder}}/{{/ifnoteq}}{{../htmlLink}}">&laquo; Previous</a>{{/unless}}</li>
+          <li class="page-item">{{#unless @last}}<a class="page-link" href="{{#ifnoteq ../pageTemplate "index"}}../{{/ifnoteq}}{{nextPage pageOrder}}/{{../htmlLink}}">Next &raquo;</a>{{/unless}}</li>
         </ul>
   {{/ifeq}}
 {{/pages}}
