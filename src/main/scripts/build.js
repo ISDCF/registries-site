@@ -623,12 +623,21 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
     if (pageTemplate != "index") { 
       await fs.mkdir(BUILD_PATH + "/" + pageTemplate, { recursive: true });
     }
-    
+
+  /* determine if build on GH to remove "index.html" from internal link */
+
+    let htmlLink = "index.html"
+
+    if ('GH_PAGES_BUILD' in process.env) {
+      htmlLink = ""
+    }
+
   /* apply template */
     
     var html = template({
       "version" : registry_version[1],
       "pages": pages,
+      "htmlLink": htmlLink,
       "pageOrder": pageOrder,
       "data" : registry,
       "date" :  new Date(),

@@ -70,7 +70,7 @@
   </nav>
   <div class="container-fluid bg-light border-bottom">
     <div class="row p-3 d-print-none breadcrumbs border-bottom">
-        <span class="small"> <a href="https://www.isdcf.com/site/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/></svg></a> > {{#ifnoteq pageTemplate "index"}}<a href="../index.html">Digital Cinema Naming Convention and Metadata Registry</a> > {{#if breadCrumb}}{{#breadCrumb}}{{this}} > {{/breadCrumb}}{{/if}}{{/ifnoteq}}{{pageTitle}}</span>
+        <span class="small"> <a href="https://www.isdcf.com/site/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/></svg></a> > {{#ifnoteq pageTemplate "index"}}<a href="../{{htmlLink}}">Digital Cinema Naming Convention and Metadata Registry</a> > {{#if breadCrumb}}{{#breadCrumb}}{{this}} > {{/breadCrumb}}{{/if}}{{/ifnoteq}}{{pageTitle}}</span>
     </div>
     <div class="row p-3">
       {{>pagination}}
@@ -79,7 +79,7 @@
 {{#pages}}
   {{#ifeq menuLevel "1"}}
     {{#ifeq pageType "descriptiveText"}}
-          <li><a class="nav-link{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{#ifeq ../pageTemplate "index"}}{{#ifnoteq pageTemplate "index"}}{{pageTemplate}}/{{/ifnoteq}}{{/ifeq}}{{#ifnoteq ../pageTemplate "index"}}../{{#ifnoteq pageTemplate "index"}}{{pageTemplate}}/{{/ifnoteq}}{{/ifnoteq}}index.html">{{pageTitle}}</a></li>
+          <li><a class="nav-link{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{#ifeq ../pageTemplate "index"}}{{#ifnoteq pageTemplate "index"}}{{pageTemplate}}/{{/ifnoteq}}{{/ifeq}}{{#ifnoteq ../pageTemplate "index"}}../{{#ifnoteq pageTemplate "index"}}{{pageTemplate}}/{{/ifnoteq}}{{/ifnoteq}}{{../htmlLink}}">{{pageTitle}}</a></li>
     {{/ifeq}}
   {{/ifeq}}
   {{#ifeq menuLevel "2"}}
@@ -94,7 +94,7 @@
     {{/ifeq}}
   {{/ifeq}}
   {{#ifeq menuLevel "3"}}
-              <li><a class="nav-link pl-4{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{#ifeq ../pageTemplate "index"}}{{pageTemplate}}/{{/ifeq}}{{#ifnoteq ../pageTemplate "index"}}../{{pageTemplate}}/{{/ifnoteq}}index.html">{{pageTitle}}</a></li>
+              <li><a class="nav-link pl-4{{#ifeq pageTitle ../pageTitle}} active{{/ifeq}}{{#if @last}} rounded-bottom{{/if}}{{#if @first}} rounded-top{{/if}}" href="{{#ifeq ../pageTemplate "index"}}{{pageTemplate}}/{{/ifeq}}{{#ifnoteq ../pageTemplate "index"}}../{{pageTemplate}}/{{/ifnoteq}}{{../htmlLink}}">{{pageTitle}}</a></li>
   {{/ifeq}}
 {{/pages}}
         </ul>
