@@ -9,20 +9,20 @@
             <thead class="thead-light">
               <tr>
                 <th scope="col" class="align-text-top">#</th>
-                <th scope="col" class="align-text-top" width="15%">DCNC Content Modifier Value<br><small>(For CTT)</small></th>
+                <th scope="col" class="align-text-top">DCNC Content Modifier Value<br><small>(For CTT)</small></th>
                 <th scope="col" class="align-text-top">Description</th>
-                <th scope="col" class="align-text-top" width="30%">CPL Metadata Sample/Values</th>
-                <th scope="col" class="align-text-top" width="15%">>Metadata Defining Document(s)</th>
+                <th scope="col" class="align-text-top col-4">CPL Metadata Sample/Values</th>
+                <th scope="col" class="align-text-top col-2">Metadata Defining Document(s)</th>
               </tr>
             </thead>
             <tbody id="searchTable">
               {{#data}}
-              <tr id="{{../idType}}-{{dcncCode}}">
-                <td class="">
+              <tr id="{{../idType}}-{{stripillegalChars dcncCode}}">
+                <td>
                   {{dcncSortOrder}}
                 </td>
                 <td class="code">
-                  <a class="anchor" id="{{dcncCode}}" href="#{{dcncCode}}"></a><code>{{dcncCode}}</code>
+                  <a class="anchor" id="{{stripillegalChars dcncCode}}" href="#{{stripillegalChars dcncCode}}"></a><code>{{dcncCode}}</code>
                 </td>
                 <td>
                   {{description}}

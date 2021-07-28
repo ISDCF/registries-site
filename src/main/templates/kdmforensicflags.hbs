@@ -9,14 +9,14 @@
             <thead class="thead-light">
               <tr>
                 <th scope="col" class="align-text-top">Description</th>
-                <th scope="col" class="align-text-top" width="45%">URI</th>
-                <th scope="col" class="align-text-top" width="15%">Defining Document(s)</th>
+                <th scope="col" class="align-text-top col-6">URI</th>
+                <th scope="col" class="align-text-top col-2">Defining Document(s)</th>
                 <th scope="col" class="align-text-top">Notes</th>
               </tr>
             </thead>
             <tbody id="searchTable">
               {{#data}}
-              <tr id="{{../idType}}">
+              <tr id="{{../idType}}-{{stripillegalChars uri}}">
                 <td>
                   {{description}}
                 </td>

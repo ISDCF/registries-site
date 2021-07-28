@@ -10,14 +10,14 @@
               <tr>
                 <th scope="col" class="align-text-top">Usage</th>
                 <th scope="col" class="align-text-top">Name</th>
-                <th scope="col" class="align-text-top" width="25%">UL</th>
+                <th scope="col" class="align-text-top col-2">UL</th>
                 <th scope="col" class="align-text-top">Defining Document(s)</th>
                 <th scope="col" class="align-text-top">Notes</th>
               </tr>
             </thead>
             <tbody id="searchTable">
               {{#data}}
-              <tr id="{{../idType}}">
+              <tr id="{{../idType}}-{{stripillegalChars ul}}">
                 <td>
                   {{usage}}
                 </td>

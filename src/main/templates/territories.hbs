@@ -12,12 +12,12 @@
                 <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
                 <th scope="col" class="align-text-top">ReleaseTerritory Tag<br><small>(For DCP Metadata)</small></th>
                 <th scope="col" class="align-text-top">Tag Scope<br><small>(For DCP Metadata)</small></th>
-                <th scope="col" class="align-text-top text-wrap" width="20%">Notes</th>
+                <th scope="col" class="align-text-top text-wrap col-2">Notes</th>
               </tr>
             </thead>
             <tbody id="searchTable">
               {{#data}}
-              <tr id="{{../idType}}-{{rfc5646Tag}}">
+              <tr id="{{../idType}}-{{tag}}">
                 <td>
                   <span class="description">{{dcncTerritory}}</span>
                 </td>
@@ -29,7 +29,7 @@
                   {{/if}}
                 </td>
                 <td class="rfc">
-                  <a class="anchor" id="{{rfc5646Tag}}" href="#{{rfc5646Tag}}"></a><code>{{tag}}</code>
+                  <a class="anchor" id="{{tag}}" href="#{{tag}}"></a><code>{{tag}}</code>
                 </td>
                 <td class="cell-breakAll">
                   {{#if tagScope}}

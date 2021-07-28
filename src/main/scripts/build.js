@@ -92,14 +92,8 @@ const pages = [
     "pageOrder": 3
   },
   {
-    "pageType": "menuBreak",
-    "pageTemplate": "#",
-    "pageTitle": "Collapse Sections",
-    "menuLevel": 1
-  },
-  {
-    "pageType": "menuBreak",
-    "pageTemplate": "#",
+    "pageType": "menuCollapse",
+    "pageTemplate": "namingconvention",
     "pageTitle": "Naming Convention",
     "menuLevel": 2
   },
@@ -283,14 +277,14 @@ const pages = [
     "pageOrder": 19
   },
   {
-    "pageType": "menuBreakEnd",
-    "pageTemplate": "#",
+    "pageType": "menuCollapseEnd",
+    "pageTemplate": "namingconvention",
     "pageTitle": "Naming Convention End",
     "menuLevel": 2
   },
   {
-    "pageType": "menuBreak",
-    "pageTemplate": "#",
+    "pageType": "menuCollapse",
+    "pageTemplate": "metadataregistry",
     "pageTitle": "Metadata Registry",
     "menuLevel": 2
   },
@@ -341,16 +335,10 @@ const pages = [
     "pageOrder": 23
   },
   {
-    "pageType": "menuBreakEnd",
-    "pageTemplate": "#",
+    "pageType": "menuCollapseEnd",
+    "pageTemplate": "metadataregistry",
     "pageTitle": "Metadata Registry End",
     "menuLevel": 2
-  },
-  {
-    "pageType": "menuBreakEnd",
-    "pageTemplate": "#",
-    "pageTitle": "Collapse Sections End",
-    "menuLevel": 1
   },
   {
     "pageType": "descriptiveText",
@@ -484,6 +472,11 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
         return options.fn(this); 
       }
       return options.inverse(this);
+    });
+
+    hb.registerHelper('stripillegalChars', function (a, b, options) {
+      var cleanString = a.replace(/([^a-z0-9]+)/gi, '');
+      return cleanString
     });
 
     const pageNumtoTemplate = {}

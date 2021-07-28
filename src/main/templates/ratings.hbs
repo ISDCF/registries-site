@@ -11,7 +11,7 @@
                 <th scope="col" class="align-text-top">Region</th>
                 <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
                 <th scope="col" class="align-text-top">Rating Label Value<br><small>(For DCP Metadata)</small></th>
-                <th scope="col" class="align-text-top">Rating Agency Value<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top col-4">Rating Agency Value<br><small>(For DCP Metadata)</small></th>
                 <th scope="col" class="align-text-top">Rating Agency</th>
                 <th scope="col" class="align-text-top">Usage</th>
                 <th scope="col" class="align-text-top">Reference</th>
@@ -19,7 +19,7 @@
             </thead>
             <tbody id="searchTable">
               {{#data}}
-              <tr id="{{../idType}}-{{rfc5646Tag}}">
+              <tr id="{{../idType}}-{{stripillegalChars agency/identifier}}-{{stripillegalChars region/code}}">
                 <td>
                   {{region/name}} ({{region/code}})
                 </td>
@@ -41,7 +41,7 @@
                 </td>
                 <td class="use">
                   {{#use}}
-                  <p class="badge badge-secondary">{{this}}</p>
+                  <span class="badge badge-secondary">{{this}}</span>
                   {{/use}}
                 </td>
                 <td>
