@@ -2,6 +2,8 @@ name: build and test
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [build-site]
   push:
   pull_request:
   schedule:
