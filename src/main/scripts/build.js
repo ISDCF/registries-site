@@ -159,7 +159,7 @@ const pages = [
     "pageTemplate": "languages",
     "idType": "language",
     "pageTitle": "Language Codes",
-    "schemaBuild": "1.0.0",
+    "schemaBuild": "1.0.1",
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
