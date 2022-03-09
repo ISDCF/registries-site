@@ -19,7 +19,7 @@
     "cldr-core": "^36.0.0",
     "cldr-localenames-modern": "^36.0.0",
     "language-tags": "^1.0.5",
-    "markdown-it": "^12.0.2",
+    "markdown-it": "^12.3.2",
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-include": "^2.0.0"
