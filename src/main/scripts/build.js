@@ -114,7 +114,7 @@ const pages = [
     "pageTemplate": "contentmodifiers",
     "idType": "contentmodifier",
     "pageTitle": "Content Modifiers",
-    "schemaBuild": "1.0.0-beta.1",
+    "schemaBuild": "1.0.1",
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
