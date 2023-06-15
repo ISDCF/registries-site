@@ -181,7 +181,7 @@ const pages = [
     "pageTemplate": "territories",
     "idType": "territory",
     "pageTitle": "Territory Codes",
-    "schemaBuild": "1.0.2",
+    "schemaBuild": "1.0.3",
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
