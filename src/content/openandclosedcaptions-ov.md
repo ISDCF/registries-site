@@ -1,6 +1,6 @@
 Open and Closed Caption files are coded as “CCAP” for Closed Caption and “OCAP” or “OPNCAP" for Open Caption.
 
-If used, CCAP, OCAP, and/or OPNCAP should appear at the end of the Language field after a hyphen.
+If used, CCAP, OCAP, or OPNCAP should appear at the end of the Language field after a hyphen.
 
 For example:
 
