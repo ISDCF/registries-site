@@ -78,24 +78,30 @@ const pages = [
     "pageOrder": 1
   },
   {
+    "pageType": "menuCollapse",
+    "pageTemplate": "namingconvention",
+    "pageTitle": "Digital Cinema Naming Convention",
+    "menuLevel": 2
+  },
+  {
     "pageType": "descriptiveText",
     "pageTemplate": "general",
     "pageTitle": "General Tips",
-    "menuLevel": 1,
+    "menuLevel": 3,
+    "breadCrumb": [
+      "Naming Convention"
+    ],
     "pageOrder": 2
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "illustratedguide",
     "pageTitle": "Illustrated Guide",
-    "menuLevel": 1,
+    "menuLevel": 3,
+    "breadCrumb": [
+      "Naming Convention"
+    ],
     "pageOrder": 3
-  },
-  {
-    "pageType": "menuCollapse",
-    "pageTemplate": "namingconvention",
-    "pageTitle": "Naming Convention",
-    "menuLevel": 2
   },
   {
     "pageType": "registryTable",
@@ -277,6 +283,46 @@ const pages = [
     "pageOrder": 19
   },
   {
+    "pageType": "descriptiveText",
+    "pageTemplate": "references",
+    "pageTitle": "References",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "Naming Convention"
+    ],
+    "pageOrder": 20
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "acknowledgements",
+    "pageTitle": "Acknowledgements",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "Naming Convention"
+    ],
+    "pageOrder": 21
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "translations",
+    "pageTitle": "Translations",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "Naming Convention"
+    ],
+    "pageOrder": 22
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "updates",
+    "pageTitle": "Updates",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "Naming Convention"
+    ],
+    "pageOrder": 23
+  },
+  {
     "pageType": "menuCollapseEnd",
     "pageTemplate": "namingconvention",
     "pageTitle": "Naming Convention End",
@@ -296,7 +342,7 @@ const pages = [
     "breadCrumb": [
       "Metadata Registry"
     ],
-    "pageOrder": 20
+    "pageOrder": 24
   },
   {
     "pageType": "registryTable", 
@@ -308,7 +354,7 @@ const pages = [
     "breadCrumb": [
       "Metadata Registry"
     ],
-    "pageOrder": 21
+    "pageOrder": 25
   },
   {
     "pageType": "registryTable",
@@ -320,7 +366,7 @@ const pages = [
     "breadCrumb": [
       "Metadata Registry"
     ],
-    "pageOrder": 22
+    "pageOrder": 26
   },
   {
     "pageType": "registryTable",
@@ -332,7 +378,7 @@ const pages = [
     "breadCrumb": [
       "Metadata Registry"
     ],
-    "pageOrder": 23
+    "pageOrder": 27
   },
   {
     "pageType": "menuCollapseEnd",
@@ -354,7 +400,7 @@ const pages = [
     "breadCrumb": [
       "Terminology Registry"
     ],
-    "pageOrder": 24
+    "pageOrder": 28
   },
   {
     "pageType": "registryTable",
@@ -363,41 +409,16 @@ const pages = [
     "pageTitle": "Terms",
     "schemaBuild": "1.0.0-beta.2",
     "menuLevel": 3,
-    "pageOrder": 25
+    "breadCrumb": [
+      "Terminology Registry"
+    ],
+    "pageOrder": 29
   },
   {
     "pageType": "menuCollapseEnd",
     "pageTemplate": "terminologyregistry",
     "pageTitle": "Terminology Registry End",
     "menuLevel": 2
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "references",
-    "pageTitle": "References",
-    "menuLevel": 1,
-    "pageOrder": 26
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "acknowledgements",
-    "pageTitle": "Acknowledgements",
-    "menuLevel": 1,
-    "pageOrder": 27
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "translations",
-    "pageTitle": "Translations",
-    "menuLevel": 1,
-    "pageOrder": 28
-  },
-  {
-    "pageType": "descriptiveText",
-    "pageTemplate": "updates",
-    "pageTitle": "Updates",
-    "menuLevel": 1,
-    "pageOrder": 29
   }/*,
   {
     "pageType": "descriptiveText",
