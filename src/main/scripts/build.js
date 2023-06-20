@@ -73,7 +73,7 @@ const pages = [
   {
     "pageType": "descriptiveText",
     "pageTemplate": "index",
-    "pageTitle": "Digital Cinema Naming Convention and Metadata Registry",
+    "pageTitle": "Digital Cinema Naming Convention and Metadata/Terminology Registries",
     "menuLevel": 1,
     "pageOrder": 1
   },
@@ -341,32 +341,63 @@ const pages = [
     "menuLevel": 2
   },
   {
+    "pageType": "menuCollapse",
+    "pageTemplate": "terminologyregistry",
+    "pageTitle": "Terminology Registry",
+    "menuLevel": 2
+  },
+  {
+    "pageType": "descriptiveText",
+    "pageTemplate": "termsintro",
+    "pageTitle": "Introduction",
+    "menuLevel": 3,
+    "breadCrumb": [
+      "Terminology Registry"
+    ],
+    "pageOrder": 24
+  },
+  {
+    "pageType": "registryTable",
+    "pageTemplate": "terms",
+    "idType": "term",
+    "pageTitle": "Terms",
+    "schemaBuild": "1.0.0-beta.2",
+    "menuLevel": 3,
+    "pageOrder": 25
+  },
+  {
+    "pageType": "menuCollapseEnd",
+    "pageTemplate": "terminologyregistry",
+    "pageTitle": "Terminology Registry End",
+    "menuLevel": 2
+  },
+  {
     "pageType": "descriptiveText",
     "pageTemplate": "references",
     "pageTitle": "References",
     "menuLevel": 1,
-    "pageOrder": 24
+    "pageOrder": 26
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "acknowledgements",
     "pageTitle": "Acknowledgements",
     "menuLevel": 1,
-    "pageOrder": 25
+    "pageOrder": 27
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "translations",
     "pageTitle": "Translations",
     "menuLevel": 1,
-    "pageOrder": 26
+    "pageOrder": 28
   },
   {
     "pageType": "descriptiveText",
     "pageTemplate": "updates",
     "pageTitle": "Updates",
     "menuLevel": 1,
-    "pageOrder": 27
+    "pageOrder": 29
   }/*,
   {
     "pageType": "descriptiveText",

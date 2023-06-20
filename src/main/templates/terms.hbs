@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+  <!-- Markdown content starts -->
+{{>content}}
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top">Term</th>
+                <th scope="col" class="align-text-top">Abbreviation(s)</th>
+                <th scope="col" class="align-text-top">Symbol(s)</th>
+                <th scope="col" class="align-text-top col-5">Definition</th>
+ 
+                <th scope="col" class="align-text-top">Related Term(s)</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              {{#data}}
+              <tr id="{{../idType}}-{{stripillegalChars term}}{{#if termContext}}{{stripillegalChars termContext}}{{/if}}">
+                <td>
+                  <code>{{term}}<code>{{#if termContext}} ({{termContext}}){{/if}}
+                </td>
+                <td>
+                  {{#abbreviations}}
+                    {{this}}{{#unless @last}},<br>{{/unless}}
+                  {{/abbreviations}}
+                </td>
+                <td>
+                  {{#symbols}}
+                    <code class="sampCode">{{this}}{{#unless @last}}</code><br>{{/unless}}
+                  {{/symbols}}
+                </td>
+                <td>
+                  {{#if definition}} 
+                  <p>
+                    {{definition}}
+                  </p>
+                  {{/if}}
+                  {{#if media}}
+                    {{#if media/image}}
+                    <div class="p-2">
+                      {{#media/image}}<img src="{{this}}" class="img-fluid">{{#unless @last}}<br>{{/unless}}{{/media/image}}
+                    </div>
+                    {{/if}}
+                    {{#if media/video}}
+                    <div class="embed-responsive embed-responsive-16by9">
+                      {{#media/video}}<iframe class="embed-responsive-item" src="{{this}}" allowfullscreen></iframe>{{#unless @last}}<br>{{/unless}}{{/media/video}}
+                    </div>
+                    {{/if}}
+                  {{/if}}
+                  {{#if synonyms}} 
+                  <div class="border-top p-2">
+                    AKA: {{#synonyms}}{{this}}{{#unless @last}}, {{/unless}}{{/synonyms}}
+                  </div>
+                  {{/if}}
+                  {{#if sources}} 
+                  <div class="border-top p-2">
+                    Source(s):
+                    <br>{{#sources}}[<a href="{{this}}"><span class="text-break">{{this}}</span></a>]{{#unless @last}},<br>{{/unless}}{{/sources}}
+                  </div>
+                  {{/if}}
+                </td>
+                <td>
+                  {{#relatedTerms}}
+                    <a href="#term-{{stripillegalChars this}}">{{this}}</a>{{#unless @last}},<br>{{/unless}}
+                  {{/relatedTerms}}
+                </td>
+              </tr>
+              {{/data}}
+            </tbody>
+          </table>
+<!-- Main content ends - do not edit below this line -->
+{{>footer}}
+
+</html>
