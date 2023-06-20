@@ -73,7 +73,7 @@ const pages = [
   {
     "pageType": "descriptiveText",
     "pageTemplate": "index",
-    "pageTitle": "Digital Cinema Naming Convention and Metadata Registry",
+    "pageTitle": "Digital Cinema Naming Convention and Metadata/Terminology Registries",
     "menuLevel": 1,
     "pageOrder": 1
   },
