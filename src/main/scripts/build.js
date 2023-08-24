@@ -393,16 +393,6 @@ const pages = [
     "menuLevel": 2
   },
   {
-    "pageType": "descriptiveText",
-    "pageTemplate": "termsintro",
-    "pageTitle": "Introduction",
-    "menuLevel": 3,
-    "breadCrumb": [
-      "Terminology Registry"
-    ],
-    "pageOrder": 28
-  },
-  {
     "pageType": "registryTable",
     "pageTemplate": "terms",
     "idType": "term",
@@ -412,7 +402,7 @@ const pages = [
     "breadCrumb": [
       "Terminology Registry"
     ],
-    "pageOrder": 29
+    "pageOrder": 28
   },
   {
     "pageType": "menuCollapseEnd",
