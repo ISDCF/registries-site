@@ -223,7 +223,7 @@ const pages = [
     "pageTemplate": "studios",
     "idType": "studio",
     "pageTitle": "Studio Codes",
-    "schemaBuild": "2.0.0",
+    "schemaBuild": "1.0.0",
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
@@ -245,7 +245,7 @@ const pages = [
     "pageTemplate": "facilities",
     "idType": "facility",
     "pageTitle": "Facility Codes",
-    "schemaBuild": "1.0.0",
+    "schemaBuild": "2.0.0",
     "menuLevel": 3,
     "breadCrumb": [
       "Naming Convention"
