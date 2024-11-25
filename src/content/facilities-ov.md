@@ -2,7 +2,7 @@ The Facility field is useful as a record of which company packaged a given DCP. 
 
 **If you want to add your facility to this list:**
 
-1) Pick a 2-3 letter code that IS NOT BEING USED by another facility
+1) Pick a 2-4 letter code that IS NOT BEING USED by another facility
 2) Enter your information on [THIS FACILITY APPLICATION FORM](https://forms.gle/vVUytft8J6qQQFvd6)
 3) Give us a few days and check the list to see if you have been added AND IF THE INFORMATION IS CORRECT! (It’s a manual entry process and sometime we mess up.) If it needs correcting or has not posted, please email <digitalcinemanaming@isdcf.com>. 
 
