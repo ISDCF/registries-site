@@ -1,3 +1,3 @@
-**Special Exception Note:** For CTTs where there are No Spoken Languages or No Subtitles, the proper DCNC code is `XX`. This code is only for usage within the CTT. The absence of the <`Language>` element where optional shall denote there is no spoken or written language.
+**Special Exception Note:** For CTTs where there are No Spoken Languages or No Subtitles, the proper DCNC code is `XX`. This code is only for usage within the CTT. The absence of the `<Language>` element where optional shall denote there is no spoken or written language.
 
 In the case where there is a Spoken Language or Subtitle that uses an undefined or unknown language, the DCNC code is `UND` and `<Language>` element's value is `und`"
