@@ -1,6 +1,6 @@
-The Studio codes are 2–4 character codes that represent the studio or content creator of the material. This is helpful if a theatre or distribution entity does not immediately recognize the title in the file name and has a question regarding the material. The codes are often but not always based on ISCI codes. They are determined by the individual studios and can be changed at any time by the studios 
+The Studio codes are 2–4 character codes that represent the studio or content creator of the material. This is helpful if a theatre or distribution entity does not immediately recognize the title in the file name and has a question regarding the material. The codes are often but not always based on ISCI codes. They are selected by the individual studios. Studios are encouraged to update their entry for change of address, contact information or website updates. If there is a change of ownership or a studio no longer exists the old code can be obsoleted and may be updated to point to a new code. Studios that close may notify us as well to obsolete old codes. No code can be re-used.
 
-**If you want to add your studio to this list:**
+**If you want to add or modify your studio in the studio registry:**
 
 1) Pick a 2-4 letter code that IS NOT BEING USED by another facility
 2) Enter your information on [THIS STUDIO APPLICATION FORM](https://forms.gle/CwGvusenTtDHvXHK8)
