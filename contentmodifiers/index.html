@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://www.isdcf.com/wp-content/uploads/2025/03/favicon_IS.svg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="../mobile.css">
+  <link rel="bookmark" href="https://registry-page.isdcf.com/contentmodifiers"/>
+  <link rel="canonical" href="https://registry-page.isdcf.com/contentmodifiers"/>
+<title>Content Modifiers</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="../features.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom d-flex d-print-none">
+    <a class="navbar-brand" href="https://www.isdcf.com/site/"><img src="../ISDCF-logo.png" height="56" alt="ISDCF"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse site-menu" id="navbarNav">
+      <ul class="navbar-nav ml-auto navbar-right">
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Home <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="https://www.isdcf.com/site/">Welcome</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/about/">About</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/terms/">Agreement of Terms</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            InterSociety <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="https://www.isdcf.com/site/intersociety/">InterSociety</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/intersociety-leadership/">InterSociety Leadership
+</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/ken-mason-award/">Ken Mason Award</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/membership/">Membership</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Meetings <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="https://isdcf.com/site/meetings/">Meetings</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/meeting-notes/about/">Meeting Notes</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/subgroups/">ISDCF SubGroups</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/logistics/">Meeting Logistics</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/events/">Events</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Technical Details <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+            <a class="dropdown-item" href="https://www.isdcf.com/site/technical-docs/">Technical Docs</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/test-content/">Test Content</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/smpte-dcp-tests/">SMPTE DCP Tests</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/smpte-dcp-tests/framing-chart/">Framing Chart</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/smptestandards/">SMPTE and Other Standards</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/other-resources/">Other Resources</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav">
+          <a class="nav-link" href="https://registry-page.isdcf.com/">DCNC and Registry</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid bg-light border-bottom">
+    <div class="row p-3 d-print-none breadcrumbs border-bottom">
+        <span class="small"> <a href="https://www.isdcf.com/site/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/></svg></a> > <a href="../">Digital Cinema Naming Convention and Metadata/Terminology Registries</a> > <a href="../general/">Naming Convention</a> > Content Modifiers</span>
+    </div>
+    <div class="row p-3">
+            <div class="container-fluid d-print-none">
+              <ul class="pagination justify-content-between">
+                <li class="page-item"><a class="page-link" href="../contenttypes/">&laquo; Previous</a></li>
+                <li class="page-item"><a class="page-link" href="../labeling3dproduct/">Next &raquo;</a></li>
+              </ul>
+            </div>      <div id="sideNav" class="col-lg-2 sidenav pl-0 d-print-none">  
+        <ul class="list-unstyled components rounded">
+          <li><a class="nav-link rounded-top" href="../">Digital Cinema Naming Convention and Metadata/Terminology Registries</a></li>
+          <li>
+            <a href="#namingconvention" data-toggle="collapse" aria-expanded="true" class="nav-link">Digital Cinema Naming Convention <svg width="1em" height="1em" viewBox="0 0 16 16" class="float-right bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></a>
+            <ul class="collapse list-unstyled" id="namingconvention">
+              <li><a class="nav-link pl-4" href="../general/">General Tips</a></li>
+              <li><a class="nav-link pl-4" href="../illustratedguide/">Illustrated Guide</a></li>
+              <li><a class="nav-link pl-4" href="../contenttypes/">Content Types</a></li>
+              <li><a class="nav-link pl-4 active" href="../contentmodifiers/">Content Modifiers</a></li>
+              <li><a class="nav-link pl-4" href="../labeling3dproduct/">Labeling 3D Product</a></li>
+              <li><a class="nav-link pl-4" href="../labelingcombotrailers/">Labeling &#x27;Combo&#x27; Trailers</a></li>
+              <li><a class="nav-link pl-4" href="../projectoraspectratios/">Projector Aspect Ratios and Resolutions</a></li>
+              <li><a class="nav-link pl-4" href="../languages/">Language Codes</a></li>
+              <li><a class="nav-link pl-4" href="../openandclosedcaptions/">Open and Closed Captions</a></li>
+              <li><a class="nav-link pl-4" href="../territories/">Territory Codes</a></li>
+              <li><a class="nav-link pl-4" href="../ratings/">Ratings</a></li>
+              <li><a class="nav-link pl-4" href="../audioconfigs/">Audio Config and Narrative Description Tracks</a></li>
+              <li><a class="nav-link pl-4" href="../studios/">Studio Codes</a></li>
+              <li><a class="nav-link pl-4" href="../creationdate/">Creation Date</a></li>
+              <li><a class="nav-link pl-4" href="../facilities/">Facility Codes</a></li>
+              <li><a class="nav-link pl-4" href="../standard/">Standard</a></li>
+              <li><a class="nav-link pl-4" href="../pkgtypes/">Package Types</a></li>
+              <li><a class="nav-link pl-4" href="../imax/">IMAX</a></li>
+              <li><a class="nav-link pl-4" href="../references/">References</a></li>
+              <li><a class="nav-link pl-4" href="../acknowledgements/">Acknowledgements</a></li>
+              <li><a class="nav-link pl-4" href="../translations/">Translations</a></li>
+              <li><a class="nav-link pl-4" href="../updates/">Updates</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#metadataregistry" data-toggle="collapse" aria-expanded="true" class="nav-link">Metadata Registry <svg width="1em" height="1em" viewBox="0 0 16 16" class="float-right bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></a>
+            <ul class="collapse list-unstyled" id="metadataregistry">
+              <li><a class="nav-link pl-4" href="../registryintro/">Introduction</a></li>
+              <li><a class="nav-link pl-4" href="../cplmetadataexts/">CPL Metadata Extensions</a></li>
+              <li><a class="nav-link pl-4" href="../kdmforensicflags/">KDM Forensic Flags</a></li>
+              <li><a class="nav-link pl-4" href="../uls/">ULs</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#terminologyregistry" data-toggle="collapse" aria-expanded="true" class="nav-link">Terminology Registry <svg width="1em" height="1em" viewBox="0 0 16 16" class="float-right bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></a>
+            <ul class="collapse list-unstyled" id="terminologyregistry">
+              <li><a class="nav-link pl-4" href="../terms/">Terms</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col bg-white rounded border pl-0 pr-0" id="main">
+        <nav class="navbar navbar-expand-md navbar-light d-flex">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><span class="d-none d-print-block">DCNC and Metadata Registry: </span>Content Modifiers</a>
+          </div>
+          <ul class="nav navbar-nav d-print-none ml-auto navbar-right">
+            <li>
+              <a id="json-feed" target="_blank" class="nav-link" href="https://registry.isdcf.com/contentmodifiers"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/></svg> JSON Feed</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" onclick="window.print();return false;" class="nav-link" title="Print Page"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg> Print Page</a>
+            </li>
+          </ul>
+        </nav>
+<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+<a class="anchor" id="top" href="#top"></a>
+  <!-- Markdown content starts -->
+          <div class="row p-3">
+            <div class="col">
+              <div class="container-fluid"> 
+                <ul class="nav nav-tabs">
+                  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#ov">Overview</a></li>
+                </ul>
+                <div class="tab-content p-3">
+                  <div class="tab-pane active" id="ov">
+                    <div class="ovHide" id="ovShow">
+<p>It’s important to add a version number after the Content Type code.  For example, feature version 2 would be “FTR-2”, etc.  This is important not only for selecting the correct version, but also for matching an “OV” with a “VF” version file (see <a href="https://registry-page.isdcf.com/pkgtypes">Package Types</a>). The Content Type field can also be expanded to add 2D or 3D identifiers (see <a href="https://registry-page.isdcf.com/standard">Labeling 3D Product</a>)</p>
+<p>After the Content Type and Version number in the Content Type Field, you may add further descriptions or “Content Type Modifiers” in sub-fields separated by hyphens. For example: <code>POL-1-Temp-RedBand-TheatreChain-3D-6fl-48</code></p>
+<p>These are used “a la carte” only if needed, and must be used in this order with these value.</p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top">#</th>
+                <th scope="col" class="align-text-top">DCNC Content Modifier Value<br><small>(For CTT)</small></th>
+                <th scope="col" class="align-text-top">Description</th>
+                <th scope="col" class="align-text-top col-4">CPL Metadata Sample/Values</th>
+                <th scope="col" class="align-text-top col-2">Metadata Defining Document(s)</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              <tr id="contentmodifier-VersionNumber">
+                <td>
+                  1
+                </td>
+                <td class="code">
+                  <a class="anchor" id="VersionNumber" href="#VersionNumber"></a><code>[VersionNumber]</code>
+                </td>
+                <td>
+                  Indicates the version number of the Composition.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;VersionNumber&gt;<code>[VersionNumber]</code>&lt;/VersionNumber&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-16.2014" target="_blank">[SMPTE ST 429-16:2014]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-Final">
+                <td>
+                  2
+                </td>
+                <td class="code">
+                  <a class="anchor" id="Final" href="#Final"></a><code>Final</code>
+                </td>
+                <td>
+                  Final composition, including final sound, picture and accessibility features. Note: You should not use this modifier code in the CTT - this is present only to show the intended value of the VersionNumber&#x27;s &#x27;status&#x27; attribute in a &#x27;Final&#x27; Composition.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;VersionNumber status="<code>final</code>"&gt;...&lt;/VersionNumber&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-16.2014" target="_blank">[SMPTE ST 429-16:2014]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-Temp">
+                <td>
+                  3
+                </td>
+                <td class="code">
+                  <a class="anchor" id="Temp" href="#Temp"></a><code>Temp</code>
+                </td>
+                <td>
+                  Temporary composition, e.g. preview or rough-cut version. Picture and/or sound are temporary and unfinished.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;VersionNumber status="<code>temp</code>"&gt;...&lt;/VersionNumber&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-16.2014" target="_blank">[SMPTE ST 429-16:2014]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-Pre">
+                <td>
+                  4
+                </td>
+                <td class="code">
+                  <a class="anchor" id="Pre" href="#Pre"></a><code>Pre</code>
+                </td>
+                <td>
+                  Pre-release Composition. Picture and sound are final, but not all features of the final version such as accessibility features are present.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;VersionNumber status="<code>pre</code>"&gt;...&lt;/VersionNumber&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-16.2014" target="_blank">[SMPTE ST 429-16:2014]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-RedBand">
+                <td>
+                  5
+                </td>
+                <td class="code">
+                  <a class="anchor" id="RedBand" href="#RedBand"></a><code>RedBand</code>
+                </td>
+                <td>
+                    For US released trailers, NATO and the MPAA have requested that trailers with the Red Band MPAA rating be clearly marked early in the DCP file name. This is so theatres will more clearly see the trailer is restricted, and not accidently place a Red Band trailer with a G, PG, or PG-13 movie.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;Rating&gt;<br>
+                      &nbsp;&nbsp;&lt;Agency&gt;<code>http://www.movielabs.com/md/ratings/US/MPAAT/1</code>&lt;/Agency&gt;<br>
+                      &nbsp;&nbsp;&lt;Label&gt;<code>RB</code>&lt;/Label&gt;<br>
+                    &lt;/Rating&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-7.2006" target="_blank">[SMPTE ST 429-7:2006]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-CHAIN">
+                <td>
+                  6
+                </td>
+                <td class="code">
+                  <a class="anchor" id="CHAIN" href="#CHAIN"></a><code>[CHAIN]</code>
+                </td>
+                <td>
+                  A human-readable name of the specific targeted use (specific theatre chain or event) for which the Composition Playlist is intended.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;Chain&gt;<code>[CHAIN]</code>&lt;/Chain&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-16.2014" target="_blank">[SMPTE ST 429-16:2014]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-ALT">
+                <td>
+                  7
+                </td>
+                <td class="code">
+                  <a class="anchor" id="ALT" href="#ALT"></a><code>ALT</code>
+                </td>
+                <td>
+                  Alternative version - You have the option of using the word &#x27;ALT&#x27; in the theatre chain sub-field instead of naming a specific theatre chain or event.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;Chain&gt;<code>Alt</code>&lt;/Chain&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-16.2014" target="_blank">[SMPTE ST 429-16:2014]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-2D">
+                <td>
+                  8
+                </td>
+                <td class="code">
+                  <a class="anchor" id="2D" href="#2D"></a><code>2D</code>
+                </td>
+                <td>
+                  If the product is in both 2D and 3D, label the 2D version: &#x27;2D&#x27;. If the product only exists in 2D, you do not need to label it &#x27;2D&#x27; - it will be assumed to be in 2D if it is not otherwise described.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;MainPicture&gt;...&lt;/MainPicture&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-7.2006" target="_blank">[SMPTE ST 429-7:2006]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-3D">
+                <td>
+                  9
+                </td>
+                <td class="code">
+                  <a class="anchor" id="3D" href="#3D"></a><code>3D</code>
+                </td>
+                <td>
+                  If the product is 3D.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;MainStereoscopicPicture&gt;...&lt;/MainStereoscopicPicture&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-10.2008" target="_blank">[SMPTE ST 429-10:2008]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-Luminancefl">
+                <td>
+                  10
+                </td>
+                <td class="code">
+                  <a class="anchor" id="Luminancefl" href="#Luminancefl"></a><code>[Luminance]fl</code>
+                </td>
+                <td>
+                  There is currently no luminance standard for mastering 3D content. Some films are color timed at 3.5 foot lamberts, others at 4, 4.5, 6, 7, and even 10 foot lamberts. If you have multiple luminance versions of your product, put the foot lamberts numerical value here in order to signal which version the DCP contains. Do not use decimal points for the CTT.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;Luminance units="<code>foot-lambert</code>"&gt;<code>[Luminance]</code>&lt;/Luminance&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-16.2014" target="_blank">[SMPTE ST 429-16:2014]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-FPS">
+                <td>
+                  11
+                </td>
+                <td class="code">
+                  <a class="anchor" id="FPS" href="#FPS"></a><code>[FPS]</code>
+                </td>
+                <td>
+                  Frame Rate numerical value (if other than 24 frames per second).
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;EditRate&gt;<code>[FPS]</code>&lt;/EditRate&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://doi.org/10.5594/SMPTE.ST429-16.2014" target="_blank">[SMPTE ST 429-16:2014]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-DVis">
+                <td>
+                  12
+                </td>
+                <td class="code">
+                  <a class="anchor" id="DVis" href="#DVis"></a><code>DVis</code>
+                </td>
+                <td>
+                  Dolby Vision graded image.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;cpl-meta:ExtensionMetadata scope="<code>http://www.dolby.com/schemas/2014/EDR-metadata</code>"&gt;<br>
+                    &nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>Dolby EDR</code>&lt;/cpl-meta:Name&gt;<br>
+                    &nbsp;&nbsp;&lt;cpl-meta:PropertyList&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Property&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>image transfer function</code>&lt;/cpl-meta:Name&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Value&gt;<code>PQ10K</code>&lt;/cpl-meta:Value&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/cpl-meta:Property&gt;<br>
+                    &nbsp;&nbsp;&lt;/cpl-meta:PropertyList&gt;<br>
+                    &lt;/cpl-meta:ExtensionMetadata&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://www.isdcf.com/site/registry-cpl-extensions/" target="_blank">[ISDCF CPL Metadata Extensions]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-HDR1">
+                <td>
+                  13
+                </td>
+                <td class="code">
+                  <a class="anchor" id="HDR1" href="#HDR1"></a><code>HDR1</code>
+                </td>
+                <td>
+                  DCI HDR graded image.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                    &lt;cpl-meta:ExtensionMetadata scope="<code>http://www.dcimovies.com/schemas/2018/HDR-Metadata</code>"&gt;<br>
+                    &nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>Image Encoding Parameters</code>&lt;/cpl-meta:Name&gt;<br>
+                    &nbsp;&nbsp;&lt;cpl-meta:PropertyList&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Property&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>EOTF</code>&lt;/cpl-meta:Name&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Value&gt;<code>ST 2084</code>&lt;/cpl-meta:Value&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/cpl-meta:Property&gt;<br>
+                    &nbsp;&nbsp;&lt;/cpl-meta:PropertyList&gt;<br>
+                    &lt;/cpl-meta:ExtensionMetadata&gt;
+                  </code>
+                </td>
+                <td>
+                    <a href="https://documents.dcimovies.com/HDR-Addendum/release/1.2.1/" target="_blank">[DCI High Dynamic Range D-Cinema Addendum, Version 1.2.1]</a>
+                </td>
+              </tr>
+              <tr id="contentmodifier-EC">
+                <td>
+                  14
+                </td>
+                <td class="code">
+                  <a class="anchor" id="EC" href="#EC"></a><code>EC</code>
+                </td>
+                <td>
+                  Eclaircolor graded image.
+                </td>
+                <td class="cell-breakAll">
+                  <code class="sampCode">
+                  </code>
+                </td>
+                <td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+<!-- Main content ends - do not edit below this line -->
+        </div>
+      </div>
+            <div class="container-fluid d-print-none">
+              <ul class="pagination justify-content-between">
+                <li class="page-item"><a class="page-link" href="../contenttypes/">&laquo; Previous</a></li>
+                <li class="page-item"><a class="page-link" href="../labeling3dproduct/">Next &raquo;</a></li>
+              </ul>
+            </div>    </div>
+  <footer class="page-footer font-small">
+    <div class="row d-flex align-items-center text-center p-3">
+      <div class="col text-center">
+        <small class="text-muted">
+          Registry version: <code>external/registries</code>
+          <br>Site version: <code>7419c9b4b3e1080781bd3600a9800e048bf3e159</code>
+          <br>Generated on Mon Dec 15 2025 23:01:03 GMT+0000 (Coordinated Universal Time)
+        </small>
+      </div>
+    </div>
+    <div class="footer-copyright text-center py-2 bg-white">
+      <small class="text-muted">
+        ALL DOCUMENTS AND INFORMATION PRESENTED HERE ARE TO BE USED AT YOUR OWN RISK, STRICTLY VOLUNTARY, <br>SHOULD NOT BE USED FOR IMPLEMENTING PRODUCTS, NO WARRANTY EXPRESSED OR IMPLIED. PROVIDED FOR CONVENIENCE ONLY.
+        <br>:: CONTACT: <a href="mailto:INFO@ISDCF.COM">INFO@ISDCF.COM</a> OR <a href="https://github.com/ISDCF/registries-site/issues" target="_blank">https://github.com/ISDCF/registries-site/issues</a> TO OFFER SUGGESTIONS/CORRECTIONS. ::
+        <br>USE AT YOUR OWN RISK
+      </small>
+    <div class="footer-copyright text-center py-2 bg-white">
+      <small class="text-muted">
+        © Copyright: <a href="https://isdcf.com/">ISDCF.com</a>
+      </small>
+    </div>
+  </div>
+  </footer> 
+</body>
+</html>

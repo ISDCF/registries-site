@@ -1,0 +1,3529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://www.isdcf.com/wp-content/uploads/2025/03/favicon_IS.svg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="../mobile.css">
+  <link rel="bookmark" href="https://registry-page.isdcf.com/ratings"/>
+  <link rel="canonical" href="https://registry-page.isdcf.com/ratings"/>
+<title>Ratings</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="../features.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom d-flex d-print-none">
+    <a class="navbar-brand" href="https://www.isdcf.com/site/"><img src="../ISDCF-logo.png" height="56" alt="ISDCF"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse site-menu" id="navbarNav">
+      <ul class="navbar-nav ml-auto navbar-right">
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Home <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="https://www.isdcf.com/site/">Welcome</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/about/">About</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/terms/">Agreement of Terms</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            InterSociety <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="https://www.isdcf.com/site/intersociety/">InterSociety</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/intersociety-leadership/">InterSociety Leadership
+</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/ken-mason-award/">Ken Mason Award</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/membership/">Membership</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Meetings <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+            <a class="dropdown-item" href="https://isdcf.com/site/meetings/">Meetings</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/meeting-notes/about/">Meeting Notes</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/subgroups/">ISDCF SubGroups</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/logistics/">Meeting Logistics</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/events/">Events</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Technical Details <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+            <a class="dropdown-item" href="https://www.isdcf.com/site/technical-docs/">Technical Docs</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/test-content/">Test Content</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/smpte-dcp-tests/">SMPTE DCP Tests</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/smpte-dcp-tests/framing-chart/">Framing Chart</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/smptestandards/">SMPTE and Other Standards</a>
+            <a class="dropdown-item" href="https://www.isdcf.com/site/other-resources/">Other Resources</a>
+          </div>
+        </li>
+        <li class="nav-item main-nav">
+          <a class="nav-link" href="https://registry-page.isdcf.com/">DCNC and Registry</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid bg-light border-bottom">
+    <div class="row p-3 d-print-none breadcrumbs border-bottom">
+        <span class="small"> <a href="https://www.isdcf.com/site/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/><path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/></svg></a> > <a href="../">Digital Cinema Naming Convention and Metadata/Terminology Registries</a> > <a href="../general/">Naming Convention</a> > Ratings</span>
+    </div>
+    <div class="row p-3">
+            <div class="container-fluid d-print-none">
+              <ul class="pagination justify-content-between">
+                <li class="page-item"><a class="page-link" href="../territories/">&laquo; Previous</a></li>
+                <li class="page-item"><a class="page-link" href="../audioconfigs/">Next &raquo;</a></li>
+              </ul>
+            </div>      <div id="sideNav" class="col-lg-2 sidenav pl-0 d-print-none">  
+        <ul class="list-unstyled components rounded">
+          <li><a class="nav-link rounded-top" href="../">Digital Cinema Naming Convention and Metadata/Terminology Registries</a></li>
+          <li>
+            <a href="#namingconvention" data-toggle="collapse" aria-expanded="true" class="nav-link">Digital Cinema Naming Convention <svg width="1em" height="1em" viewBox="0 0 16 16" class="float-right bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></a>
+            <ul class="collapse list-unstyled" id="namingconvention">
+              <li><a class="nav-link pl-4" href="../general/">General Tips</a></li>
+              <li><a class="nav-link pl-4" href="../illustratedguide/">Illustrated Guide</a></li>
+              <li><a class="nav-link pl-4" href="../contenttypes/">Content Types</a></li>
+              <li><a class="nav-link pl-4" href="../contentmodifiers/">Content Modifiers</a></li>
+              <li><a class="nav-link pl-4" href="../labeling3dproduct/">Labeling 3D Product</a></li>
+              <li><a class="nav-link pl-4" href="../labelingcombotrailers/">Labeling &#x27;Combo&#x27; Trailers</a></li>
+              <li><a class="nav-link pl-4" href="../projectoraspectratios/">Projector Aspect Ratios and Resolutions</a></li>
+              <li><a class="nav-link pl-4" href="../languages/">Language Codes</a></li>
+              <li><a class="nav-link pl-4" href="../openandclosedcaptions/">Open and Closed Captions</a></li>
+              <li><a class="nav-link pl-4" href="../territories/">Territory Codes</a></li>
+              <li><a class="nav-link pl-4 active" href="../ratings/">Ratings</a></li>
+              <li><a class="nav-link pl-4" href="../audioconfigs/">Audio Config and Narrative Description Tracks</a></li>
+              <li><a class="nav-link pl-4" href="../studios/">Studio Codes</a></li>
+              <li><a class="nav-link pl-4" href="../creationdate/">Creation Date</a></li>
+              <li><a class="nav-link pl-4" href="../facilities/">Facility Codes</a></li>
+              <li><a class="nav-link pl-4" href="../standard/">Standard</a></li>
+              <li><a class="nav-link pl-4" href="../pkgtypes/">Package Types</a></li>
+              <li><a class="nav-link pl-4" href="../imax/">IMAX</a></li>
+              <li><a class="nav-link pl-4" href="../references/">References</a></li>
+              <li><a class="nav-link pl-4" href="../acknowledgements/">Acknowledgements</a></li>
+              <li><a class="nav-link pl-4" href="../translations/">Translations</a></li>
+              <li><a class="nav-link pl-4" href="../updates/">Updates</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#metadataregistry" data-toggle="collapse" aria-expanded="true" class="nav-link">Metadata Registry <svg width="1em" height="1em" viewBox="0 0 16 16" class="float-right bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></a>
+            <ul class="collapse list-unstyled" id="metadataregistry">
+              <li><a class="nav-link pl-4" href="../registryintro/">Introduction</a></li>
+              <li><a class="nav-link pl-4" href="../cplmetadataexts/">CPL Metadata Extensions</a></li>
+              <li><a class="nav-link pl-4" href="../kdmforensicflags/">KDM Forensic Flags</a></li>
+              <li><a class="nav-link pl-4" href="../uls/">ULs</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#terminologyregistry" data-toggle="collapse" aria-expanded="true" class="nav-link">Terminology Registry <svg width="1em" height="1em" viewBox="0 0 16 16" class="float-right bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/><path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg></a>
+            <ul class="collapse list-unstyled" id="terminologyregistry">
+              <li><a class="nav-link pl-4" href="../terms/">Terms</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col bg-white rounded border pl-0 pr-0" id="main">
+        <nav class="navbar navbar-expand-md navbar-light d-flex">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><span class="d-none d-print-block">DCNC and Metadata Registry: </span>Ratings</a>
+          </div>
+          <ul class="nav navbar-nav d-print-none ml-auto navbar-right">
+            <li>
+              <a id="json-feed" target="_blank" class="nav-link" href="https://registry.isdcf.com/ratings"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/></svg> JSON Feed</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" onclick="window.print();return false;" class="nav-link" title="Print Page"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg> Print Page</a>
+            </li>
+          </ul>
+        </nav>
+<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+<a class="anchor" id="top" href="#top"></a>
+  <!-- Markdown content starts -->
+          <div class="row p-3">
+            <div class="col-md-8">
+              <div class="container-fluid"> 
+                <ul class="nav nav-tabs">
+                  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#ov">Overview</a></li>
+                  <li class="nav-item d-print-none"><a class="nav-link" data-toggle="tab" href="#cpl">CPL Usage</a></li>
+                </ul>
+                <div class="tab-content p-3">
+                  <div class="tab-pane active" id="ov">
+                    <div class="ovHide" id="ovShow">
+<p>The <a href="https://www.movielabs.com/md/ratings/">MovieLabs Ratings Codes</a> are suggested codes for each territory’s ratings. The Naming Convention uses abbreviations of each rating system's ratings.</p>
+<p>For US trailers, <code>GB</code> indicates Green Band; <code>RB</code> indicates Red Band.  <code>GB</code> indicates that the trailer has been approved for all audiences by the MPAA, but does not indicate the rating of the advertised feature.  For Canadian trailers that are identical to the US version with the exception of the Rating Tag, use <code>CA</code> in the territory field and do not follow with <code>GB</code> or <code>RB</code>.</p>
+
+                      <br>
+                      <div class="border bg-light rounded p-3 font-italic">
+
+<p><strong>Important Note</strong>: The MPAA has requested that the Green Card at the head of US trailers be part of the main trailer DCP, instead of being enclosed as a separate package.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane d-print-none" id="cpl">
+<p>The Rating is listed at <strong>//RatingList//Rating[n]</strong><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<pre><code>&lt;CompositionPlaylist xmlns=”http://www.smpte-ra.org/schemas/429-7/2006/CPL”&gt;
+  …
+  &lt;RatingList&gt;
+    …
+    &lt;Rating&gt;
+      &lt;Agency&gt;http://www.movielabs.com/md/ratings/GB/BBFC/1/12A&lt;/Agency&gt;
+      &lt;Label&gt;12A&lt;/Label&gt;
+    &lt;/Rating&gt;
+    …
+  &lt;/RatingList&gt;
+  …
+&lt;/CompositionPlaylist&gt;
+</code></pre>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><em>Permissible values for ratings are governed by the Agency element, which associates a unique URI with each rating system.  There is no global registry for rating systems, but a reasonable alternative would be to use the <a href="http://www.movielabs.com/md/ratings/">MovieLabs Common Metadata Ratings</a>, which has coverage of most rating systems.</em> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><em>Note that <code>13</code>, <code>RB</code>, and <code>GB</code> are not permissible MPAA ratings.  The <code>13</code> rating would map to <code>PG-13</code>.  In the MovieLabs Common Metadata Ratings scheme, <code>RB</code> and <code>RB</code> can be accommodated by using the Agency URI “<a href="http://www.movielabs.com/md/ratings/US/MPAAT/1">http://www.movielabs.com/md/ratings/US/MPAAT/1</a>”</em> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="border bg-light p-3 font-italic">
+<p><strong>Special Exception Note:</strong> Although <code>XX</code> is used in the Language field to indicate “No Subtitles”, you should not use <code>XX</code> in the Territory/Ratings field to indicate “No Rating”, since this might be confused with an “X” rating</p>
+
+              </div>
+            </div>
+          </div>
+  <!-- Markdown content ends -->
+  <!-- Registry content starts - do not edit above this line -->
+          <table id="sorttable" class="table table-small table-hover display">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="align-text-top">Region</th>
+                <th scope="col" class="align-text-top">DCNC Code<br><small>(For CTT)</small></th>
+                <th scope="col" class="align-text-top">Rating Label Value<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top col-4">Rating Agency Value<br><small>(For DCP Metadata)</small></th>
+                <th scope="col" class="align-text-top">Rating Agency</th>
+                <th scope="col" class="align-text-top">Usage</th>
+                <th scope="col" class="align-text-top">Reference</th>
+              </tr>
+            </thead>
+            <tbody id="searchTable">
+              <tr id="rating-httpwwwmovielabscommdratingsAENMC0-AE">
+                <td>
+                  UNITED ARAB EMIRATES (AE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>PG15</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>PG15</code></div>
+                  <div class="border-bottom p-2"><code>15+</code></div>
+                  <div class="p-2"><code>18+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/AE/NMC/0</code>
+                </td>
+                <td>
+                  MOI
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-09T17:22:01)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsARINCAA0-AR">
+                <td>
+                  ARGENTINA (AR)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>ATP</code></div>
+                  <div class="border-bottom p-2"><code>SAM13</code></div>
+                  <div class="border-bottom p-2"><code>SAM16</code></div>
+                  <div class="border-bottom p-2"><code>SAM18</code></div>
+                  <div class="p-2"><code>C</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>ATP</code></div>
+                  <div class="border-bottom p-2"><code>SAM13</code></div>
+                  <div class="border-bottom p-2"><code>SAM16</code></div>
+                  <div class="border-bottom p-2"><code>SAM18</code></div>
+                  <div class="p-2"><code>C</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/AR/INCAA/0</code>
+                </td>
+                <td>
+                  INCAA
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-16T22:10:25)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsATBMUKK2-AT">
+                <td>
+                  AUSTRIA (AT)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AA</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>8</code></div>
+                  <div class="border-bottom p-2"><code>10</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="p-2"><code>16</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AA</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>8</code></div>
+                  <div class="border-bottom p-2"><code>10</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="p-2"><code>16</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/AT/BMUKK/2</code>
+                </td>
+                <td>
+                  BMUKK
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2021-01-12T22:50:01)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsAUNCS1-AU">
+                <td>
+                  AUSTRALIA (AU)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>M</code></div>
+                  <div class="border-bottom p-2"><code>MA15</code></div>
+                  <div class="border-bottom p-2"><code>R18</code></div>
+                  <div class="border-bottom p-2"><code>CTC</code></div>
+                  <div class="border-bottom p-2"><code>X18</code></div>
+                  <div class="p-2"><code>RC</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>M</code></div>
+                  <div class="border-bottom p-2"><code>MA15</code></div>
+                  <div class="border-bottom p-2"><code>R18+</code></div>
+                  <div class="border-bottom p-2"><code>CTC</code></div>
+                  <div class="border-bottom p-2"><code>X18+</code></div>
+                  <div class="p-2"><code>RC</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/AU/NCS/1</code>
+                </td>
+                <td>
+                  NCS
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-06-18T18:39:26)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsBECICF1-BE">
+                <td>
+                  BELGIUM (BE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>KTEA</code></div>
+                  <div class="p-2"><code>KNTEN</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>KT/EA</code></div>
+                  <div class="p-2"><code>KNT/ENA</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/BE/CICF/1</code>
+                </td>
+                <td>
+                  CICF
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2021-01-14T20:02:15)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsBGNFRC3-BG">
+                <td>
+                  BULGARIA (BG)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>D</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>D</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/BG/NFRC/3</code>
+                </td>
+                <td>
+                  NFRC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2021-01-12T22:13:55)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsBHMIA0-BH">
+                <td>
+                  BAHRAIN (BH)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>PG15</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG-13</code></div>
+                  <div class="border-bottom p-2"><code>PG-15</code></div>
+                  <div class="border-bottom p-2"><code>15+</code></div>
+                  <div class="p-2"><code>18+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/BH/MIA/0</code>
+                </td>
+                <td>
+                  MIA
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-28T20:42:04)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsBNFilm0-BN">
+                <td>
+                  BRUNEI DARUSSALAM (BN)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>APG</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>A/PG</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/BN/Film/0</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-28T20:42:45)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsBOFilm0-BO">
+                <td>
+                  BOLIVIA (BO)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>TP</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>TP</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/BO/Film/0</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-28T20:43:05)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsBRDJCTQ4-BR">
+                <td>
+                  BRAZIL (BR)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>ER</code></div>
+                  <div class="border-bottom p-2"><code>L</code></div>
+                  <div class="border-bottom p-2"><code>L12</code></div>
+                  <div class="border-bottom p-2"><code>L14</code></div>
+                  <div class="border-bottom p-2"><code>L16</code></div>
+                  <div class="border-bottom p-2"><code>L18</code></div>
+                  <div class="border-bottom p-2"><code>L10</code></div>
+                  <div class="border-bottom p-2"><code>1018</code></div>
+                  <div class="border-bottom p-2"><code>1016</code></div>
+                  <div class="border-bottom p-2"><code>1014</code></div>
+                  <div class="border-bottom p-2"><code>1012</code></div>
+                  <div class="border-bottom p-2"><code>10</code></div>
+                  <div class="border-bottom p-2"><code>1214</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>1218</code></div>
+                  <div class="border-bottom p-2"><code>1216</code></div>
+                  <div class="border-bottom p-2"><code>1418</code></div>
+                  <div class="border-bottom p-2"><code>1416</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>1618</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>ER</code></div>
+                  <div class="border-bottom p-2"><code>L</code></div>
+                  <div class="border-bottom p-2"><code>L-12</code></div>
+                  <div class="border-bottom p-2"><code>L-14</code></div>
+                  <div class="border-bottom p-2"><code>L-16</code></div>
+                  <div class="border-bottom p-2"><code>L-18</code></div>
+                  <div class="border-bottom p-2"><code>L-10</code></div>
+                  <div class="border-bottom p-2"><code>10-18</code></div>
+                  <div class="border-bottom p-2"><code>10-16</code></div>
+                  <div class="border-bottom p-2"><code>10-14</code></div>
+                  <div class="border-bottom p-2"><code>10-12</code></div>
+                  <div class="border-bottom p-2"><code>10</code></div>
+                  <div class="border-bottom p-2"><code>12-14</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>12-18</code></div>
+                  <div class="border-bottom p-2"><code>12-16</code></div>
+                  <div class="border-bottom p-2"><code>14-18</code></div>
+                  <div class="border-bottom p-2"><code>14-16</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>16-18</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/BR/DJCTQ/4</code>
+                </td>
+                <td>
+                  DJCTQ
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-04-27T16:40:52)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsBYIBC0-BY">
+                <td>
+                  BELARUS (BY)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="p-2"><code>12</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>16+</code></div>
+                  <div class="border-bottom p-2"><code>18+</code></div>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6+</code></div>
+                  <div class="p-2"><code>12+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/BY/IBC/0</code>
+                </td>
+                <td>
+                  MKRF
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-09T18:05:58)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCAAFC2-CAAB">
+                <td>
+                  CANADA (CA-AB)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CA/AFC/2</code>
+                </td>
+                <td>
+                  AFC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-18T19:22:10)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCACBSC2-CAON">
+                <td>
+                  CANADA (CA-ON)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>C8</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>C8</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CA/CBSC/2</code>
+                </td>
+                <td>
+                  CBSC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-16T23:18:33)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCACPBCT2-CABC">
+                <td>
+                  CANADA (CA-BC)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AP</code></div>
+                  <div class="border-bottom p-2"><code>SP</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="p-2"><code>A</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AP</code></div>
+                  <div class="border-bottom p-2"><code>SP</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="p-2"><code>A</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CA/CPBC-T/2</code>
+                </td>
+                <td>
+                  CPBC-T
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-16T23:21:19)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCACPBC2-CABC">
+                <td>
+                  CANADA (CA-BC)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="p-2"><code>A</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="p-2"><code>A</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CA/CPBC/2</code>
+                </td>
+                <td>
+                  CPBC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-16T23:20:59)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCAMFCB2-CAPE">
+                <td>
+                  CANADA (CA-PE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>XXX</code></div>
+                  <div class="p-2"><code>AA</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>XXX</code></div>
+                  <div class="p-2"><code>AA</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CA/MFCB/2</code>
+                </td>
+                <td>
+                  MFCB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-02T20:27:23)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCAMFCB2-CANB">
+                <td>
+                  CANADA (CA-NB)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>XXX</code></div>
+                  <div class="p-2"><code>AA</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>XXX</code></div>
+                  <div class="p-2"><code>AA</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CA/MFCB/2</code>
+                </td>
+                <td>
+                  MFCB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-02T20:27:23)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCAMFCB2-CANS">
+                <td>
+                  CANADA (CA-NS)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>XXX</code></div>
+                  <div class="p-2"><code>AA</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>XXX</code></div>
+                  <div class="p-2"><code>AA</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CA/MFCB/2</code>
+                </td>
+                <td>
+                  MFCB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-02T20:27:23)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCAOFRB2-CAON">
+                <td>
+                  CANADA (CA-ON)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14A</code></div>
+                  <div class="border-bottom p-2"><code>18A</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CA/OFRB/2</code>
+                </td>
+                <td>
+                  OFRB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-03T21:43:50)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCARCQ2-CAQC">
+                <td>
+                  CANADA (CA-QC)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>RC</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>13+</code></div>
+                  <div class="border-bottom p-2"><code>16+</code></div>
+                  <div class="border-bottom p-2"><code>18+</code></div>
+                  <div class="p-2"><code>RC</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CA/RCQ/2</code>
+                </td>
+                <td>
+                  RCQ
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-06T19:11:48)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCHFilm2-CH">
+                <td>
+                  SWITZERLAND (CH)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>8</code></div>
+                  <div class="border-bottom p-2"><code>10</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>8</code></div>
+                  <div class="border-bottom p-2"><code>10</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CH/Film/2</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-06-30T17:03:44)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCLANATEL0-CL">
+                <td>
+                  CHILE (CL)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>F</code></div>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>I7</code></div>
+                  <div class="border-bottom p-2"><code>I10</code></div>
+                  <div class="border-bottom p-2"><code>I12</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="p-2"><code>A</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>F</code></div>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>I-7</code></div>
+                  <div class="border-bottom p-2"><code>I-10</code></div>
+                  <div class="border-bottom p-2"><code>I-12</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="p-2"><code>A</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CL/ANATEL/0</code>
+                </td>
+                <td>
+                  ANATEL
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2018-02-05T21:53:01)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCLCCC1-CL">
+                <td>
+                  CHILE (CL)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>TE</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>TE</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CL/CCC/1</code>
+                </td>
+                <td>
+                  CCC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2018-02-05T19:14:07)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCOMOC1-CO">
+                <td>
+                  COLOMBIA (CO)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>T</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>X</code></div>
+                  <div class="p-2"><code>BANNE</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>T</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>X</code></div>
+                  <div class="p-2"><code>Banned</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CO/MOC/1</code>
+                </td>
+                <td>
+                  MOC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T00:07:33)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCRCCEP0-CR">
+                <td>
+                  COSTA RICA (CR)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>TP</code></div>
+                  <div class="border-bottom p-2"><code>TP12</code></div>
+                  <div class="p-2"><code>12</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>TP</code></div>
+                  <div class="border-bottom p-2"><code>TP12</code></div>
+                  <div class="p-2"><code>12</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CR/CCEP/0</code>
+                </td>
+                <td>
+                  CCEP
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-28T21:46:15)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsCZFilm1-CZ">
+                <td>
+                  CZECH REPUBLIC (CZ)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/CZ/Film/1</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T00:18:10)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsDEFSK1-DE">
+                <td>
+                  GERMANY (DE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>KEINE</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>Keine</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/DE/FSK/1</code>
+                </td>
+                <td>
+                  FSK
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-17T22:22:56)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsDKMCCYP1-DK">
+                <td>
+                  DENMARK (DK)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>11</code></div>
+                  <div class="p-2"><code>15</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>11</code></div>
+                  <div class="p-2"><code>15</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/DK/MCCYP/1</code>
+                </td>
+                <td>
+                  MCCYP
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-09T21:21:13)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsECCNE0-EC">
+                <td>
+                  ECUADOR (EC)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>TP</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>21</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>TP</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>21</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/EC/CNE/0</code>
+                </td>
+                <td>
+                  CNE
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-04T22:31:26)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsEEFilm1-EE">
+                <td>
+                  ESTONIA (EE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PERE</code></div>
+                  <div class="border-bottom p-2"><code>L</code></div>
+                  <div class="border-bottom p-2"><code>MS6</code></div>
+                  <div class="border-bottom p-2"><code>K6</code></div>
+                  <div class="border-bottom p-2"><code>MS12</code></div>
+                  <div class="border-bottom p-2"><code>K12</code></div>
+                  <div class="border-bottom p-2"><code>K14</code></div>
+                  <div class="p-2"><code>K16</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>Pere</code></div>
+                  <div class="border-bottom p-2"><code>L</code></div>
+                  <div class="border-bottom p-2"><code>MS-6</code></div>
+                  <div class="border-bottom p-2"><code>K-6</code></div>
+                  <div class="border-bottom p-2"><code>MS-12</code></div>
+                  <div class="border-bottom p-2"><code>K-12</code></div>
+                  <div class="border-bottom p-2"><code>K-14</code></div>
+                  <div class="p-2"><code>K-16</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/EE/Film/1</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-28T20:44:09)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsEGFilm2-EG">
+                <td>
+                  EGYPT (EG)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>GN</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>BN</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>GN</code></div>
+                  <div class="border-bottom p-2"><code>12+</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>BN</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/EG/Film/2</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-28T20:44:31)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsESICAA2-ES">
+                <td>
+                  SPAIN (ES)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>APTA</code></div>
+                  <div class="border-bottom p-2"><code>ER</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>APTA</code></div>
+                  <div class="border-bottom p-2"><code>ER</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/ES/ICAA/2</code>
+                </td>
+                <td>
+                  ICAA
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-23T21:16:23)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsFIMEKU2-FI">
+                <td>
+                  FINLAND (FI)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>S</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>S</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/FI/MEKU/2</code>
+                </td>
+                <td>
+                  MEKU
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-23T21:08:36)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsFRCNC3-FR">
+                <td>
+                  FRANCE (FR)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>T</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>INTER</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>T</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>interdiction</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/FR/CNC/3</code>
+                </td>
+                <td>
+                  CNC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-11T23:39:15)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsGBBBFC1-GB">
+                <td>
+                  UNITED KINGDOM (GB)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12A</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>R18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12A</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>R18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/GB/BBFC/1</code>
+                </td>
+                <td>
+                  BBFC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-11-05T23:05:50)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsGRFilm0-GR">
+                <td>
+                  GREECE (GR)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>K</code></div>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>K12</code></div>
+                  <div class="border-bottom p-2"><code>K13</code></div>
+                  <div class="border-bottom p-2"><code>K15</code></div>
+                  <div class="border-bottom p-2"><code>K17</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>K</code></div>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>K-12</code></div>
+                  <div class="border-bottom p-2"><code>K-13</code></div>
+                  <div class="border-bottom p-2"><code>K-15</code></div>
+                  <div class="border-bottom p-2"><code>K-17</code></div>
+                  <div class="p-2"><code>18+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/GR/Film/0</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T00:30:23)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsGRFilm0-CY">
+                <td>
+                  CYPRUS (CY)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>K</code></div>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>K12</code></div>
+                  <div class="border-bottom p-2"><code>K13</code></div>
+                  <div class="border-bottom p-2"><code>K15</code></div>
+                  <div class="border-bottom p-2"><code>K17</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>K</code></div>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>K-12</code></div>
+                  <div class="border-bottom p-2"><code>K-13</code></div>
+                  <div class="border-bottom p-2"><code>K-15</code></div>
+                  <div class="border-bottom p-2"><code>K-17</code></div>
+                  <div class="p-2"><code>18+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/GR/Film/0</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T00:30:23)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsHKFCO1-HK">
+                <td>
+                  HONG KONG (HK)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>IIA</code></div>
+                  <div class="border-bottom p-2"><code>IIB</code></div>
+                  <div class="p-2"><code>III</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>IIA</code></div>
+                  <div class="border-bottom p-2"><code>IIB</code></div>
+                  <div class="p-2"><code>III</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/HK/FCO/1</code>
+                </td>
+                <td>
+                  FCO
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-16T18:10:53)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsHNFilm0-HN">
+                <td>
+                  HONDURAS (HN)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/HN/Film/0</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-04T22:39:18)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsHRHAVC0-HR">
+                <td>
+                  CROATIA (HR)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>SU</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>SU</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/HR/HAVC/0</code>
+                </td>
+                <td>
+                  HAVC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-10T00:26:58)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsHURCNOF2-HU">
+                <td>
+                  HUNGARY (HU)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>II</code></div>
+                  <div class="border-bottom p-2"><code>III</code></div>
+                  <div class="border-bottom p-2"><code>IV</code></div>
+                  <div class="border-bottom p-2"><code>V</code></div>
+                  <div class="p-2"><code>VI</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>II</code></div>
+                  <div class="border-bottom p-2"><code>III</code></div>
+                  <div class="border-bottom p-2"><code>IV</code></div>
+                  <div class="border-bottom p-2"><code>V</code></div>
+                  <div class="p-2"><code>VI</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/HU/RCNOF/2</code>
+                </td>
+                <td>
+                  RCNOF
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T00:45:00)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsIDLSF1-ID">
+                <td>
+                  INDONESIA (ID)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>SU</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>17</code></div>
+                  <div class="p-2"><code>21</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>SU</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>17</code></div>
+                  <div class="p-2"><code>21</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/ID/LSF/1</code>
+                </td>
+                <td>
+                  LSF
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2018-02-05T21:54:29)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsIEIFCOF1-IE">
+                <td>
+                  IRELAND (IE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12A</code></div>
+                  <div class="border-bottom p-2"><code>15A</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12A</code></div>
+                  <div class="border-bottom p-2"><code>15A</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/IE/IFCOF/1</code>
+                </td>
+                <td>
+                  IFCOF
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-10T00:30:10)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsILFilm0-IL">
+                <td>
+                  ISRAEL (IL)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>ALL</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>ALL</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/IL/Film/0</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T20:25:24)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsINCBFC1-IN">
+                <td>
+                  INDIA (IN)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>UA</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="p-2"><code>S</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>UA</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="p-2"><code>S</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/IN/CBFC/1</code>
+                </td>
+                <td>
+                  CBFC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2013-12-29T19:13:42)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsISFRISK0-IS">
+                <td>
+                  ICELAND (IS)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>L</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>L</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/IS/FRISK/0</code>
+                </td>
+                <td>
+                  FRISK
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T20:27:39)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsISSMAIS2-IS">
+                <td>
+                  ICELAND (IS)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>L</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>L</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/IS/SMAIS/2</code>
+                </td>
+                <td>
+                  SMAIS
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T20:27:27)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsITMBACT2-IT">
+                <td>
+                  ITALY (IT)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>T</code></div>
+                  <div class="border-bottom p-2"><code>VM14</code></div>
+                  <div class="border-bottom p-2"><code>VM16</code></div>
+                  <div class="p-2"><code>VM18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>T</code></div>
+                  <div class="border-bottom p-2"><code>VM14</code></div>
+                  <div class="border-bottom p-2"><code>VM16</code></div>
+                  <div class="p-2"><code>VM18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/IT/MBACT/2</code>
+                </td>
+                <td>
+                  MBACT
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T21:06:01)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsJOMCJO0-JO">
+                <td>
+                  JORDAN (JO)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>PG15</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>PG15</code></div>
+                  <div class="border-bottom p-2"><code>15+</code></div>
+                  <div class="p-2"><code>18+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/JO/MC-JO/0</code>
+                </td>
+                <td>
+                  MC-JO
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-04T23:07:58)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsJPERIN1-JP">
+                <td>
+                  JAPAN (JP)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG12</code></div>
+                  <div class="border-bottom p-2"><code>R15</code></div>
+                  <div class="p-2"><code>R18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG12</code></div>
+                  <div class="border-bottom p-2"><code>R15+</code></div>
+                  <div class="p-2"><code>R18+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/JP/ERIN/1</code>
+                </td>
+                <td>
+                  EIRIN
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-05T18:18:20)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsKEKFCB1-KE">
+                <td>
+                  KENYA (KE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>16+</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/KE/KFCB/1</code>
+                </td>
+                <td>
+                  KFCB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2013-10-28T19:13:23)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsKHMCFAKH0-KH">
+                <td>
+                  CAMBODIA (KH)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>NC15</code></div>
+                  <div class="p-2"><code>R18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG-13</code></div>
+                  <div class="border-bottom p-2"><code>NC-15</code></div>
+                  <div class="p-2"><code>R-18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/KH/MCFA-KH/0</code>
+                </td>
+                <td>
+                  MCFA-KH
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-28T20:44:59)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsKRKMRB4-KR">
+                <td>
+                  KOREA, REP (KR)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>LIM</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>12+</code></div>
+                  <div class="border-bottom p-2"><code>15+</code></div>
+                  <div class="border-bottom p-2"><code>18+</code></div>
+                  <div class="p-2"><code>LIM</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/KR/KMRB/4</code>
+                </td>
+                <td>
+                  KMRB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2021-04-05T20:06:26)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsKWKCB0-KW">
+                <td>
+                  KUWAIT (KW)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>12+</code></div>
+                  <div class="border-bottom p-2"><code>13+</code></div>
+                  <div class="border-bottom p-2"><code>15+</code></div>
+                  <div class="p-2"><code>18+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/KW/KCB/0</code>
+                </td>
+                <td>
+                  KCB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-05T00:15:16)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsKZKCB0-KZ">
+                <td>
+                  KAZAKHSTAN (KZ)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>K</code></div>
+                  <div class="border-bottom p-2"><code>BA</code></div>
+                  <div class="border-bottom p-2"><code>B14</code></div>
+                  <div class="border-bottom p-2"><code>E16</code></div>
+                  <div class="border-bottom p-2"><code>E18</code></div>
+                  <div class="p-2"><code>HA</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>K</code></div>
+                  <div class="border-bottom p-2"><code>BA</code></div>
+                  <div class="border-bottom p-2"><code>B14</code></div>
+                  <div class="border-bottom p-2"><code>E16</code></div>
+                  <div class="border-bottom p-2"><code>E18</code></div>
+                  <div class="p-2"><code>HA</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/KZ/KCB/0</code>
+                </td>
+                <td>
+                  KCB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-04T23:40:02)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsLBLCB0-LB">
+                <td>
+                  LEBANON (LB)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>PG16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>R21</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>PG16</code></div>
+                  <div class="border-bottom p-2"><code>18+</code></div>
+                  <div class="p-2"><code>R21</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/LB/LCB/0</code>
+                </td>
+                <td>
+                  LCB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-05T17:17:02)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsLTLKC0-LT">
+                <td>
+                  LITHUANIA (LT)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>V</code></div>
+                  <div class="border-bottom p-2"><code>N7</code></div>
+                  <div class="border-bottom p-2"><code>N13</code></div>
+                  <div class="border-bottom p-2"><code>N16</code></div>
+                  <div class="p-2"><code>N18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>V</code></div>
+                  <div class="border-bottom p-2"><code>N-7</code></div>
+                  <div class="border-bottom p-2"><code>N-13</code></div>
+                  <div class="border-bottom p-2"><code>N-16</code></div>
+                  <div class="p-2"><code>N-18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/LT/LKC/0</code>
+                </td>
+                <td>
+                  LKC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-05T17:27:58)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsLUCSCF1-LU">
+                <td>
+                  LUXEMBOURG (LU)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>T</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>T</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/LU/CSCF/1</code>
+                </td>
+                <td>
+                  CSCF
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2021-01-14T19:32:03)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsLVNKCLV1-LV">
+                <td>
+                  LATVIA (LV)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>7+</code></div>
+                  <div class="border-bottom p-2"><code>12+</code></div>
+                  <div class="border-bottom p-2"><code>16+</code></div>
+                  <div class="p-2"><code>18+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/LV/NKC-LV/1</code>
+                </td>
+                <td>
+                  NKC-LV
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2015-08-19T15:42:45)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsMTMCCAA1-MT">
+                <td>
+                  MALTA (MT)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12A</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12A</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/MT/MCCAA/1</code>
+                </td>
+                <td>
+                  MCCAA
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2013-10-28T19:19:32)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsMVNBC1-MV">
+                <td>
+                  MALDIVES (MV)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>18R</code></div>
+                  <div class="p-2"><code>PU</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12+</code></div>
+                  <div class="border-bottom p-2"><code>15+</code></div>
+                  <div class="border-bottom p-2"><code>18+</code></div>
+                  <div class="border-bottom p-2"><code>18+R</code></div>
+                  <div class="p-2"><code>PU</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/MV/NBC/1</code>
+                </td>
+                <td>
+                  NBC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2018-02-05T21:55:39)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsMXRTC1-MX">
+                <td>
+                  MEXICO (MX)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AA</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>B15</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="p-2"><code>D</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AA</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>B15</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="p-2"><code>D</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/MX/RTC/1</code>
+                </td>
+                <td>
+                  RTC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2018-04-02T21:26:22)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsMYFCBM1-MY">
+                <td>
+                  MALAYSIA (MY)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>P13</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>18SX</code></div>
+                  <div class="border-bottom p-2"><code>18PA</code></div>
+                  <div class="border-bottom p-2"><code>18SG</code></div>
+                  <div class="p-2"><code>18PL</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>U</code></div>
+                  <div class="border-bottom p-2"><code>P13</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>18SX</code></div>
+                  <div class="border-bottom p-2"><code>18PA</code></div>
+                  <div class="border-bottom p-2"><code>18SG</code></div>
+                  <div class="p-2"><code>18PL</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/MY/FCBM/1</code>
+                </td>
+                <td>
+                  FCBM
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-11-11T23:21:37)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsNGNFVCB1-NG">
+                <td>
+                  NIGERIA (NG)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>12A</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>RE</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>12A</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>RE</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/NG/NFVCB/1</code>
+                </td>
+                <td>
+                  NFVCB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-06-18T19:40:30)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsNLKijkwijzer2-NL">
+                <td>
+                  NETHERLANDS (NL)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AL</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AL</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/NL/Kijkwijzer/2</code>
+                </td>
+                <td>
+                  Kijkwijzer
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2021-01-14T19:53:59)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsNLKijkwijzer2-BE">
+                <td>
+                  BELGIUM (BE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AL</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AL</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/NL/Kijkwijzer/2</code>
+                </td>
+                <td>
+                  Kijkwijzer
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2021-01-14T19:53:59)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsNOMedietilsynet3-NO">
+                <td>
+                  NORWAY (NO)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>11</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>11</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/NO/Medietilsynet/3</code>
+                </td>
+                <td>
+                  Medietilsynet
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2021-01-13T17:43:09)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsNZOFLC2-NZ">
+                <td>
+                  NEW ZEALAND (NZ)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>RP13</code></div>
+                  <div class="border-bottom p-2"><code>R13</code></div>
+                  <div class="border-bottom p-2"><code>R15</code></div>
+                  <div class="border-bottom p-2"><code>M</code></div>
+                  <div class="border-bottom p-2"><code>RP16</code></div>
+                  <div class="border-bottom p-2"><code>R16</code></div>
+                  <div class="border-bottom p-2"><code>RP18</code></div>
+                  <div class="border-bottom p-2"><code>R18</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>RP13</code></div>
+                  <div class="border-bottom p-2"><code>R13</code></div>
+                  <div class="border-bottom p-2"><code>R15</code></div>
+                  <div class="border-bottom p-2"><code>M</code></div>
+                  <div class="border-bottom p-2"><code>RP16</code></div>
+                  <div class="border-bottom p-2"><code>R16</code></div>
+                  <div class="border-bottom p-2"><code>RP18</code></div>
+                  <div class="border-bottom p-2"><code>R18</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/NZ/OFLC/2</code>
+                </td>
+                <td>
+                  OFLC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2017-08-07T14:25:35)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsPEFilm0-PE">
+                <td>
+                  PERU (PE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PT</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>PT</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/PE/Film/0</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-11T00:33:08)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsPHMTRCB1-PH">
+                <td>
+                  PHILIPPINES (PH)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>GTV</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PGTV</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>SPG</code></div>
+                  <div class="border-bottom p-2"><code>R13</code></div>
+                  <div class="border-bottom p-2"><code>R16</code></div>
+                  <div class="border-bottom p-2"><code>R18</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G-TV</code></div>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG-TV</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>SPG</code></div>
+                  <div class="border-bottom p-2"><code>R13</code></div>
+                  <div class="border-bottom p-2"><code>R16</code></div>
+                  <div class="border-bottom p-2"><code>R18</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/PH/MTRCB/1</code>
+                </td>
+                <td>
+                  MTRCB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2014-09-05T19:55:26)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsPLNBCPL1-PL">
+                <td>
+                  POLAND (PL)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>II</code></div>
+                  <div class="border-bottom p-2"><code>III</code></div>
+                  <div class="border-bottom p-2"><code>IV</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>I</code></div>
+                  <div class="border-bottom p-2"><code>II</code></div>
+                  <div class="border-bottom p-2"><code>III</code></div>
+                  <div class="border-bottom p-2"><code>IV</code></div>
+                  <div class="p-2"><code>18+</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/PL/NBC-PL/1</code>
+                </td>
+                <td>
+                  NBC-PL
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-11T00:35:13)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsPTCCE0-PT">
+                <td>
+                  PORTUGAL (PT)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>M3</code></div>
+                  <div class="border-bottom p-2"><code>M4</code></div>
+                  <div class="border-bottom p-2"><code>M6</code></div>
+                  <div class="border-bottom p-2"><code>M12</code></div>
+                  <div class="border-bottom p-2"><code>M16</code></div>
+                  <div class="border-bottom p-2"><code>M18</code></div>
+                  <div class="p-2"><code>M18P</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>M/3</code></div>
+                  <div class="border-bottom p-2"><code>M/4</code></div>
+                  <div class="border-bottom p-2"><code>M/6</code></div>
+                  <div class="border-bottom p-2"><code>M/12</code></div>
+                  <div class="border-bottom p-2"><code>M/16</code></div>
+                  <div class="border-bottom p-2"><code>M/18</code></div>
+                  <div class="p-2"><code>M/18-P</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/PT/CCE/0</code>
+                </td>
+                <td>
+                  CCE
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-11T00:37:43)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsPTCCE0-MO">
+                <td>
+                  MACAO (MO)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>M3</code></div>
+                  <div class="border-bottom p-2"><code>M4</code></div>
+                  <div class="border-bottom p-2"><code>M6</code></div>
+                  <div class="border-bottom p-2"><code>M12</code></div>
+                  <div class="border-bottom p-2"><code>M16</code></div>
+                  <div class="border-bottom p-2"><code>M18</code></div>
+                  <div class="p-2"><code>M18P</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>M/3</code></div>
+                  <div class="border-bottom p-2"><code>M/4</code></div>
+                  <div class="border-bottom p-2"><code>M/6</code></div>
+                  <div class="border-bottom p-2"><code>M/12</code></div>
+                  <div class="border-bottom p-2"><code>M/16</code></div>
+                  <div class="border-bottom p-2"><code>M/18</code></div>
+                  <div class="p-2"><code>M/18-P</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/PT/CCE/0</code>
+                </td>
+                <td>
+                  CCE
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-11T00:37:43)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsROCNA1-RO">
+                <td>
+                  ROMANIA (RO)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AP</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>G</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AP</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>18+</code></div>
+                  <div class="p-2"><code>G</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/RO/CNA/1</code>
+                </td>
+                <td>
+                  CNA
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-11T00:39:44)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsRUMKRF1-RU">
+                <td>
+                  RUSSIA (RU)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/RU/MKRF/1</code>
+                </td>
+                <td>
+                  MKRF
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-16T23:09:58)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsRUMKRF1-AM">
+                <td>
+                  ARMENIA (AM)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/RU/MKRF/1</code>
+                </td>
+                <td>
+                  MKRF
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-16T23:09:58)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsRUMKRF1-BY">
+                <td>
+                  BELARUS (BY)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/RU/MKRF/1</code>
+                </td>
+                <td>
+                  MKRF
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-16T23:09:58)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsSAGCAM0-SA">
+                <td>
+                  SAUDI ARABIA (SA)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>PG12</code></div>
+                  <div class="border-bottom p-2"><code>R12</code></div>
+                  <div class="border-bottom p-2"><code>R15</code></div>
+                  <div class="p-2"><code>R18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>PG12</code></div>
+                  <div class="border-bottom p-2"><code>R12</code></div>
+                  <div class="border-bottom p-2"><code>R15</code></div>
+                  <div class="p-2"><code>R18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/SA/GCAM/0</code>
+                </td>
+                <td>
+                  CIC-SA
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-06-30T17:00:28)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsSESMSA1-SE">
+                <td>
+                  SWEDEN (SE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>BARNT</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>11</code></div>
+                  <div class="p-2"><code>15</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>Barntillåten</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>11</code></div>
+                  <div class="p-2"><code>15</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/SE/SM-SA/1</code>
+                </td>
+                <td>
+                  SM-SA
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2016-12-20T21:45:13)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsSGMDA2-SG">
+                <td>
+                  SINGAPORE (SG)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>NC16</code></div>
+                  <div class="border-bottom p-2"><code>M18</code></div>
+                  <div class="p-2"><code>R21</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>NC16</code></div>
+                  <div class="border-bottom p-2"><code>M18</code></div>
+                  <div class="p-2"><code>R21</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/SG/MDA/2</code>
+                </td>
+                <td>
+                  MDA
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-10-29T19:57:38)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsSKFilm1-SK">
+                <td>
+                  SLOVAKIA (SK)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>P2</code></div>
+                  <div class="border-bottom p-2"><code>P5</code></div>
+                  <div class="p-2"><code>P8</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>P2</code></div>
+                  <div class="border-bottom p-2"><code>P5</code></div>
+                  <div class="p-2"><code>P8</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/SK/Film/1</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-28T20:45:52)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsSVFilm0-SV">
+                <td>
+                  EL SALVADOR (SV)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AA</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>D</code></div>
+                  <div class="p-2"><code>E</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>AA</code></div>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>D</code></div>
+                  <div class="p-2"><code>E</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/SV/Film/0</code>
+                </td>
+                <td>
+                  Film
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-02-04T22:36:23)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsTHBFVC0-TH">
+                <td>
+                  THAILAND (TH)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>20</code></div>
+                  <div class="p-2"><code>B</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>E</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>20</code></div>
+                  <div class="p-2"><code>B</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/TH/BFVC/0</code>
+                </td>
+                <td>
+                  BFVC
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-11T00:51:42)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsTRIBMCT0-TR">
+                <td>
+                  TURKEY (TR)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>GA</code></div>
+                  <div class="border-bottom p-2"><code>7A</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>13A</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>15A</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>GA</code></div>
+                  <div class="border-bottom p-2"><code>7A</code></div>
+                  <div class="border-bottom p-2"><code>7</code></div>
+                  <div class="border-bottom p-2"><code>13A</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>15A</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="p-2"><code>18</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/TR/IBMCT/0</code>
+                </td>
+                <td>
+                  IBMCT
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2016-12-20T15:36:33)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsTWMOCTW2-TW">
+                <td>
+                  TAIWAN (TW)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>P</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>R12</code></div>
+                  <div class="border-bottom p-2"><code>R15</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>P</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>R-12</code></div>
+                  <div class="border-bottom p-2"><code>R-15</code></div>
+                  <div class="p-2"><code>R</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/TW/MOC-TW/2</code>
+                </td>
+                <td>
+                  MOC-TW
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-06-19T16:09:14)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsUAUkraine2-UA">
+                <td>
+                  UKRAINE (UA)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>YES</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>FOR</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>X21</code></div>
+                  <div class="p-2"><code>DENIE</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>Yes</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>For</code></div>
+                  <div class="border-bottom p-2"><code>14</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>X21</code></div>
+                  <div class="p-2"><code>Denied</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/UA/Ukraine/2</code>
+                </td>
+                <td>
+                  Ukraine
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2021-01-14T20:20:51)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsUSFAB3-US">
+                <td>
+                  UNITED STATES (US)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>F</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>PD</code></div>
+                  <div class="border-bottom p-2"><code>PDM</code></div>
+                  <div class="border-bottom p-2"><code>M</code></div>
+                  <div class="border-bottom p-2"><code>VM</code></div>
+                  <div class="border-bottom p-2"><code>EM</code></div>
+                  <div class="p-2"><code>AO</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>F</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>PD</code></div>
+                  <div class="border-bottom p-2"><code>PD-M</code></div>
+                  <div class="border-bottom p-2"><code>M</code></div>
+                  <div class="border-bottom p-2"><code>VM</code></div>
+                  <div class="border-bottom p-2"><code>EM</code></div>
+                  <div class="p-2"><code>AO</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/US/FAB/3</code>
+                </td>
+                <td>
+                  FAB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-04-28T23:18:12)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsUSMPAAT1-US">
+                <td>
+                  UNITED STATES (US)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>GB</code></div>
+                  <div class="p-2"><code>RB</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>GB</code></div>
+                  <div class="p-2"><code>RB</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/US/MPAAT/1</code>
+                </td>
+                <td>
+                  MPAAT
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2013-10-28T19:44:10)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsUSMPAA2-US">
+                <td>
+                  UNITED STATES (US)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>M</code></div>
+                  <div class="border-bottom p-2"><code>GP</code></div>
+                  <div class="border-bottom p-2"><code>PG13</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="border-bottom p-2"><code>NC17</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>G</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>M</code></div>
+                  <div class="border-bottom p-2"><code>GP</code></div>
+                  <div class="border-bottom p-2"><code>PG-13</code></div>
+                  <div class="border-bottom p-2"><code>R</code></div>
+                  <div class="border-bottom p-2"><code>NC-17</code></div>
+                  <div class="p-2"><code>X</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/US/MPAA/2</code>
+                </td>
+                <td>
+                  MPAA
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2018-02-05T21:56:37)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingstbdtbd0-UY">
+                <td>
+                  URUGUAY (UY)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>TP</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>6</code></div>
+                  <div class="border-bottom p-2"><code>9</code></div>
+                  <div class="border-bottom p-2"><code>12</code></div>
+                  <div class="border-bottom p-2"><code>15</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="p-2"><code>TP</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/-t.b.d.-/-t.b.d.-/0</code>
+                </td>
+                <td>
+                  INAU
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-12-17T23:00:48)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsVERESORTEHealth1-VE">
+                <td>
+                  VENEZUELA (VE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="p-2"><code>D</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="p-2"><code>D</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/VE/RESORTE-Health/1</code>
+                </td>
+                <td>
+                  RESORTE-Health
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-06-11T12:50:34)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsVERESORTELanguage1-VE">
+                <td>
+                  VENEZUELA (VE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="p-2"><code>C</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="p-2"><code>C</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/VE/RESORTE-Language/1</code>
+                </td>
+                <td>
+                  RESORTE-Language
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-06-11T12:50:21)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsVERESORTESexo1-VE">
+                <td>
+                  VENEZUELA (VE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>D</code></div>
+                  <div class="p-2"><code>E</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>D</code></div>
+                  <div class="p-2"><code>E</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/VE/RESORTE-Sexo/1</code>
+                </td>
+                <td>
+                  RESORTE-Sexo
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-06-11T12:51:56)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsVERESORTEViolencia1-VE">
+                <td>
+                  VENEZUELA (VE)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>D</code></div>
+                  <div class="p-2"><code>E</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>B</code></div>
+                  <div class="border-bottom p-2"><code>C</code></div>
+                  <div class="border-bottom p-2"><code>D</code></div>
+                  <div class="p-2"><code>E</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/VE/RESORTE-Violencia/1</code>
+                </td>
+                <td>
+                  RESORTE-Violencia
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2019-06-11T12:52:57)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsVNMCST2-VN">
+                <td>
+                  VIET NAM (VN)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>P</code></div>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>C13</code></div>
+                  <div class="border-bottom p-2"><code>C16</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>C18</code></div>
+                  <div class="p-2"><code>NYR</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>P</code></div>
+                  <div class="border-bottom p-2"><code>0</code></div>
+                  <div class="border-bottom p-2"><code>C13</code></div>
+                  <div class="border-bottom p-2"><code>C16</code></div>
+                  <div class="border-bottom p-2"><code>16+</code></div>
+                  <div class="border-bottom p-2"><code>C18</code></div>
+                  <div class="p-2"><code>NYR</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/VN/MCST/2</code>
+                </td>
+                <td>
+                  MCST
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T22:15:23)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsZAFPB4-ZA">
+                <td>
+                  SOUTH AFRICA (ZA)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>79PG</code></div>
+                  <div class="border-bottom p-2"><code>10</code></div>
+                  <div class="border-bottom p-2"><code>10M</code></div>
+                  <div class="border-bottom p-2"><code>1012P</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>X18</code></div>
+                  <div class="p-2"><code>XX</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>A</code></div>
+                  <div class="border-bottom p-2"><code>PG</code></div>
+                  <div class="border-bottom p-2"><code>7-9-PG</code></div>
+                  <div class="border-bottom p-2"><code>10</code></div>
+                  <div class="border-bottom p-2"><code>10M</code></div>
+                  <div class="border-bottom p-2"><code>10-12-PG</code></div>
+                  <div class="border-bottom p-2"><code>13</code></div>
+                  <div class="border-bottom p-2"><code>16</code></div>
+                  <div class="border-bottom p-2"><code>18</code></div>
+                  <div class="border-bottom p-2"><code>X18</code></div>
+                  <div class="p-2"><code>XX</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/ZA/FPB/4</code>
+                </td>
+                <td>
+                  FPB
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2020-01-17T22:16:51)</a>
+                </td>
+              </tr>
+              <tr id="rating-httpwwwmovielabscommdratingsZZUNRATED0-ZZ">
+                <td>
+                  Global (ZZ)
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>ALL</code></div>
+                  <div class="border-bottom p-2"><code>UNRAT</code></div>
+                  <div class="border-bottom p-2"><code>ADULT</code></div>
+                  <div class="p-2"><code>PROSC</code></div>
+                </td>
+                <td>
+                  <div class="border-bottom p-2"><code>ALL</code></div>
+                  <div class="border-bottom p-2"><code>UNRATED</code></div>
+                  <div class="border-bottom p-2"><code>ADULT</code></div>
+                  <div class="p-2"><code>PROSCRIBED</code></div>
+                </td>
+                <td class="cell-breakAll">
+                  <code>http://www.movielabs.com/md/ratings/ZZ/UNRATED/0</code>
+                </td>
+                <td>
+                  UNRATED
+                </td>
+                <td class="use">
+                  <span class="badge badge-secondary">feature</span>
+                  <span class="badge badge-secondary">trailer</span>
+                </td>
+                <td>
+                  <a href="https://movielabs.com/md/ratings/" target="_blank">MovieLabs, Common Metadata Ratings (2014-08-01T15:14:44)</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+<!-- Main content ends - do not edit below this line -->
+        </div>
+      </div>
+            <div class="container-fluid d-print-none">
+              <ul class="pagination justify-content-between">
+                <li class="page-item"><a class="page-link" href="../territories/">&laquo; Previous</a></li>
+                <li class="page-item"><a class="page-link" href="../audioconfigs/">Next &raquo;</a></li>
+              </ul>
+            </div>    </div>
+  <footer class="page-footer font-small">
+    <div class="row d-flex align-items-center text-center p-3">
+      <div class="col text-center">
+        <small class="text-muted">
+          Registry version: <code>external/registries</code>
+          <br>Site version: <code>7419c9b4b3e1080781bd3600a9800e048bf3e159</code>
+          <br>Generated on Mon Dec 15 2025 23:01:03 GMT+0000 (Coordinated Universal Time)
+        </small>
+      </div>
+    </div>
+    <div class="footer-copyright text-center py-2 bg-white">
+      <small class="text-muted">
+        ALL DOCUMENTS AND INFORMATION PRESENTED HERE ARE TO BE USED AT YOUR OWN RISK, STRICTLY VOLUNTARY, <br>SHOULD NOT BE USED FOR IMPLEMENTING PRODUCTS, NO WARRANTY EXPRESSED OR IMPLIED. PROVIDED FOR CONVENIENCE ONLY.
+        <br>:: CONTACT: <a href="mailto:INFO@ISDCF.COM">INFO@ISDCF.COM</a> OR <a href="https://github.com/ISDCF/registries-site/issues" target="_blank">https://github.com/ISDCF/registries-site/issues</a> TO OFFER SUGGESTIONS/CORRECTIONS. ::
+        <br>USE AT YOUR OWN RISK
+      </small>
+    <div class="footer-copyright text-center py-2 bg-white">
+      <small class="text-muted">
+        © Copyright: <a href="https://isdcf.com/">ISDCF.com</a>
+      </small>
+    </div>
+  </div>
+  </footer> 
+</body>
+</html>
