@@ -3,7 +3,7 @@ The Studio codes are 2–4 character codes that represent the studio or content 
 **If you want to add or modify your studio in the studio registry:**
 
 1) Pick a 2-4 letter code that IS NOT BEING USED by another facility
-2) Enter your information on [THIS STUDIO APPLICATION FORM](https://forms.gle/CwGvusenTtDHvXHK8)
+2) Enter your information on [THIS STUDIO APPLICATION FORM](https://forms.gle/DJtTEk48nkFjDVv78)
 3) Give us a few days and check the list to see if you have been added AND IF THE INFORMATION IS CORRECT! (It’s a manual entry process and sometime we mess up.) If it needs correcting or has not posted, please email <digitalcinemanaming@isdcf.com>. 
 
 ***NOTE 1:** If we happen to be on vacation it may take up to 2 weeks to add your studio. Sometimes you get same day service!*
