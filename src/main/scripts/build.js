@@ -516,6 +516,10 @@ async function buildPage ({ pageTemplate, pageType, idType, pageTitle, schemaBui
       return options.inverse(this);
     });
 
+    hb.registerHelper('or', function (a, b) {
+      return Boolean(a || b);
+    });
+
     hb.registerHelper('stripillegalChars', function (a, b, options) {
       var cleanString = a.replace(/([^a-z0-9]+)/gi, '');
       return cleanString

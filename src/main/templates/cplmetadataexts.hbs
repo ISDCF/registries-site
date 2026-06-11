@@ -25,12 +25,14 @@
                   <code class="sampCode">
                     &lt;cpl-meta:ExtensionMetadata scope="<code>{{extension/extScope}}</code>"&gt;<br>
                     &nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{extension/extName}}</code>&lt;/cpl-meta:Name&gt;<br>
+                    {{#if (or extension/extpropName extension/extpropValue)}}
                     &nbsp;&nbsp;&lt;cpl-meta:PropertyList&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Property&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{extension/extpropName}}</code>&lt;/cpl-meta:Name&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Value&gt;<code>{{extension/extpropValue}}</code>&lt;/cpl-meta:Value&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/cpl-meta:Property&gt;<br>
                     &nbsp;&nbsp;&lt;/cpl-meta:PropertyList&gt;<br>
+                    {{/if}}
                     &lt;/cpl-meta:ExtensionMetadata&gt;
                   </code>
                 </td>
