@@ -1,4 +1,4 @@
-The Content Type is listed at **//ContentKind**:[^1]
+The Content Type is listed at **//ContentKind**:
 
     <CompositionPlaylist xmlns=”http://www.smpte-ra.org/schemas/429-7/2006/CPL”>
       …
@@ -6,4 +6,4 @@ The Content Type is listed at **//ContentKind**:[^1]
       …
     <CompositionPlaylist>
 
-[^1]: *If the scope attribute is absent, the permissible SMPTE 429-7 ContentKind values are as follows: “feature”, “trailer”, “teaser”, “test”, “rating”, “advertisement”, “short”, “transitional”, “psa”, and “policy”.  If the scope attribute is present and set to `http://www.smpte–ra.org/schemas/429-16/2014/CPL-Metadata#scope/content-kind`, the permissible SMPTE ST 429-16 ContentKind values are as follows: “clip”, “promo” and “stereocard.”  See the specification for details.*
++_NOTE_: As specified at SMPTE ST 429-7, 6.8, the `scope` attribute of the `ContentKind` element is present and set to the value specified in the _ContentKind Scope_ column of the register, _unless_ the _ContentKind Scope_ is equal to `http://www.smpte-ra.org/schemas/429-7/2006/CPL`, in which case  the `scope` attribute can be omitted.
