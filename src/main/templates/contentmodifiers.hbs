@@ -51,12 +51,14 @@
                   {{#ifeq cplMetadata/metaType "Extension Present"}}
                     &lt;cpl-meta:ExtensionMetadata scope="<code>{{cplMetadata/extScope}}</code>"&gt;<br>
                     &nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extName}}</code>&lt;/cpl-meta:Name&gt;<br>
+                    {{#if cplMetadata/extpropName}}
                     &nbsp;&nbsp;&lt;cpl-meta:PropertyList&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Property&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Name&gt;<code>{{cplMetadata/extpropName}}</code>&lt;/cpl-meta:Name&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cpl-meta:Value&gt;<code>{{cplMetadata/extpropValue}}</code>&lt;/cpl-meta:Value&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/cpl-meta:Property&gt;<br>
                     &nbsp;&nbsp;&lt;/cpl-meta:PropertyList&gt;<br>
+                    {{/if}}
                     &lt;/cpl-meta:ExtensionMetadata&gt;
                     {{/ifeq}}
                   </code>
